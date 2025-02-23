@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation with {{ conversation.persona }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/conversations.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Conversation with {{ conversation.persona }}</h1>
+            <div class="nav-links">
+                <a href="/" class="nav-link">🎯 Practice</a>
+                <a href="/conversations" class="nav-link">📝 History</a>
+                <a href="/admin" class="nav-link">⚙️ Settings</a>
+            </div>
+        </div>
+        
+        <div class="conversation-transcript">
+            {% for message in conversation.history %}
+                {% if message.role != 'system' %}
+                <div class="message {{ message.role }}">
+                    <div class="message-header">
+                        {% if message.role == 'assistant' %}
+                            {{ conversation.persona }}
+                        {% else %}
+                            You
+                        {% endif %}
+                    </div>
+                    <div class="message-content">
+                        {{ message.content }}
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html> 

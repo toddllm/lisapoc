@@ -128,9 +128,25 @@ button {
 
 #feedback {
     background-color: #1e2332;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     margin-top: 20px;
+}
+
+#feedback h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#feedback h3 {
+    color: #4CAF50;
+    margin: 20px 0 10px 0;
+}
+
+#feedback p {
+    margin: 10px 0;
+    line-height: 1.5;
 }
 
 #end-btn {
@@ -161,4 +177,153 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #3a3f4e;
+}
+
+.persona-selector {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.persona-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.persona-card {
+    background-color: #2a2f3e;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.persona-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.persona-card h4 {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.persona-card p {
+    color: #a0a0a0;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.persona-card .description {
+    font-size: 12px;
+    margin: 10px 0;
+    height: 60px;
+    overflow: hidden;
+}
+
+.persona-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.persona-card button:hover {
+    background-color: #45a049;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 9999;
+}
+
+.nav-link {
+    background-color: rgba(42, 47, 62, 0.8);
+    color: #888;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(58, 63, 78, 0.9);
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* Remove all other navigation styles */
+.back-button, .admin-link {
+    display: none;
+}
+
+.end-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.restart-button, .selection-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.restart-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.selection-button {
+    background-color: #2196F3;
+    color: white;
+}
+
+.restart-button:hover, .selection-button:hover {
+    filter: brightness(1.1);
+}
+
+.loading-feedback {
+    text-align: center;
+    padding: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #2a2f3e;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 2s ease-in-out;
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Admin Panel</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body>
+    <!-- Fixed navigation that appears on all pages -->
+    <div class="nav-links">
+        <a href="/" class="nav-link">🎯 Practice</a>
+        <a href="/conversations" class="nav-link">📝 History</a>
+        <a href="/admin" class="nav-link">⚙️ Settings</a>
+    </div>
+
+    <div class="admin-container">
+        <h1>Voice Management</h1>
+        
+        <div class="personas-grid">
+            {% for persona_id, persona in personas.items() %}
+            <div class="persona-config-card">
+                <h2>{{ persona.name }}</h2>
+                <p>Role: {{ persona.role }}</p>
+                
+                <div class="voice-config">
+                    <label>Voice Selection:</label>
+                    <select class="voice-select" data-persona="{{ persona_id }}">
+                        {% for voice in available_voices %}
+                        <option value="{{ voice }}" {% if voice == persona.voice %}selected{% endif %}>
+                            {{ voice }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                    
+                    <label>Speed (0.5 - 2.0):</label>
+                    <input type="range" min="0.5" max="2.0" step="0.1" 
+                           value="{{ persona.speed }}" 
+                           class="speed-slider"
+                           data-persona="{{ persona_id }}">
+                    <span class="speed-value">{{ persona.speed }}</span>
+                    
+                    <div class="test-controls">
+                        <input type="text" 
+                               class="test-text" 
+                               value="Hi, I'm {{ persona.name }}. How are you today?"
+                               placeholder="Enter test text...">
+                        <button onclick="testVoice('{{ persona_id }}')" class="test-button">
+                            Test Voice
+                        </button>
+                    </div>
+                    
+                    <button onclick="savePersonaSettings('{{ persona_id }}')" class="save-button">
+                        Save Settings
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <script src="/static/js/admin.js"></script>
+</body>
+</html> 

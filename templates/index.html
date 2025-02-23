@@ -21,10 +21,45 @@
             <div class="section-title">Best Practices</div>
             <div>Practice active listening. Be curious.</div>
             <div>Find out what the person does and where they work.</div>
+            
+            <!-- Add admin link at the bottom of left panel -->
+            <div class="admin-link">
+                <a href="/admin">⚙️ Voice Settings</a>
+            </div>
+
+            <!-- Replace both link sections with this single nav-links div -->
+            <div class="nav-links">
+                <a href="/admin" class="nav-link">⚙️ Settings</a>
+                <a href="/conversations" class="nav-link">📝 History</a>
+            </div>
         </div>
 
         <div class="main-panel">
             <div id="timer">Time Left: 5:00</div>
+            
+            <div class="persona-selector">
+                <h3>Select Your Conversation Partner</h3>
+                <div class="persona-cards">
+                    <div class="persona-card" data-persona="jake">
+                        <div class="avatar jake">
+                            <!-- Avatar SVG will be updated via JavaScript -->
+                        </div>
+                        <h4>Jake</h4>
+                        <p>Software Engineer</p>
+                        <p class="description">A friendly software engineer specializing in AI and machine learning.</p>
+                        <button onclick="selectPersona('jake')">Select Jake</button>
+                    </div>
+                    <div class="persona-card" data-persona="sarah">
+                        <div class="avatar sarah">
+                            <!-- Avatar SVG will be updated via JavaScript -->
+                        </div>
+                        <h4>Sarah</h4>
+                        <p>Product Manager</p>
+                        <p class="description">A strategic product manager with experience in tech startups.</p>
+                        <button onclick="selectPersona('sarah')">Select Sarah</button>
+                    </div>
+                </div>
+            </div>
             
             <div id="avatar-container">
                 <svg id="avatar" width="100" height="100">

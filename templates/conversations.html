@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation History</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/conversations.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Conversation History</h1>
+            <a href="/" class="back-button">Back to Practice</a>
+        </div>
+        
+        <div class="nav-links">
+            <a href="/" class="nav-link">🎯 Practice</a>
+            <a href="/admin" class="nav-link">⚙️ Settings</a>
+        </div>
+        
+        <div class="conversations-list">
+            {% for conversation in conversations|sort(attribute='timestamp', reverse=true) %}
+            <div class="conversation-card">
+                <div class="conversation-header">
+                    <h3>Conversation with {{ conversation.persona }}</h3>
+                    <span class="timestamp">{{ conversation.timestamp|datetime }}</span>
+                </div>
+                <div class="conversation-preview">
+                    {% set messages = conversation.history|selectattr('role', 'equalto', 'user')|list %}
+                    {{ messages|length }} messages exchanged
+                </div>
+                <a href="/conversation/{{ conversation.id }}" class="view-button">View Full Conversation</a>
+            </div>
+            {% else %}
+            <p class="no-conversations">No conversations yet. Start practicing!</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html> 
