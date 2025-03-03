@@ -109,47 +109,47 @@ ACTIONABLE SUGGESTIONS:
 
 # Fallback data for when generation or evaluation fails
 FALLBACK_CONVERSATION = """
-SOFTWARE ENGINEER: Excuse me, hi there! I noticed your company logo on your badge. I'm [Name], a software engineer working on web applications. Is this your first time at this networking event?
+USER: Excuse me, hi there! I noticed your company logo on your badge. I'm [Name], a software engineer working on web applications. Is this your first time at this networking event?
 
-PROFESSIONAL (Product Manager): Hi! Nice to meet you. I'm [Name], a Product Manager at [Company]. No, I've been to a few of these events before. What about you?
+PARTNER (Product Manager): Hi! Nice to meet you. I'm [Name], a Product Manager at [Company]. No, I've been to a few of these events before. What about you?
 
-SOFTWARE ENGINEER: It's my first time at this particular event. I'm here to learn more about the industry and meet new people in the tech space.
+USER: It's my first time at this particular event. I'm here to learn more about the industry and meet new people in the tech space.
 
-PROFESSIONAL (Product Manager): That's great! First-time experiences can be exciting. What kind of web development are you currently working on?
+PARTNER (Product Manager): That's great! First-time experiences can be exciting. What kind of web development are you currently working on?
 
-SOFTWARE ENGINEER: I'm focusing on frontend development. I've been working with React and Node.js mostly for about two years now. I really enjoy creating user-friendly interfaces.
+USER: I'm focusing on frontend development. I've been working with React and Node.js mostly for about two years now. I really enjoy creating user-friendly interfaces.
 
-PROFESSIONAL (Product Manager): Web development is such a dynamic area! React is definitely in demand. I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+PARTNER (Product Manager): Web development is such a dynamic area! React is definitely in demand. I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
 
-SOFTWARE ENGINEER: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+USER: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
 
-PROFESSIONAL (Product Manager): Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+PARTNER (Product Manager): Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
 
-SOFTWARE ENGINEER: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+USER: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
 
-PROFESSIONAL (Product Manager): Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking.
+PARTNER (Product Manager): Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking.
 
-SOFTWARE ENGINEER: Thank you! I see someone with a CTO badge over there. I should probably introduce myself to them as well. It was nice meeting you!
+USER: Thank you! I see someone with a CTO badge over there. I should probably introduce myself to them as well. It was nice meeting you!
 
-PROFESSIONAL (Product Manager): Good idea! It was nice meeting you too. Good luck with your networking!
+PARTNER (Product Manager): Good idea! It was nice meeting you too. Good luck with your networking!
 
-SOFTWARE ENGINEER: Excuse me, hi! I'm [Name], a frontend developer working with React. I noticed your CTO badge and wanted to introduce myself.
+USER: Excuse me, hi! I'm [Name], a frontend developer working with React. I noticed your CTO badge and wanted to introduce myself.
 
-PROFESSIONAL (CTO): Hello there! I'm [Name], the CTO at [Startup]. Always good to meet React developers. What kind of projects have you worked on?
+PARTNER (CTO): Hello there! I'm [Name], the CTO at [Startup]. Always good to meet React developers. What kind of projects have you worked on?
 
-SOFTWARE ENGINEER: I've mainly worked on e-commerce platforms and some data visualization dashboards. I'm particularly proud of a real-time analytics dashboard I built recently.
+USER: I've mainly worked on e-commerce platforms and some data visualization dashboards. I'm particularly proud of a real-time analytics dashboard I built recently.
 
-PROFESSIONAL (CTO): That sounds impressive. We're working on something similar. Here's my card - would you mind connecting on LinkedIn as well? I'd love to continue this conversation.
+PARTNER (CTO): That sounds impressive. We're working on something similar. Here's my card - would you mind connecting on LinkedIn as well? I'd love to continue this conversation.
 
-SOFTWARE ENGINEER: Of course, I'll connect with you right away. Thank you for the interest in my work.
+USER: Of course, I'll connect with you right away. Thank you for the interest in my work.
 
-PROFESSIONAL (CTO): Great! Feel free to reach out if you're ever looking for new opportunities or just want to discuss tech. I should get back to my team now, but it was nice meeting you.
+PARTNER (CTO): Great! Feel free to reach out if you're ever looking for new opportunities or just want to discuss tech. I should get back to my team now, but it was nice meeting you.
 
-SOFTWARE ENGINEER: It was nice meeting you too! Thanks for the LinkedIn connection. I look forward to staying in touch.
+USER: It was nice meeting you too! Thanks for the LinkedIn connection. I look forward to staying in touch.
 
-PROFESSIONAL (CTO): Likewise! Enjoy the rest of the event.
+PARTNER (CTO): Likewise! Enjoy the rest of the event.
 
-SOFTWARE ENGINEER: You too! Thanks again.
+USER: You too! Thanks again.
 """
 
 FALLBACK_EVALUATION = """
@@ -170,7 +170,7 @@ Stage Scores:
 - Farewell: 1
 
 Feedback:
-The conversation demonstrates basic networking skills. The software engineer initiates conversations appropriately but could ask more thoughtful questions and show deeper interest in the professionals they meet. The LinkedIn connections were established, but the engineer could have been more strategic about how to leverage these new connections. The transitions between conversations were somewhat abrupt. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+The conversation demonstrates basic networking skills. The user initiates conversations appropriately but could ask more thoughtful questions and show deeper interest in the partners they meet. The LinkedIn connections were established, but the user could have been more strategic about how to leverage these new connections. The transitions between conversations were somewhat abrupt. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
 """
 
 def get_openai_client() -> OpenAI:
@@ -212,33 +212,33 @@ def generate_conversation(skill_level):
     
     # Define the base prompt
     base_prompt = """
-    Generate a realistic networking conversation between a SOFTWARE ENGINEER and various PROFESSIONALS at a networking event.
-    The SOFTWARE ENGINEER is the person being evaluated on their networking skills.
+    Generate a realistic networking conversation between a USER and various PARTNERS at a networking event.
+    The USER is the person being evaluated on their networking skills.
     
-    The conversation should include interactions with at least two different professionals (e.g., Product Manager, Marketing Director, CTO, Startup Founder, etc.) and should include:
-    1. An introduction/opener (SOFTWARE ENGINEER speaks first)
+    The conversation should include interactions with at least two different partners (e.g., Product Manager, Marketing Director, CTO, Startup Founder, etc.) and should include:
+    1. An introduction/opener (USER speaks first)
     2. Some back-and-forth conversation
     3. A LinkedIn connection request
     4. A natural way to move on/end the conversation
     5. A farewell
 
     Format the conversation exactly like this:
-    SOFTWARE ENGINEER: [software engineer's message]
+    USER: [user's message]
     
-    PROFESSIONAL (role): [professional's message]
+    PARTNER (role): [partner's message]
     
-    SOFTWARE ENGINEER: [software engineer's message]
+    USER: [user's message]
     
     And so on...
     
-    IMPORTANT: The SOFTWARE ENGINEER must initiate the conversation by approaching a professional at the networking event.
+    IMPORTANT: The USER must initiate the conversation by approaching a partner at the networking event.
     """
     
     # Add skill level specific instructions
     skill_instructions = {
         "novice": {
             "low": """
-            The SOFTWARE ENGINEER should demonstrate NOVICE_LOW networking skills:
+            The USER should demonstrate NOVICE_LOW networking skills:
             - Shows basic social etiquette but appears nervous or uncertain
             - Responds to questions but rarely asks their own
             - Misses obvious networking opportunities
@@ -247,7 +247,7 @@ def generate_conversation(skill_level):
             - Demonstrates awkward conversation transitions
             """,
             "basic": """
-            The SOFTWARE ENGINEER should demonstrate NOVICE_BASIC networking skills:
+            The USER should demonstrate NOVICE_BASIC networking skills:
             - Shows adequate social etiquette with occasional awkwardness
             - Sometimes asks questions but they may be generic
             - Recognizes some networking opportunities but misses others
@@ -256,7 +256,7 @@ def generate_conversation(skill_level):
             - Has somewhat abrupt conversation transitions
             """,
             "high": """
-            The SOFTWARE ENGINEER should demonstrate NOVICE_HIGH networking skills:
+            The USER should demonstrate NOVICE_HIGH networking skills:
             - Shows good social etiquette with minimal awkwardness
             - Asks some relevant questions
             - Recognizes obvious networking opportunities
@@ -267,7 +267,7 @@ def generate_conversation(skill_level):
         },
         "intermediate": {
             "low": """
-            The SOFTWARE ENGINEER should demonstrate INTERMEDIATE_LOW networking skills:
+            The USER should demonstrate INTERMEDIATE_LOW networking skills:
             - Shows professional social etiquette
             - Asks relevant questions and follows up on answers
             - Identifies most networking opportunities
@@ -276,7 +276,7 @@ def generate_conversation(skill_level):
             - Manages conversation flow with minimal awkwardness
             """,
             "basic": """
-            The SOFTWARE ENGINEER should demonstrate INTERMEDIATE_BASIC networking skills:
+            The USER should demonstrate INTERMEDIATE_BASIC networking skills:
             - Shows confident and professional social etiquette
             - Asks thoughtful questions that demonstrate interest
             - Capitalizes on most networking opportunities
@@ -285,7 +285,7 @@ def generate_conversation(skill_level):
             - Navigates conversation transitions smoothly
             """,
             "high": """
-            The SOFTWARE ENGINEER should demonstrate INTERMEDIATE_HIGH networking skills:
+            The USER should demonstrate INTERMEDIATE_HIGH networking skills:
             - Shows polished social etiquette
             - Asks insightful questions that build rapport
             - Recognizes and creates networking opportunities
@@ -296,7 +296,7 @@ def generate_conversation(skill_level):
         },
         "advanced": {
             "low": """
-            The SOFTWARE ENGINEER should demonstrate ADVANCED_LOW networking skills:
+            The USER should demonstrate ADVANCED_LOW networking skills:
             - Shows sophisticated social awareness and etiquette
             - Asks strategic questions that reveal shared interests or opportunities
             - Creates valuable networking moments throughout the conversation
@@ -305,7 +305,7 @@ def generate_conversation(skill_level):
             - Controls conversation pacing and transitions expertly
             """,
             "basic": """
-            The SOFTWARE ENGINEER should demonstrate ADVANCED_BASIC networking skills:
+            The USER should demonstrate ADVANCED_BASIC networking skills:
             - Demonstrates exceptional social intelligence and etiquette
             - Asks questions that uncover meaningful professional connections
             - Transforms casual conversation into valuable networking
@@ -314,7 +314,7 @@ def generate_conversation(skill_level):
             - Manages conversation dynamics with subtle expertise
             """,
             "high": """
-            The SOFTWARE ENGINEER should demonstrate ADVANCED_HIGH networking skills:
+            The USER should demonstrate ADVANCED_HIGH networking skills:
             - Shows masterful social intelligence and charismatic presence
             - Asks questions that build deep rapport and uncover unexpected connections
             - Creates high-value networking opportunities that benefit both parties
@@ -812,17 +812,17 @@ def format_evaluation_for_output(evaluation: Dict[str, Any]) -> str:
     # Generate feedback
     if badge_level == "Bronze":
         feedback = "The conversation demonstrates basic networking skills. "
-        feedback += "The software engineer could be more proactive in asking questions and showing interest in the professionals they meet. "
-        feedback += "The LinkedIn connections were established, but the engineer could have been more strategic about how to leverage these new connections. "
+        feedback += "The user could be more proactive in asking questions and showing interest in the partners they meet. "
+        feedback += "The LinkedIn connections were established, but the user could have been more strategic about how to leverage these new connections. "
         feedback += "Overall, this represents a novice level of networking skill with room for improvement in all dimensions."
     elif badge_level == "Silver":
         feedback = "The conversation demonstrates good networking skills. "
-        feedback += "The software engineer asks relevant questions and shows genuine interest in the professionals they meet. "
+        feedback += "The user asks relevant questions and shows genuine interest in the partners they meet. "
         feedback += "The LinkedIn connections were established with some strategic follow-up. "
         feedback += "Overall, this represents an intermediate level of networking skill with solid performance across all dimensions."
     else:  # Gold
         feedback = "The conversation demonstrates excellent networking skills. "
-        feedback += "The software engineer asks insightful questions that build rapport and uncover meaningful connections. "
+        feedback += "The user asks insightful questions that build rapport and uncover meaningful connections. "
         feedback += "The LinkedIn connections were established with clear next steps and mutual value. "
         feedback += "Overall, this represents an advanced level of networking skill with exceptional performance across all dimensions."
     
