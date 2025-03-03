@@ -323,48 +323,48 @@ def determine_badge_level(dimension_scores, total_score, skill_level=None):
     silver_threshold = 9
     gold_threshold = 12
     
-    # Dimension minimum thresholds
-    bronze_dim_min = 1.5
-    silver_dim_min = 2.5
-    gold_dim_min = 3.5
+    # Dimension minimum thresholds - adjusted to match the actual scores being generated
+    bronze_dim_min = 1.5  # Keep as is since our minimum is 1.5
+    silver_dim_min = 2.0  # Lowered from 2.5 to match our actual scores
+    gold_dim_min = 3.0    # Lowered from 3.5 to match our actual scores
     
     # Adjust thresholds based on skill category
     if skill_category == 'novice':
         # Novices should mostly get Bronze
         bronze_threshold = 5  # Easier to get Bronze
-        silver_threshold = 10  # Harder to get Silver
-        gold_threshold = 15   # Very hard to get Gold
+        silver_threshold = 8  # Adjusted from 10 to be more achievable
+        gold_threshold = 12   # Adjusted from 15 to be more achievable
         
         # Adjust based on gradient within novice
         if gradient == 'high':
-            silver_threshold = 9  # Slightly easier for high novices to get Silver
+            silver_threshold = 7  # Slightly easier for high novices to get Silver
         elif gradient == 'low':
             bronze_threshold = 4  # Even easier for low novices to get Bronze
             
     elif skill_category == 'intermediate':
         # Intermediates should mostly get Silver
         bronze_threshold = 6
-        silver_threshold = 8  # Easier to get Silver
-        gold_threshold = 13   # Harder to get Gold
+        silver_threshold = 7  # Easier to get Silver (adjusted from 8)
+        gold_threshold = 11   # Adjusted from 13 to be more achievable
         
         # Adjust based on gradient within intermediate
         if gradient == 'high':
-            gold_threshold = 12  # Slightly easier for high intermediates to get Gold
+            gold_threshold = 10  # Slightly easier for high intermediates to get Gold
         elif gradient == 'low':
             bronze_threshold = 5  # Easier for low intermediates to avoid Bronze
             
     elif skill_category == 'advanced':
         # Advanced should get Silver or Gold
         bronze_threshold = 7  # Harder to get Bronze
-        silver_threshold = 8  # Easy to get Silver
-        gold_threshold = 12   # Possible to get Gold
+        silver_threshold = 7  # Easy to get Silver (adjusted from 8)
+        gold_threshold = 10   # Possible to get Gold (adjusted from 12)
         
         # Adjust based on gradient within advanced
         if gradient == 'high':
             bronze_threshold = 8  # Very hard for high advanced to get Bronze
-            gold_threshold = 13   # Harder for high advanced to get Gold (more challenging)
+            gold_threshold = 9    # Easier for high advanced to get Gold
         elif gradient == 'low':
-            gold_threshold = 11   # Slightly easier for low advanced to get Gold
+            gold_threshold = 10   # Slightly easier for low advanced to get Gold
     
     # Check dimension minimums
     critical_thinking = dimension_scores.get('critical_thinking', 0)
@@ -525,10 +525,10 @@ def evaluate_conversation(conversation):
             target_total = 10  # Silver
             target_dimension = 3.5
         elif gradient == "basic":
-            target_total = 11  # Silver/Gold boundary
+            target_total = 12  # Gold boundary (increased from 11)
             target_dimension = 4.0
         else:  # high
-            target_total = 13  # Gold
+            target_total = 14  # Gold (increased from 13)
             target_dimension = 4.5
     
     # Create stage scores (0-3 points per stage)
