@@ -7,6 +7,13 @@ import json
 import os
 import unittest
 from unittest.mock import patch, MagicMock
+import sys
+
+# Add the current directory to the path to ensure imports work
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+# Import the function to test
+from generate_simple import determine_badge_level
 
 # Import functions to test
 # Note: These functions will be implemented in generate_simple.py
