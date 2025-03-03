@@ -475,49 +475,88 @@ def evaluate_conversation(conversation):
     # Generate mock evaluation data
     # In a real implementation, this would analyze the conversation
     
-    # Extract skill level from the conversation (for testing purposes)
+    # Extract skill level and gradient from the conversation (for testing purposes)
     skill_level = "novice"
-    if "NOVICE" in conversation:
-        skill_level = "novice"
-    elif "INTERMEDIATE" in conversation:
-        skill_level = "intermediate"
-    elif "ADVANCED" in conversation:
-        skill_level = "advanced"
+    gradient = "low"
     
-    # Generate scores based on skill level
+    if "NOVICE_LOW" in conversation:
+        skill_level, gradient = "novice", "low"
+    elif "NOVICE_BASIC" in conversation:
+        skill_level, gradient = "novice", "basic"
+    elif "NOVICE_HIGH" in conversation:
+        skill_level, gradient = "novice", "high"
+    elif "INTERMEDIATE_LOW" in conversation:
+        skill_level, gradient = "intermediate", "low"
+    elif "INTERMEDIATE_BASIC" in conversation:
+        skill_level, gradient = "intermediate", "basic"
+    elif "INTERMEDIATE_HIGH" in conversation:
+        skill_level, gradient = "intermediate", "high"
+    elif "ADVANCED_LOW" in conversation:
+        skill_level, gradient = "advanced", "low"
+    elif "ADVANCED_BASIC" in conversation:
+        skill_level, gradient = "advanced", "basic"
+    elif "ADVANCED_HIGH" in conversation:
+        skill_level, gradient = "advanced", "high"
+    
+    # Generate base scores based on skill level
     if skill_level == "novice":
-        base_score = 2.0
+        base_score = 1.5
     elif skill_level == "intermediate":
         base_score = 3.0
     else:  # advanced
         base_score = 4.0
     
-    # Add some randomness to scores
-    variation = random.uniform(-0.5, 0.5)
+    # Adjust base score based on gradient
+    if gradient == "low":
+        gradient_modifier = -0.5
+    elif gradient == "basic":
+        gradient_modifier = 0
+    else:  # high
+        gradient_modifier = 0.5
     
-    # Create stage scores
+    # Apply gradient modifier
+    adjusted_base = base_score + gradient_modifier
+    
+    # Add some randomness to scores
+    variation = random.uniform(-0.3, 0.3)
+    
+    # Create stage scores (0-3 points per stage)
     stage_scores = {
-        'opener': min(3, max(0, round(base_score - 1 + random.uniform(-0.5, 0.5)))),
-        'carrying_conversation': min(3, max(0, round(base_score - 1 + random.uniform(-0.5, 0.5)))),
-        'linkedin_connection': min(3, max(0, round(base_score - 1 + random.uniform(-0.5, 0.5)))),
-        'move_on': min(3, max(0, round(base_score - 1 + random.uniform(-0.5, 0.5)))),
-        'farewell': min(3, max(0, round(base_score - 1 + random.uniform(-0.5, 0.5))))
+        'opener': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2)))),
+        'carrying_conversation': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2)))),
+        'linkedin_connection': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2)))),
+        'move_on': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2)))),
+        'farewell': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2))))
     }
     
-    # Calculate total score
+    # Calculate total score (0-15 points total)
     total_score = sum(stage_scores.values())
     
-    # Create dimension scores
+    # Create dimension scores (1-5 scale)
     dimension_scores = {
-        'critical_thinking': min(5.0, max(1.0, base_score + variation)),
-        'communication': min(5.0, max(1.0, base_score + random.uniform(-0.3, 0.3))),
-        'emotional_intelligence': min(5.0, max(1.0, base_score + random.uniform(-0.4, 0.2)))
+        'critical_thinking': min(5.0, max(1.0, adjusted_base + variation)),
+        'communication': min(5.0, max(1.0, adjusted_base + random.uniform(-0.3, 0.3))),
+        'emotional_intelligence': min(5.0, max(1.0, adjusted_base + random.uniform(-0.4, 0.2)))
     }
     
     # Generate feedback
     feedback = f"This conversation demonstrates {skill_level} level networking skills. "
-    feedback += "The candidate shows appropriate engagement and communication skills. "
-    feedback += "Areas for improvement include more strategic questioning and follow-up."
+    
+    if skill_level == "novice":
+        feedback += "The candidate shows basic engagement but could improve in strategic questioning. "
+    elif skill_level == "intermediate":
+        feedback += "The candidate demonstrates good communication skills and professional engagement. "
+    else:  # advanced
+        feedback += "The candidate shows excellent networking abilities and strategic relationship building. "
+    
+    feedback += f"For a {skill_level}_{gradient} level, the performance is "
+    
+    if total_score < 6:
+        feedback += "below expectations."
+    elif total_score < 10:
+        feedback += "meeting expectations."
+    else:
+        feedback += "exceeding expectations."
     
     return {
         'stage_scores': stage_scores,
