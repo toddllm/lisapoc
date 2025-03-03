@@ -371,6 +371,13 @@ def determine_badge_level(dimension_scores, total_score, skill_level=None):
     communication = dimension_scores.get('communication', 0)
     emotional_intelligence = dimension_scores.get('emotional_intelligence', 0)
     
+    # Debug output
+    print(f"Skill level: {skill_level}")
+    print(f"Dimension scores: {dimension_scores}")
+    print(f"Total score: {total_score}")
+    print(f"Thresholds - Bronze: {bronze_threshold}, Silver: {silver_threshold}, Gold: {gold_threshold}")
+    print(f"Dimension minimums - Bronze: {bronze_dim_min}, Silver: {silver_dim_min}, Gold: {gold_dim_min}")
+    
     # Determine badge level based on total score and dimension minimums
     if total_score >= gold_threshold and all([
         critical_thinking >= gold_dim_min,
@@ -503,33 +510,24 @@ def evaluate_conversation(conversation):
     if skill_level == "novice":
         if gradient == "low":
             target_total = 6  # Bronze
-            target_dimension = 1.8
         elif gradient == "basic":
             target_total = 7  # Bronze
-            target_dimension = 2.0
         else:  # high
             target_total = 8  # Bronze, close to Silver
-            target_dimension = 2.2
     elif skill_level == "intermediate":
         if gradient == "low":
             target_total = 8  # Bronze/Silver boundary
-            target_dimension = 2.5
         elif gradient == "basic":
             target_total = 9  # Silver
-            target_dimension = 3.0
         else:  # high
             target_total = 10  # Silver
-            target_dimension = 3.5
     else:  # advanced
         if gradient == "low":
             target_total = 10  # Silver
-            target_dimension = 3.5
         elif gradient == "basic":
-            target_total = 12  # Gold boundary (increased from 11)
-            target_dimension = 4.0
+            target_total = 12  # Gold boundary
         else:  # high
-            target_total = 14  # Gold (increased from 13)
-            target_dimension = 4.5
+            target_total = 14  # Gold
     
     # Create stage scores (0-3 points per stage)
     # Distribute points to reach target total
