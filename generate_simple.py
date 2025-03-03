@@ -500,33 +500,37 @@ def evaluate_conversation(conversation):
     
     # Generate base scores based on skill level
     if skill_level == "novice":
-        base_score = 1.5
+        base_stage_score = 1.0  # Out of 3
+        base_dimension_score = 2.0  # Out of 5
     elif skill_level == "intermediate":
-        base_score = 3.0
+        base_stage_score = 2.0  # Out of 3
+        base_dimension_score = 3.0  # Out of 5
     else:  # advanced
-        base_score = 4.0
+        base_stage_score = 2.5  # Out of 3
+        base_dimension_score = 4.0  # Out of 5
     
     # Adjust base score based on gradient
     if gradient == "low":
-        gradient_modifier = -0.5
+        gradient_modifier_stage = -0.3
+        gradient_modifier_dimension = -0.5
     elif gradient == "basic":
-        gradient_modifier = 0
+        gradient_modifier_stage = 0
+        gradient_modifier_dimension = 0
     else:  # high
-        gradient_modifier = 0.5
+        gradient_modifier_stage = 0.3
+        gradient_modifier_dimension = 0.5
     
     # Apply gradient modifier
-    adjusted_base = base_score + gradient_modifier
-    
-    # Add some randomness to scores
-    variation = random.uniform(-0.3, 0.3)
+    adjusted_stage_base = base_stage_score + gradient_modifier_stage
+    adjusted_dimension_base = base_dimension_score + gradient_modifier_dimension
     
     # Create stage scores (0-3 points per stage)
     stage_scores = {
-        'opener': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2)))),
-        'carrying_conversation': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2)))),
-        'linkedin_connection': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2)))),
-        'move_on': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2)))),
-        'farewell': min(3, max(0, round(adjusted_base * 0.6 + random.uniform(-0.2, 0.2))))
+        'opener': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2)))),
+        'carrying_conversation': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2)))),
+        'linkedin_connection': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2)))),
+        'move_on': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2)))),
+        'farewell': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2))))
     }
     
     # Calculate total score (0-15 points total)
@@ -534,9 +538,9 @@ def evaluate_conversation(conversation):
     
     # Create dimension scores (1-5 scale)
     dimension_scores = {
-        'critical_thinking': min(5.0, max(1.0, adjusted_base + variation)),
-        'communication': min(5.0, max(1.0, adjusted_base + random.uniform(-0.3, 0.3))),
-        'emotional_intelligence': min(5.0, max(1.0, adjusted_base + random.uniform(-0.4, 0.2)))
+        'critical_thinking': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.3, 0.3))),
+        'communication': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.3, 0.3))),
+        'emotional_intelligence': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.4, 0.2)))
     }
     
     # Generate feedback
