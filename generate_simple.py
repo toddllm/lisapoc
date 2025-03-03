@@ -535,6 +535,10 @@ def evaluate_conversation(conversation):
     remaining_points = target_total
     stages = ['opener', 'carrying_conversation', 'linkedin_connection', 'move_on', 'farewell']
     
+    # Ensure we have enough points to distribute (minimum 1 per stage)
+    if remaining_points < len(stages):
+        remaining_points = len(stages)  # Ensure at least 1 point per stage
+    
     # Assign scores to each stage
     for i, stage in enumerate(stages):
         # For the last stage, just assign remaining points
@@ -557,6 +561,13 @@ def evaluate_conversation(conversation):
     
     # Calculate total score (0-15 points total)
     total_score = sum(stage_scores.values())
+    
+    # Ensure total score matches target_total
+    if total_score != target_total:
+        # Adjust the last stage to make total match target
+        adjustment = target_total - total_score
+        stage_scores['farewell'] = min(3, max(1, stage_scores['farewell'] + adjustment))
+        total_score = sum(stage_scores.values())
     
     # Create dimension scores (1-5 scale)
     # Add some randomness but ensure they're appropriate for the skill level
