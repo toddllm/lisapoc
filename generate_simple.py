@@ -773,7 +773,10 @@ def evaluate_conversation(conversation):
     return {
         "stage_scores": stage_scores,
         "dimension_scores": dimension_scores,
-        "total_score": total_score
+        "total_score": total_score,
+        "strengths": [],  # Add empty strengths list
+        "areas_for_improvement": [],  # Add empty areas_for_improvement list
+        "actionable_suggestions": []  # Add empty actionable_suggestions list
     }
 
 def format_evaluation_for_output(evaluation: Dict[str, Any]) -> str:
