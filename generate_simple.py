@@ -504,20 +504,20 @@ def evaluate_conversation(conversation):
         base_dimension_score = 2.0  # Out of 5
     elif skill_level == "intermediate":
         base_stage_score = 2.0  # Out of 3
-        base_dimension_score = 3.0  # Out of 5
+        base_dimension_score = 3.5  # Out of 5
     else:  # advanced
         base_stage_score = 2.5  # Out of 3
-        base_dimension_score = 4.0  # Out of 5
+        base_dimension_score = 4.5  # Out of 5
     
     # Adjust base score based on gradient
     if gradient == "low":
-        gradient_modifier_stage = -0.3
+        gradient_modifier_stage = -0.5
         gradient_modifier_dimension = -0.5
     elif gradient == "basic":
         gradient_modifier_stage = 0
         gradient_modifier_dimension = 0
     else:  # high
-        gradient_modifier_stage = 0.3
+        gradient_modifier_stage = 0.5
         gradient_modifier_dimension = 0.5
     
     # Apply gradient modifier
@@ -538,10 +538,16 @@ def evaluate_conversation(conversation):
     total_score = sum(stage_scores.values())
     
     # Create dimension scores (1-5 scale)
+    # For intermediate and advanced, ensure higher dimension scores
+    if skill_level == "intermediate" or skill_level == "advanced":
+        min_dimension = 2.5 if skill_level == "intermediate" else 3.5
+    else:
+        min_dimension = 1.5
+    
     dimension_scores = {
-        'critical_thinking': min(5.0, max(1.5, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
-        'communication': min(5.0, max(1.5, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
-        'emotional_intelligence': min(5.0, max(1.5, adjusted_dimension_base + random.uniform(-0.5, 0.5)))
+        'critical_thinking': min(5.0, max(min_dimension, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
+        'communication': min(5.0, max(min_dimension, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
+        'emotional_intelligence': min(5.0, max(min_dimension, adjusted_dimension_base + random.uniform(-0.5, 0.5)))
     }
     
     # Generate feedback
