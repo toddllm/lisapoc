@@ -1,0 +1,39 @@
+{
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. How are you enjoying the event so far?",
+      "user_response": "Hi Jake! I'm doing well, thank you. My name is Alex. It's my first time at a networking event like this, so I'm just trying to get the hang of things."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Nice to meet you, Alex! Don't worry, everyone was new at some point. What brings you here today? Are you in tech as well?",
+      "user_response": "I'm actually just starting out in the tech world. I'm really interested in learning more about AI and how it's being used in the industry."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "That's great to hear! AI is such an exciting field with lots of opportunities. At TechCorp, I work on AI systems, mainly focusing on machine learning algorithms. If you have any questions or need guidance, feel free to ask.",
+      "user_response": "Thanks, Jake! I appreciate that. What would you recommend for someone just starting to learn about AI?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I would suggest starting with some online courses or tutorials that cover the basics of machine learning and data science. There are plenty of free resources out there. Also, working on small projects can be really helpful to solidify your understanding.",
+      "user_response": "That's really helpful advice. I'll definitely look into those resources. Thank you!"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I'm glad I could help. By the way, are you on LinkedIn? It might be great to connect there. I often share articles and resources about AI that you might find useful.",
+      "user_response": "Yes, I am on LinkedIn! I'd love to connect with you there."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Perfect, I'll look up your profile and send you a request. Well, I should probably make the rounds and meet a few more people. It was great chatting with you, Alex.",
+      "user_response": "Thank you, Jake. It was nice meeting you too. I really appreciate your insights."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Anytime! Enjoy the rest of the event and feel free to reach out if you have more questions. Take care!",
+      "user_response": "Will do, thanks again! Have a good one!"
+    }
+  ]
+}

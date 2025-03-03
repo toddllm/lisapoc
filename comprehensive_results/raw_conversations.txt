@@ -1,0 +1,1463 @@
+RAW CONVERSATION FILES
+=====================
+
+Generated on: 2025-03-03 01:10:42
+
+
+================================================================================
+FILE: advanced_basic_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:24:30.418034",
+    "conversation_id": "advanced_basic_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake, a Software Engineer at TechCorp. What brings you to this event today?",
+      "user_response": "Hello Jake, it's a pleasure to meet you. I'm here to explore emerging trends in AI and machine learning. I find it fascinating how these technologies are reshaping industries. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm here to connect with other professionals and learn about new developments in AI systems. I specialize in that area. How do you see AI influencing your field?",
+      "user_response": "AI is having a significant impact in my field, particularly in automating data analysis processes, which allows us to make more informed decisions faster. It's amazing how AI can transform raw data into actionable insights. How are you applying AI in your role at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "At TechCorp, we're leveraging AI to optimize supply chain efficiencies and enhance predictive analytics. It's quite rewarding to see real-time applications making a difference. Have you encountered any particular AI tools or platforms that stood out to you?",
+      "user_response": "Yes, actually. We've been experimenting with TensorFlow for deep learning projects, and it's been quite powerful for our image recognition tasks. It's incredible how customizable it is. Are there any specific tools you prefer for your projects?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Our team actually uses TensorFlow extensively as well. I'd love to continue this conversation and exchange insights. Would you like to connect on LinkedIn?",
+      "user_response": "Absolutely, Jake. That sounds like a great idea. I believe sharing our experiences could be mutually beneficial. Let me find you on LinkedIn so we can keep the dialogue going."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great! I'll look forward to our connection. I see someone over there I've been wanting to catch up with. Would you excuse me?",
+      "user_response": "Of course, Jake. It's been a pleasure chatting with you. Let's definitely keep in touch and perhaps collaborate on some ideas in the future."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "It's been great talking to you. I really enjoyed our conversation.",
+      "user_response": "Likewise, Jake. It was wonderful meeting you, and I appreciate the engaging discussion. Have a fantastic time at the rest of the event!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: advanced_basic_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:24:44.010817",
+    "conversation_id": "advanced_basic_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake, a Software Engineer at TechCorp. What brings you to this event today?",
+      "user_response": "Hi Jake, it's great to meet you. I'm here to explore the latest trends in AI and machine learning. I'm particularly interested in how different industries are adapting these technologies. How about you? What are you hoping to get out of the event?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm always eager to learn more about innovative applications of AI. At TechCorp, we're working on some exciting AI-driven projects. What about you? Are you involved in any AI-related work?",
+      "user_response": "Absolutely! I work with a team that's integrating AI to enhance decision-making processes in healthcare. It's fascinating how AI can predict patient outcomes and optimize treatment plans. I'd love to hear more about the projects you're involved in at TechCorp. How are you incorporating AI into your systems?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "That sounds like impactful work. At TechCorp, we're focusing on developing AI systems that improve user experiences, particularly in the realm of virtual assistants. It's all about making interactions more intuitive and responsive. How do you see AI evolving in healthcare over the next few years?",
+      "user_response": "I envision AI becoming a pivotal tool in personalized medicine, tailoring treatments to individual genetic profiles. Moreover, I think we'll see a lot more AI in managing large-scale healthcare data to improve predictive analytics. Your work on virtual assistants sounds intriguing\u2014how do you ensure they remain user-friendly and secure?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "We prioritize user testing and feedback to refine our systems continuously. I'd love to keep this conversation going and exchange more insights. Would you be interested in connecting on LinkedIn?",
+      "user_response": "Absolutely, Jake. I'd be delighted to connect on LinkedIn. I think there's a lot we can learn from each other, especially with the rapid advancements in our fields. Let me send you an invite so we can continue this exchange."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, I look forward to our connection. I see someone else I promised to catch up with. Would you excuse me?",
+      "user_response": "Of course, Jake. It was a pleasure talking with you. I'll be sure to keep an eye on TechCorp's upcoming projects. Let's definitely stay in touch."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thank you, I enjoyed our conversation. Have a great rest of the event!",
+      "user_response": "Likewise, Jake. Enjoy the event, and I look forward to our future interactions. Take care!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: advanced_basic_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:24:55.527035",
+    "conversation_id": "advanced_basic_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. It's great to see so many people here today!",
+      "user_response": "Hi Jake, I'm Alex. It's a fantastic turnout, isn't it? I'm always impressed by the energy at these events. What inspired you to attend today?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm here to meet some like-minded professionals and learn about the latest in AI systems. How about you?",
+      "user_response": "That sounds fascinating, Jake. I'm here to explore how different industries are integrating AI into their processes. I'd love to hear more about the kind of AI systems you specialize in."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I specialize in developing AI models for predictive analytics, particularly in healthcare. It's exciting to see how AI is transforming patient care.",
+      "user_response": "Absolutely, the potential for AI in healthcare is immense. How do you ensure that the AI models you develop are both effective and ethical in their application?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "We focus a lot on data privacy and bias reduction. It's crucial for models to be transparent and fair. Are you involved in AI projects as well?",
+      "user_response": "Yes, I'm working on a project that uses AI to optimize supply chain logistics. It's a different field, but the principles of transparency and ethical use certainly apply. Have you found any particular challenges in implementing AI solutions in healthcare?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "There are always challenges, especially around data integration. I'd love to continue this discussion and share more insights. Would you be interested in connecting on LinkedIn?",
+      "user_response": "I'd be delighted to connect, Jake. It seems like we have a lot to learn from each other, and I'd appreciate exchanging ideas and possibly collaborating in the future."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "I see a colleague from TechCorp who just arrived, and I want to catch up with them. Would you excuse me?",
+      "user_response": "Of course, Jake. It was wonderful chatting with you. Let's definitely keep in touch."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "It was great meeting you, Alex. Looking forward to our future conversations.",
+      "user_response": "Likewise, Jake. Take care and enjoy the rest of the event!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: advanced_high_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:25:58.870337",
+    "conversation_id": "advanced_high_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. It's a pleasure to meet you. What brings you to the event today?",
+      "user_response": "Hi Jake, I'm [Your Name]. It\u2019s great to meet you too. I'm here to explore the latest trends in AI and see how different companies are innovating in this space. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm a Software Engineer at TechCorp, specializing in AI systems. It's exciting to see how rapidly the field is evolving. What aspect of AI are you most interested in?",
+      "user_response": "That's fascinating, Jake. I\u2019m particularly interested in how AI is being used to enhance user experience and drive personalization. I read about TechCorp's work on adaptive learning algorithms\u2014could you tell me more about that?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Absolutely, our adaptive learning algorithms are designed to tailor content delivery based on user interactions, making each experience unique. What kind of industry applications are you seeing for personalization?",
+      "user_response": "I've seen a lot of potential in e-commerce, where AI can recommend products based on past behaviors, and in healthcare, where personalized treatment plans can be developed. It's exciting to think about the possibilities. How do you see AI evolving in the next few years?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Those are excellent examples! AI is certainly set to revolutionize those fields. Let's continue this conversation beyond today\u2014would you like to connect on LinkedIn?",
+      "user_response": "I\u2019d love to connect, Jake. Sharing insights and keeping up with each other's work would be very valuable. I'll send you a request after the event."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great! I see someone I should catch up with before the session starts. Would you excuse me?",
+      "user_response": "Of course, Jake. It\u2019s been wonderful discussing AI with you. I'll look forward to our LinkedIn connection."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "It was a pleasure meeting you. Enjoy the rest of the event!",
+      "user_response": "Thank you, Jake. I really enjoyed our conversation and am looking forward to collaborating in the future. Take care!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: advanced_high_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:26:11.210385",
+    "conversation_id": "advanced_high_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake, a Software Engineer at TechCorp. What brings you to this event today?",
+      "user_response": "Hi Jake, great to meet you! I'm here to explore the latest trends in AI and machine learning. I've always found these events to be a great way to connect with like-minded professionals and learn from leading experts in the field. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Absolutely, I totally agree. I'm here to network and learn as well. I'm focused on AI systems\u2014what's your area of expertise?",
+      "user_response": "My background is in data science, specifically predictive analytics. I find the intersection of AI and data science fascinating, especially how machine learning models can be optimized for better accuracy and efficiency. I'd love to hear about the AI projects you're currently working on at TechCorp."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "That sounds fascinating! At TechCorp, we're working on an AI-driven platform to enhance customer experience through real-time data analysis. It's challenging but rewarding. Have you encountered any exciting breakthroughs in your work recently?",
+      "user_response": "Yes, actually! Our team recently developed a model that significantly improves forecast accuracy by integrating time-series analysis with machine learning. It's been a game-changer in terms of providing more precise insights. I can imagine how real-time data analysis could transform customer interactions. Your work sounds really impactful!"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Wow, that's impressive! It sounds like we share a passion for pushing the boundaries of what's possible with AI. Why don't we connect on LinkedIn? I'd love to continue sharing insights and perhaps even collaborate in the future.",
+      "user_response": "I'd love that, Jake. A professional network is invaluable, especially when it's built on shared interests and goals. Let's definitely stay in touch on LinkedIn. I look forward to seeing how your projects evolve at TechCorp."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great! I see someone over there I promised to catch up with, but let's definitely keep in touch.",
+      "user_response": "Absolutely, Jake. I don't want to keep you from your other connections. It was fantastic chatting with you. Best of luck with your AI projects, and let's reconnect soon!"
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "It was a pleasure meeting you. Enjoy the rest of the event!",
+      "user_response": "Thank you, Jake. It was a delight speaking with you as well. Enjoy the event and I'm excited for our future conversations!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: advanced_high_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:26:23.613353",
+    "conversation_id": "advanced_high_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. What brings you to this event today?",
+      "user_response": "Hello Jake! I'm delighted to meet you. I'm here to explore the latest trends in AI and to connect with innovative professionals like yourself. How are you finding the event so far?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm really impressed with the diversity of speakers here. I specialize in AI systems. How about you? What do you do?",
+      "user_response": "That sounds fascinating, Jake! I work in product management for a tech startup, focusing on integrating AI solutions into consumer products. I'm particularly interested in how AI can enhance user experience. How did you get into AI development?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I've always been fascinated by the potential of AI to solve complex problems. What about you? What sparked your interest in product management and AI?",
+      "user_response": "For me, it was the realization that AI isn't just about technology\u2014it's about transforming lives. I love bridging the gap between technology and user needs. Speaking of which, have you seen any recent AI advancements that you think will dramatically change the industry?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, the rapid advancements in natural language processing are particularly exciting. Speaking of keeping up with trends, why don't we connect on LinkedIn? I'd love to exchange insights and stay updated on your work.",
+      "user_response": "That would be fantastic, Jake. It's always great to connect with someone who shares a passion for AI innovation. I'll send you a request right after this!"
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "I see someone over there I've been wanting to talk to. Would you excuse me?",
+      "user_response": "Of course, Jake. It was a pleasure to chat with you. Enjoy the rest of the event and feel free to reach out anytime."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "It was great talking to you. I'm looking forward to our future conversations.",
+      "user_response": "Likewise, Jake! I truly enjoyed our conversation and am looking forward to seeing what the future holds for AI. Have a wonderful evening!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: advanced_low_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:25:12.312907",
+    "conversation_id": "advanced_low_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer at TechCorp. How's your day going at the event so far?",
+      "user_response": "Hi Jake, I'm Alex. It's been fantastic meeting so many like-minded professionals. I'm particularly interested in the AI systems you mentioned. What aspect of AI do you focus on at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I specialize in developing machine learning algorithms for natural language processing. It's fascinating how much we can teach machines to understand and generate human language. What about you, Alex? What field are you in?",
+      "user_response": "That sounds incredibly impactful. I'm in the renewable energy sector, focusing on integrating AI to optimize energy consumption and distribution. I'm curious, how do you see NLP evolving in the next few years, especially in terms of cross-industry applications?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "NLP is rapidly advancing, and I believe its integration into sectors like healthcare and finance will revolutionize how data is analyzed and decisions are made. It's exciting to think about the potential for AI to drive efficiency in renewable energy, too. How did you get started in that field?",
+      "user_response": "I've always been passionate about sustainability and technology. I started in environmental science and gradually moved into tech as I saw the potential for AI to make substantial environmental impacts. It's fascinating how our fields can intersect. How do you stay on top of the latest AI trends?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I make it a point to attend conferences and engage with AI communities online. Speaking of which, I'd love to continue this conversation and exchange insights. Would you be open to connecting on LinkedIn?",
+      "user_response": "Absolutely, Jake. I'd be delighted to connect. It would be great to have someone with your expertise in my network. Sharing knowledge across our industries could lead to some innovative collaborations."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "I'm glad we could connect, Alex. I noticed someone I promised to catch up with. Would you excuse me?",
+      "user_response": "Of course, Jake. I appreciate the conversation and look forward to staying in touch. Enjoy the rest of the event!"
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks, Alex. It's been a pleasure talking with you. Take care!",
+      "user_response": "Likewise, Jake. Have a great day and let's keep the conversation going!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: advanced_low_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:25:27.972931",
+    "conversation_id": "advanced_low_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer specializing in AI systems at TechCorp. How about you? What brings you to the event today?",
+      "user_response": "Hi Jake, nice to meet you. I'm Alex, and I work in business development for a technology startup focusing on scalable AI solutions. I'm here to explore potential collaborations and learn about the latest industry trends. What kind of AI systems are you working on at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm currently working on developing more intuitive AI-driven customer support systems. What about your startup? What makes your AI solutions stand out?",
+      "user_response": "That's fascinating, Jake. Our startup specializes in creating AI models that adapt to user behavior in real-time, which we believe can revolutionize personalized marketing strategies. It's exciting to see how AI is pushing boundaries in different sectors. How do you see AI evolving in customer support over the next few years?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I think AI will become even more predictive and proactive, enhancing user experience by anticipating needs before they arise. How do you envision the role of business development evolving alongside these AI advancements?",
+      "user_response": "I completely agree. As AI systems become more sophisticated, business development will likely shift towards forming strategic partnerships that leverage these technologies. It's about building ecosystems rather than just client lists. Have you noticed any emerging trends that are shaping your work at TechCorp?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely. The integration of AI with IoT devices is gaining traction. We should definitely keep each other updated on these trends. Would you be open to connecting on LinkedIn to exchange more insights?",
+      "user_response": "I'd love that, Jake. Staying connected with industry peers is invaluable, especially as these technologies evolve so rapidly. I'll send you a request so we can continue this conversation online."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sounds great! I see someone from our team that I need to catch up with. Would you excuse me for a moment?",
+      "user_response": "Of course, Jake. It was a pleasure speaking with you. I'll look forward to our continued conversation on LinkedIn."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Likewise, Alex. It's been great talking to you. Enjoy the rest of the event!",
+      "user_response": "Thank you, Jake. I really enjoyed our conversation. Have a great time at the event!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: advanced_low_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "advanced_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:25:45.706389",
+    "conversation_id": "advanced_low_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. What brings you to this event today?",
+      "user_response": "Hi Jake, great to meet you! I'm here to explore the latest trends in AI and connect with professionals who are pushing the boundaries in technology. How about you? What are you hoping to get out of today's event?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm really interested in the developments in AI systems and looking to share insights with others. What is your area of focus in the tech world?",
+      "user_response": "I focus on leveraging AI to enhance user experience in digital platforms. It's fascinating how AI can be used to create more intuitive interfaces. How do you see AI evolving in terms of user interaction in your work at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "At TechCorp, we are exploring ways AI can be more adaptive to user needs in real-time, which I believe will be transformative. Have you come across any challenges in implementing AI solutions in user interfaces?",
+      "user_response": "Absolutely, one of the biggest challenges is ensuring that AI-driven interfaces remain user-friendly while being highly functional. It's a delicate balance. How do you address user feedback in your AI systems development?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "We take user feedback seriously at TechCorp and incorporate it into our iterative design process. I'd love to hear more about your work and experiences. Would you be interested in connecting on LinkedIn to share insights and perhaps collaborate in the future?",
+      "user_response": "I'd be delighted to connect, Jake. Sharing ideas and learning from each other can lead to some exciting collaborations. Let me find your profile and send you a request."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Thank you! I see someone over there I've been wanting to talk to. It was wonderful learning about your perspective on AI.",
+      "user_response": "Likewise, Jake. Enjoy the rest of the event, and I'm looking forward to continuing our conversation on LinkedIn."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "It was a pleasure meeting you. Have a great time at the event!",
+      "user_response": "The pleasure was mine, Jake. Have a productive day, and I'll see you online soon!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_basic_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:38.994513",
+    "conversation_id": "intermediate_basic_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. How's the event going for you so far?",
+      "user_response": "Hi Jake! I'm Alex. The event's been pretty good. I've met a few interesting people. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great! I'm really interested in the AI systems here. What do you do, Alex?",
+      "user_response": "I work in product management at a startup. We're focusing on expanding our app's features right now. AI is definitely something we're looking into. How long have you been working with AI?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I've been in AI for about five years now. It's an exciting field, always evolving. Are you on LinkedIn? We should connect there.",
+      "user_response": "Yes, I'm on LinkedIn. I'd love to connect. It's always good to have contacts in AI, especially with how fast it's growing."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Absolutely, it's a great way to keep in touch. I should probably mingle a bit more. It's been great chatting with you, Alex.",
+      "user_response": "Yeah, I should do the same. There are a few more people I'd like to meet. It was nice talking to you, Jake."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting, Alex. Have a good rest of the event!",
+      "user_response": "Thanks, you too, Jake! Looking forward to connecting on LinkedIn."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_basic_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:48.577826",
+    "conversation_id": "intermediate_basic_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. How are you finding the event so far?",
+      "user_response": "Hi Jake, I'm doing well, thanks. The event's been pretty interesting. Lots of different people and topics. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great! I've had some fascinating discussions about AI advancements. What brings you here today?",
+      "user_response": "I'm here to learn more about tech trends and meet people in the industry. AI is really exciting these days. How long have you been working with AI?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I've been with TechCorp for about five years now, focusing on AI systems. What's your area of interest?",
+      "user_response": "That sounds impressive. I'm currently exploring data analytics, but I'm quite curious about how AI can enhance data processing. Have you seen any interesting applications lately?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI is transforming data processing in many ways. By the way, are you on LinkedIn? It'd be great to connect and share some insights.",
+      "user_response": "Yes, I'm on LinkedIn. Connecting sounds good. I like keeping up with industry updates there."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, I'll send you a request. I should probably mingle a bit more. It's been nice chatting!",
+      "user_response": "Sure, I understand. It's been nice talking to you too. Enjoy the rest of the event."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for the conversation. Have a good rest of the event!",
+      "user_response": "Thanks, Jake. You too. Take care!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_basic_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:00.222773",
+    "conversation_id": "intermediate_basic_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I work at TechCorp as a Software Engineer. How are you finding the event so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm enjoying it. There are some interesting talks. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great so far! I particularly liked the session on AI advancements. What do you do?",
+      "user_response": "I'm in marketing, but I'm really interested in technology. AI seems like it has a lot of potential, right?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Absolutely, AI is transforming many industries. It's fascinating to see the impact. How long have you been in marketing?",
+      "user_response": "About three years now. I focus on digital strategies. Do you find AI influencing your work at TechCorp?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Definitely, AI plays a big role in what we do. Are you on LinkedIn? Maybe we could connect there.",
+      "user_response": "Yes, I am. I'd love to connect. It's always good to expand the network with folks in tech."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, I'll look you up. It's been nice chatting. I should probably mingle a bit more.",
+      "user_response": "Sure, it was nice meeting you too, Jake. Enjoy the rest of the event."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting. Have a good rest of the event.",
+      "user_response": "You too, Jake. Take care!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_high_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:51.718255",
+    "conversation_id": "intermediate_high_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. How are you finding the event so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm enjoying it! It's a good chance to meet people from different fields. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm having a great time too. It's always interesting to hear different perspectives in tech. What do you do?",
+      "user_response": "I'm in digital marketing, focusing on tech startups. It's fascinating to see how AI is impacting marketing strategies. How do you find working in AI?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "AI is an exciting field, especially with its rapid evolution. At TechCorp, I get to work on innovative projects that really push boundaries. Have you had any interesting experiences with AI in your field?",
+      "user_response": "Yeah, we've started using AI tools for data analysis in campaigns. It's really improved our efficiency. I'd love to learn more about how AI systems are developed. Do you work on a specific part of the AI process?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I mainly focus on machine learning algorithms. It's a lot of fun to see them come to life. Are you on LinkedIn? Maybe we can connect and share more insights.",
+      "user_response": "Absolutely, I'm on LinkedIn. It would be great to stay in touch and maybe exchange some ideas about AI and marketing."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sounds good! I should probably mingle a bit more and see who else is here. It's been great talking to you.",
+      "user_response": "Yes, definitely. I should do the same and meet a few more people. Thanks for the chat, Jake."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting. Have a great rest of the event!",
+      "user_response": "Thank you, Jake. Enjoy the event too!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_high_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:24:04.441242",
+    "conversation_id": "intermediate_high_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. How are you finding the event?",
+      "user_response": "Hi Jake, nice to meet you! I'm enjoying it so far. How about yourself?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It\u2019s been great. I\u2019ve met a lot of interesting people. So, what brings you to this event?",
+      "user_response": "I'm here to learn more about the latest trends in AI. I work in digital marketing, and AI is becoming quite relevant in our strategies. What kind of AI systems do you work on?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I specialize in developing AI systems for predictive analytics. It's fascinating how AI is impacting different fields, including marketing. How long have you been in digital marketing?",
+      "user_response": "I've been in digital marketing for about three years now. It's always changing, which keeps things exciting. Do you see any recent AI trends that could influence marketing strategies?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI-driven personalization is a big trend. Are you on LinkedIn? I\u2019d love to connect and share some articles on the topic.",
+      "user_response": "Yes, I'm on LinkedIn. I'd be happy to connect with you there and learn more about those articles."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, I'll send you a request. I should probably mingle a bit more. It was nice chatting with you.",
+      "user_response": "Sure thing, it was great meeting you too, Jake."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting. Have a good rest of the event!",
+      "user_response": "Thanks, you too! Enjoy the rest of the event."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_high_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:24:16.523533",
+    "conversation_id": "intermediate_high_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! My name is Jake, I'm a Software Engineer at TechCorp. How's your evening going?",
+      "user_response": "Hey Jake! I'm having a pretty good time, thanks. I'm Alex. How's the event working out for you so far?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great. I've met some interesting people. So, what brings you to this event?",
+      "user_response": "I'm here to meet people in the tech industry. I've been in marketing for a few years now and I'm interested in how AI is changing the landscape. What kind of projects are you working on at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Oh, that's fascinating! I'm currently working on AI systems for predictive analytics. How about you, have you worked on any AI-related marketing campaigns?",
+      "user_response": "Not directly, but we use AI tools for data analysis. It's really interesting to see how it's evolving. Do you see AI impacting your work a lot in the next few years?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI is definitely a big part of the future. Are you on LinkedIn? It would be great to connect and maybe share some insights down the line.",
+      "user_response": "Yes, I am on LinkedIn. Let's connect! It's always nice to have someone from the tech side in my network."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great! I should probably mingle a bit more, but it was really nice talking to you.",
+      "user_response": "Same here. I should catch up with a few more people too."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting, Alex. Have a good rest of the event!",
+      "user_response": "Thanks, Jake. You too! Take care!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_low_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:09.520452",
+    "conversation_id": "intermediate_low_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake, a Software Engineer at TechCorp. How are you enjoying the event so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm finding the event pretty informative. How about you? Have you been to many of these?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Yeah, I've been to a few. It's always great to see the latest trends in AI. What brings you to this event?",
+      "user_response": "I'm really interested in AI as well, so I came to learn more about it and meet people in the industry. Are you working on any exciting AI projects right now?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, I'm currently involved in developing AI systems for healthcare at TechCorp. It's a fascinating area. Are you on LinkedIn? Maybe we can connect there.",
+      "user_response": "Yes, I am on LinkedIn. I'd love to connect with you and learn more about your projects. I'll send you a request if that's okay."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "That sounds great. I should probably mingle a bit more, but it was nice chatting. Anything else you'd like to know before I move on?",
+      "user_response": "I think that's it for now. It was great to hear about your work. I'll definitely follow up on LinkedIn."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for the conversation. Enjoy the rest of the event!",
+      "user_response": "Thanks, Jake. You too. Have a good one!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_low_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:25.386752",
+    "conversation_id": "intermediate_low_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer at TechCorp. How's the event going for you so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm Alex. The event's been pretty good, lots of interesting people here. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Yeah, it's been great. I've been learning a lot from different folks. So, what line of work are you in?",
+      "user_response": "I'm in marketing for a mid-sized firm. It's always interesting to see how tech and marketing can intersect. How long have you been at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I've been with TechCorp for about five years now, mostly working on AI systems. It's a fascinating field. What kind of marketing strategies do you find most effective in your line of work?",
+      "user_response": "Well, we focus a lot on digital marketing and content creation. It's crucial to stay updated with trends. AI, like what you do, is definitely something we\u2019re keeping an eye on. Do you see a lot of AI in marketing now?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI is becoming integral in marketing analytics and personalization. Are you on LinkedIn? It would be great to connect there.",
+      "user_response": "Yes, I am. Let's definitely connect. It's always good to expand the network with people from different fields."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "I should probably mingle a bit more. It's been great talking with you, Alex.",
+      "user_response": "Yeah, same here. I think I need to catch up with a colleague, but let's stay in touch."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting, Alex. Have a good rest of the event.",
+      "user_response": "Thank you, Jake. You too. Enjoy the event!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: intermediate_low_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "intermediate_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:38.109747",
+    "conversation_id": "intermediate_low_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake, a Software Engineer at TechCorp. How's the event going for you so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm Alex. The event's been pretty good. Lots of interesting people here. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great, meeting a lot of talented folks. So, what do you do, Alex?",
+      "user_response": "I'm in marketing at a tech startup. We focus on SaaS products. It's always exciting to hear about new AI systems. How long have you been with TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I've been with TechCorp for about five years now. It's been a fantastic journey, especially working on AI projects. What do you enjoy most about your role in marketing?",
+      "user_response": "I really like the creative side of it. Coming up with campaigns that resonate with people is rewarding. How do you find working in AI? It seems like it's constantly evolving."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI is always changing, which keeps things exciting. Are you on LinkedIn? It would be great to connect and share insights.",
+      "user_response": "Yes, I'm on LinkedIn. Let me find you on there. It's always good to expand my network with professionals like you."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sounds good. I should probably mingle a bit more and meet a few other people. It was great chatting with you, Alex.",
+      "user_response": "Definitely, I should do the same. Thanks for the conversation, Jake."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Have a good rest of the event, Alex. Looking forward to connecting on LinkedIn.",
+      "user_response": "Thanks, Jake. Enjoy the rest of the event too. See you on LinkedIn."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_basic_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:21:17.410714",
+    "conversation_id": "novice_basic_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer at TechCorp. How's it going?",
+      "user_response": "Hey. Um, it's okay, I guess. I don't really like these events."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I hear you. Sometimes they can be a bit overwhelming. So, what brings you here today?",
+      "user_response": "Oh. Well, I thought I should try to meet people. Anyway, I just graduated and I'm looking for a job."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "That's great! Congrats on graduating. What field are you interested in?",
+      "user_response": "Uh, something with computers. I don't know. Maybe programming?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "If you're interested in programming, there are lots of resources and communities that can help. By the way, are you on LinkedIn?",
+      "user_response": "Oh, yeah. I need more connections on LinkedIn. You should add me."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sure, I'd be happy to connect. It's always good to expand networks. So, are you enjoying any of the talks here?",
+      "user_response": "Uh, not really. I'm bored. I'm going to talk to someone else."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, well, it was nice meeting you. Take care and good luck with the job hunt!",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_basic_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:21:25.809242",
+    "conversation_id": "novice_basic_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake. I'm a Software Engineer at TechCorp. How about you?",
+      "user_response": "Hey. I'm just here to see what this is about."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's great to meet new people at these events. Have you been to one of these before?",
+      "user_response": "Uh, no. First time. I just started in IT, so, yeah."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Welcome to the field! What kind of projects are you interested in working on?",
+      "user_response": "I don't know. I just need a job that pays well."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I understand. If you want, we could connect on LinkedIn and I might be able to give you some pointers.",
+      "user_response": "Sure. I need more connections on LinkedIn anyway."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sounds good. I'll send you a request later. Is there anything else you'd like to know?",
+      "user_response": "Nah, I'm bored. I'm going to talk to someone else."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, well, it was nice meeting you. Take care!",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_basic_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:21:35.487084",
+    "conversation_id": "novice_basic_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer at TechCorp. How about you?",
+      "user_response": "Uh, hey. I'm Alex."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Nice to meet you, Alex. I'm really into AI systems. What brings you here?",
+      "user_response": "Oh, I just came for the snacks. I guess I should talk to people, too."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Well, events like these are great for meeting people. Are you in tech as well?",
+      "user_response": "Sure. I mean, I'm trying to get a tech job. It's hard."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I can relate to that. Would you like to connect on LinkedIn? I might be able to help with some tips.",
+      "user_response": "Uh, yeah. I need more connections on LinkedIn. What's your name again?"
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "It's Jake. Feel free to add me anytime. So, have you been finding any interesting opportunities lately?",
+      "user_response": "Um, not really. Anyway, I'm going to get more food."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, enjoy the event, Alex. It was nice meeting you.",
+      "user_response": "Yeah, bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_high_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:10.494468",
+    "conversation_id": "novice_high_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, I work as a Software Engineer at TechCorp. How are you enjoying the event so far?",
+      "user_response": "Hey. It's okay, I guess. I don't really like these things."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I understand, they can be a bit overwhelming. What brings you here today?",
+      "user_response": "Oh. I just need to meet people for my job. What do you do?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm a Software Engineer, focusing on AI systems. I love working on innovative projects. Do you work in technology too?",
+      "user_response": "Cool. I'm in marketing. But anyway, let me tell you about my job..."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I'm always interested in connecting with people from different fields. Are you on LinkedIn?",
+      "user_response": "Yeah. Give me your LinkedIn. I need more connections."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sure, here it is. It was nice talking to you about your work in marketing.",
+      "user_response": "I'm bored. I'm going to talk to someone else."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, take care and enjoy the rest of the event!",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_high_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:20.352628",
+    "conversation_id": "novice_high_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake. I work as a Software Engineer at TechCorp. Nice to meet you!",
+      "user_response": "Hey. I'm not really into these events."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I understand they can be a bit overwhelming. So, what brings you here today?",
+      "user_response": "Uh, I guess I need to find a job. That's it."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Job hunting can be tough. What kind of role are you looking for?",
+      "user_response": "Whatever comes up, really. Anyway, I used to work in retail."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "That's interesting. Retail can teach you a lot about customer interactions. Are you planning to switch industries?",
+      "user_response": "I don't know, maybe. I just want to earn more money."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I see. Well, if you're interested in tech, there are a lot of different paths you could explore. Let's connect on LinkedIn if you'd like.",
+      "user_response": "Sure. I need more connections on LinkedIn."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, feel free to reach out if you have any questions. It was nice chatting with you.",
+      "user_response": "Gotta go."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, take care. Good luck with your job search!",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_high_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:29.272717",
+    "conversation_id": "novice_high_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake. I'm a Software Engineer at TechCorp. How are you enjoying the event?",
+      "user_response": "Um, it's okay. I don't really like these things."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I understand. They can be overwhelming. So, what brings you here today?",
+      "user_response": "Oh, I just want to learn about AI. I don't know much."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "That's great! AI is a fascinating field. I've been working on AI systems for about 5 years. Do you have any specific interests in AI?",
+      "user_response": "Uh, not really. I guess whatever helps me get a job."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Networking is a great way to explore career opportunities. Are you on LinkedIn?",
+      "user_response": "Yeah, give me your LinkedIn. I need more connections."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sure, I'll send you a request. If you have any questions about AI, feel free to ask. It's always nice to share knowledge.",
+      "user_response": "Okay, whatever. I see someone else I should talk to."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, it was nice meeting you. Take care!",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_low_1.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:21:44.040781",
+    "conversation_id": "novice_low_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. How are you enjoying the event?",
+      "user_response": "Hey. It's okay, I guess."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Great to hear! So, I'm curious, what brings you to this networking event?",
+      "user_response": "Uh, just trying to find a job. What do you do?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I specialize in AI systems. It's really exciting to see how AI can transform industries. What field are you interested in?",
+      "user_response": "Oh. I like computers. Anyway, let me tell you about my resume..."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I'd love to hear more about your background. Perhaps we can connect on LinkedIn?",
+      "user_response": "Yeah, whatever. Give me your LinkedIn."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sure, here's my profile. Feel free to reach out anytime if you have questions about AI or the tech industry.",
+      "user_response": "I'm bored. I'm going to talk to someone else."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, it was nice meeting you. Take care!",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_low_2.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:21:54.418878",
+    "conversation_id": "novice_low_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake. I'm a Software Engineer at TechCorp specializing in AI systems. How are you finding the event so far?",
+      "user_response": "Hey. It's okay, I guess. I don't really like these things."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I understand, they can be a bit overwhelming. What kind of work are you involved in?",
+      "user_response": "Uh, I just graduated. I'm looking for a job now. Anyway, I like gaming."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "That's interesting! Gaming can be quite related to software development. Are you looking to get into game development?",
+      "user_response": "Maybe. I just want something that pays well."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I see. If you're interested, feel free to connect with me on LinkedIn. I'd be happy to share some advice or contacts that might help.",
+      "user_response": "Uh, sure. I need more connections on LinkedIn anyway."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Alright, well if you have any questions about the industry or need some guidance, feel free to reach out anytime.",
+      "user_response": "Okay. I see someone I know. Gotta go."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Nice meeting you! Take care.",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+
+
+================================================================================
+FILE: novice_low_3.json
+================================================================================
+
+{
+  "metadata": {
+    "skill_level": "novice_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:02.500753",
+    "conversation_id": "novice_low_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake, a Software Engineer at TechCorp. How are you doing?",
+      "user_response": "Hey. I'm fine, I guess."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Great to hear! I specialize in AI systems. What brings you to this event?",
+      "user_response": "Oh. I'm just here. I don't really know much about AI."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "No worries, it's always good to explore new fields. Are you interested in tech?",
+      "user_response": "Uh, not really. I wanted to see if there are any cool jobs."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I see. Well, if you're looking into tech fields, it might be useful to connect on LinkedIn. Would you like to exchange profiles?",
+      "user_response": "Yeah, whatever. Give me your LinkedIn."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sure thing! Let me send you the link. Is there anything else you'd like to know about the tech industry?",
+      "user_response": "Nah, I'm bored. I'm going to talk to someone else."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, no problem. It was nice meeting you.",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}
+

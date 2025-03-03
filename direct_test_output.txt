@@ -1,0 +1,289 @@
+Starting direct test...
+
+================================================================================
+RUNNING DIRECT TEST WITH ACTUAL API CALLS
+================================================================================
+API Key found: sk-pr...YEcA
+
+Testing 3 skill levels: ['novice', 'intermediate', 'advanced']
+
+Initializing conversation generator and evaluator...
+
+Generator and evaluator initialized:
+  Generator: ConversationGenerator
+  Evaluator: ConversationEvaluator
+
+--------------------------------------------------------------------------------
+PROCESSING 1/3: NOVICE (gradient: 0.0)
+--------------------------------------------------------------------------------
+
+[1/2] Generating conversation for novice skill level...
+      Making API call to OpenAI (this may take 15-30 seconds)...
+
+      API Request Details:
+      - Model: gpt-4o
+      - Persona: jake
+      - Skill Level: novice
+
+      Conversation generated in 20.25 seconds
+      Conversation has 5 exchanges
+
+      GENERATED CONVERSATION (5 exchanges):
+
+      Exchange 1 - Stage: OPENER
+      AI: Hi there! I'm Jake, a Software Engineer at TechCorp. How are you enjoying the event so far?
+      User: Hey. It's okay, I guess. Nice weather, huh?
+
+      Exchange 2 - Stage: CARRY
+      AI: Yeah, it is nice out! So, what brings you to this event? Are you in tech as well?
+      User: Oh. Not really. I'm just starting out. Anyway, let me tell you about myself... I like gaming.
+
+      Exchange 3 - Stage: LINKEDIN
+      AI: That's great! Gaming is such a fascinating industry. If you’re interested in tech, feel free to connect with me on LinkedIn. It's always good to expand networks.
+      User: Give me your LinkedIn. I need more connections on LinkedIn.
+
+      Exchange 4 - Stage: MOVEON
+      AI: Absolutely, here's my profile. It was nice meeting you, and I hope you enjoy the rest of the event.
+      User: Gotta go.
+
+      Exchange 5 - Stage: FAREWELL
+      AI: Take care, enjoy the event!
+      User: Bye.
+
+[2/2] Evaluating conversation...
+      This requires 5 API calls to OpenAI (one per exchange)...
+
+      Evaluation completed in 30.80 seconds
+
+      EVALUATION RESULTS:
+      - Total Score: 0
+      - Badge Level: Bronze
+
+      Skill Scores:
+      - Critical Thinking: 0.0
+      - Communication: 0.0
+      - Emotional Intelligence: 0.0
+
+      Stage Scores:
+      - OPENER: 0 - The response is poor and demonstrates ineffective networking skills. It lacks engagement and relevance to the networking context.
+        Improvement: Start with a more engaging question or comment that relates to the event or the other person, such as asking about their reason for attending or their thoughts on the event.
+      - CARRY: 0 - The response is poor and demonstrates ineffective networking skills. It lacks engagement with the other person and shifts the focus abruptly to oneself without establishing a connection.
+        Improvement: To improve, the responder should ask questions about the other person's interests or experiences to build a connection. They should also find a way to relate their own interests to the conversation context.
+      - LINKEDIN: 0 - The response is direct and transactional, lacking politeness and consideration for the other person's willingness to connect.
+        Improvement: Try to make the request more polite and engaging. For example, 'I'd love to connect on LinkedIn to share insights and stay in touch. Would you be open to connecting?'
+      - MOVEON: 0 - The response 'Gotta go.' is abrupt and lacks the politeness and tact needed in a networking context. It does not demonstrate an understanding of the other person's engagement level or provide a smooth transition to end the conversation.
+        Improvement: Consider using a more polite and engaging way to exit the conversation, such as expressing a desire to connect with others or thanking the person for their time.
+      - FAREWELL: 0 - The response 'Bye.' is very basic and lacks engagement. It does not demonstrate effective networking skills as it is abrupt and does not leave a positive impression.
+        Improvement: Consider using a more engaging and polite farewell such as 'It was nice meeting you' or 'Great talking to you'. This would help in leaving a positive impression and potentially opening the door for future interactions.
+
+Results saved to direct_test_results/conversation_novice_0.0.json
+Badge level: Bronze
+Total score: 0
+
+Skill scores:
+  Critical Thinking: 0.0
+  Communication: 0.0
+  Emotional Intelligence: 0.0
+
+--------------------------------------------------------------------------------
+PROCESSING 2/3: INTERMEDIATE (gradient: 0.0)
+--------------------------------------------------------------------------------
+
+[1/2] Generating conversation for intermediate skill level...
+      Making API call to OpenAI (this may take 15-30 seconds)...
+
+      API Request Details:
+      - Model: gpt-4o
+      - Persona: jake
+      - Skill Level: intermediate
+
+      Conversation generated in 9.59 seconds
+      Conversation has 5 exchanges
+
+      GENERATED CONVERSATION (5 exchanges):
+
+      Exchange 1 - Stage: OPENER
+      AI: Hi there! I'm Jake, a Software Engineer at TechCorp. What brings you to this event?
+      User: Hi Jake! I'm here to learn more about the tech industry and meet new people. How's the event going for you so far?
+
+      Exchange 2 - Stage: CARRY
+      AI: It's been great, lots of interesting discussions. I specialize in AI systems. What about you? What do you do?
+      User: I work in digital marketing, but I'm really interested in how AI is changing the field. How long have you been working with AI?
+
+      Exchange 3 - Stage: LINKEDIN
+      AI: I've been in AI for about 5 years now. Are you on LinkedIn? We could connect and share more insights.
+      User: Yes, I am! I would love to connect and learn more about your work at TechCorp.
+
+      Exchange 4 - Stage: MOVEON
+      AI: Great! I'll send you a request. I should probably mingle a bit more and catch up with some colleagues.
+      User: That sounds good. I think I need to say hello to a few other people too.
+
+      Exchange 5 - Stage: FAREWELL
+      AI: Thanks for chatting, and I look forward to connecting on LinkedIn. Have a good rest of the event!
+      User: Thank you, Jake. It was nice meeting you. Enjoy the rest of the event!
+
+[2/2] Evaluating conversation...
+      This requires 5 API calls to OpenAI (one per exchange)...
+
+      Evaluation completed in 28.52 seconds
+
+      EVALUATION RESULTS:
+      - Total Score: 14
+      - Badge Level: Bronze
+
+      Skill Scores:
+      - Critical Thinking: 4.6
+      - Communication: 5.2
+      - Emotional Intelligence: 4.2
+
+      Stage Scores:
+      - OPENER: 3 - This is an optimal response that demonstrates excellent networking skills. It clearly states the speaker's purpose for attending, invites the other person to share their experience, and sets a positive tone for the conversation.
+        Improvement: To enhance this response, consider adding a specific question related to the tech industry to further engage Jake and show a deeper interest in his perspective.
+      - CARRY: 3 - This is an optimal response that demonstrates excellent networking skills. The speaker shares their own interest in AI, which is relevant to their field, and asks a question that invites the other person to share their experience, keeping the conversation engaging and focused.
+        Improvement: To further enhance the conversation, the speaker could follow up with a specific question about the other person's experiences or insights in AI, which could deepen the discussion.
+      - LINKEDIN: 3 - This response is optimal as it effectively expresses enthusiasm for connecting on LinkedIn and shows genuine interest in the other person's work. It is polite, engaging, and makes the ask feel natural.
+        Improvement: Continue to maintain this level of engagement and interest in future networking interactions.
+      - MOVEON: 2 - The response is polite and effectively communicates the intention to move on, but it could be more personalized or engaging.
+        Improvement: Consider adding a specific reason for moving on or expressing interest in reconnecting later to make the transition smoother.
+      - FAREWELL: 3 - This is an optimal response that demonstrates excellent networking skills. It expresses gratitude, acknowledges the person's name, and wishes them well, which is polite and engaging.
+        Improvement: No significant improvements needed. Consider following up with a specific action, like suggesting a LinkedIn connection, if appropriate.
+
+Results saved to direct_test_results/conversation_intermediate_0.0.json
+Badge level: Bronze
+Total score: 14
+
+Skill scores:
+  Critical Thinking: 4.6
+  Communication: 5.2
+  Emotional Intelligence: 4.2
+
+--------------------------------------------------------------------------------
+PROCESSING 3/3: ADVANCED (gradient: 0.0)
+--------------------------------------------------------------------------------
+
+[1/2] Generating conversation for advanced skill level...
+      Making API call to OpenAI (this may take 15-30 seconds)...
+
+      API Request Details:
+      - Model: gpt-4o
+      - Persona: jake
+      - Skill Level: advanced
+
+      Conversation generated in 15.80 seconds
+      Conversation has 6 exchanges
+
+      GENERATED CONVERSATION (6 exchanges):
+
+      Exchange 1 - Stage: OPENER
+      AI: Hi there, I'm Jake. What brings you here today?
+      User: Hi Jake, I'm here to meet like-minded professionals and learn about the latest trends in AI. How about you?
+
+      Exchange 2 - Stage: CARRY
+      AI: I'm a Software Engineer at TechCorp, specializing in AI systems. What do you do?
+      User: I work in business development for a tech startup. We've been exploring AI solutions to enhance our product offerings. What got you interested in AI?
+
+      Exchange 3 - Stage: CARRY
+      AI: I've always been fascinated by the potential of AI to solve complex problems and improve efficiency. Tell me more about your startup's AI projects.
+      User: We're focusing on integrating AI to provide better customer insights and automate some of our processes. It's an exciting area to explore. How do you see AI evolving in the next few years?
+
+      Exchange 4 - Stage: LINKEDIN
+      AI: I think AI will become even more integrated into everyday tools and services, making them smarter. Why don't we connect on LinkedIn to keep in touch and exchange more insights?
+      User: That sounds great, Jake. I'd love to connect and keep the conversation going. Here's my LinkedIn profile.
+
+      Exchange 5 - Stage: MOVEON
+      AI: Thank you! I see someone over there I’ve been wanting to talk to.
+      User: Of course, Jake. It was great chatting with you. Let's definitely stay in touch.
+
+      Exchange 6 - Stage: FAREWELL
+      AI: It's been great talking to you.
+      User: Likewise, Jake. Enjoy the rest of the event!
+
+[2/2] Evaluating conversation...
+      This requires 6 API calls to OpenAI (one per exchange)...
+
+      Evaluation completed in 39.66 seconds
+
+      EVALUATION RESULTS:
+      - Total Score: 16
+      - Badge Level: Bronze
+
+      Skill Scores:
+      - Critical Thinking: 4.9
+      - Communication: 6.4
+      - Emotional Intelligence: 4.7
+
+      Stage Scores:
+      - OPENER: 3 - This is an optimal response that demonstrates excellent networking skills. It opens the conversation with a clear purpose and invites the other person to share their own interests, fostering a two-way dialogue.
+        Improvement: To enhance this response further, you could incorporate a specific question about the event or the person's background to deepen the engagement.
+      - CARRY: 3 - This response is optimal as it demonstrates excellent networking skills. It shares relevant information about the speaker's work, expresses enthusiasm, and invites the other person to share their perspective, thereby facilitating an engaging conversation.
+        Improvement: To enhance this response further, consider adding a personal anecdote or specific example related to the AI integration to make the conversation more memorable.
+      - LINKEDIN: 2 - The response is good and effectively communicates the desire to connect on LinkedIn. However, it could be improved by making the ask more mutual and engaging.
+        Improvement: Instead of directly offering your LinkedIn profile, consider asking if they would like to connect on LinkedIn to make it feel more mutual. For example, 'I'd love to connect on LinkedIn to keep the conversation going. Would you like to connect?'
+      - MOVEON: 2 - This is a good response that effectively closes the conversation while expressing a desire to maintain contact. However, it could be improved by providing a more specific action or reason for moving on.
+        Improvement: Consider adding a reason for moving on or a specific follow-up action, such as mentioning someone else you need to speak with or suggesting a LinkedIn connection.
+      - FAREWELL: 3 - The response is optimal as it acknowledges the other person by name, reciprocates the sentiment, and wishes them well, which is polite and engaging.
+        Improvement: To enhance this response, consider adding a personal touch or a follow-up action, like suggesting to connect on LinkedIn.
+
+Results saved to direct_test_results/conversation_advanced_0.0.json
+Badge level: Bronze
+Total score: 16
+
+Skill scores:
+  Critical Thinking: 4.9
+  Communication: 6.4
+  Emotional Intelligence: 4.7
+
+--------------------------------------------------------------------------------
+GENERATING SUMMARY
+--------------------------------------------------------------------------------
+Summary saved to direct_test_results/test_results_summary.csv
+
+Summary data:
+         conversation_id   skill_level  ...  communication  emotional_intelligence
+0        jake_novice_0.0        novice  ...            0.0                     0.0
+1  jake_intermediate_0.0  intermediate  ...            5.2                     4.2
+2      jake_advanced_0.0      advanced  ...            6.4                     4.7
+
+[3 rows x 8 columns]
+
+Detailed Summary:
+
+  jake_novice_0.0:
+    Skill Level: novice
+    Total Score: 0
+    Badge Level: Bronze
+    Critical Thinking: 0.0
+    Communication: 0.0
+    Emotional Intelligence: 0.0
+
+  jake_intermediate_0.0:
+    Skill Level: intermediate
+    Total Score: 14
+    Badge Level: Bronze
+    Critical Thinking: 4.6
+    Communication: 5.2
+    Emotional Intelligence: 4.2
+
+  jake_advanced_0.0:
+    Skill Level: advanced
+    Total Score: 16
+    Badge Level: Bronze
+    Critical Thinking: 4.9
+    Communication: 6.4
+    Emotional Intelligence: 4.7
+
+Average scores by skill level:
+  Novice: 0.00
+  Intermediate: 14.00
+  Advanced: 16.00
+
+Score Differences:
+  Intermediate - Novice: 14.00
+  Advanced - Intermediate: 2.00
+  Advanced - Novice: 16.00
+
+================================================================================
+DIRECT TEST COMPLETED SUCCESSFULLY!
+================================================================================
+
+Test completed successfully!

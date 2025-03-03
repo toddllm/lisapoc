@@ -1,0 +1,105 @@
+Starting conversation generation at 2025-03-03 12:29:15
+Using gradient-sensitive badge determination
+
+
+Generating conversation for NOVICE_LOW
+Generated conversation for NOVICE_LOW
+Evaluated conversation for NOVICE_LOW
+  Stage scores: {'opener': 1, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 0, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.9901160588578624, 'communication': 1.3234518235049724, 'emotional_intelligence': 1.876851523125651}
+  Total score: 4
+  Badge level: Bronze
+  Skill level: novice_low
+
+Generating conversation for NOVICE_BASIC
+Generated conversation for NOVICE_BASIC
+Evaluated conversation for NOVICE_BASIC
+  Stage scores: {'opener': 1, 'carrying_conversation': 1, 'linkedin_connection': 0, 'move_on': 0, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.059115488121805, 'communication': 1.026973640035592, 'emotional_intelligence': 1.1390904302229128}
+  Total score: 3
+  Badge level: Bronze
+  Skill level: novice_basic
+
+Generating conversation for NOVICE_HIGH
+Generated conversation for NOVICE_HIGH
+Evaluated conversation for NOVICE_HIGH
+  Stage scores: {'opener': 1, 'carrying_conversation': 0, 'linkedin_connection': 1, 'move_on': 0, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.506272782190683, 'communication': 1.6549496582162018, 'emotional_intelligence': 1.3614802520295863}
+  Total score: 3
+  Badge level: Bronze
+  Skill level: novice_high
+
+Generating conversation for INTERMEDIATE_LOW
+Generated conversation for INTERMEDIATE_LOW
+Evaluated conversation for INTERMEDIATE_LOW
+  Stage scores: {'opener': 1, 'carrying_conversation': 1, 'linkedin_connection': 0, 'move_on': 1, 'farewell': 0}
+  Dimension scores: {'critical_thinking': 1.7952956167112593, 'communication': 1.4561835727695338, 'emotional_intelligence': 1.215175117534012}
+  Total score: 3
+  Badge level: Bronze
+  Skill level: intermediate_low
+
+Generating conversation for INTERMEDIATE_BASIC
+Generated conversation for INTERMEDIATE_BASIC
+Evaluated conversation for INTERMEDIATE_BASIC
+  Stage scores: {'opener': 0, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.5853321118463999, 'communication': 1.7793410472051356, 'emotional_intelligence': 1.2636931875904318}
+  Total score: 4
+  Badge level: Bronze
+  Skill level: intermediate_basic
+
+Generating conversation for INTERMEDIATE_HIGH
+Generated conversation for INTERMEDIATE_HIGH
+Evaluated conversation for INTERMEDIATE_HIGH
+  Stage scores: {'opener': 1, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 0, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.4578837928253567, 'communication': 1.69028868192424, 'emotional_intelligence': 1.5531894180064594}
+  Total score: 4
+  Badge level: Bronze
+  Skill level: intermediate_high
+
+Generating conversation for ADVANCED_LOW
+Generated conversation for ADVANCED_LOW
+Evaluated conversation for ADVANCED_LOW
+  Stage scores: {'opener': 0, 'carrying_conversation': 1, 'linkedin_connection': 0, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.7906795810153637, 'communication': 1.4042587841813634, 'emotional_intelligence': 1.3157116348623101}
+  Total score: 3
+  Badge level: Bronze
+  Skill level: advanced_low
+
+Generating conversation for ADVANCED_BASIC
+Generated conversation for ADVANCED_BASIC
+Evaluated conversation for ADVANCED_BASIC
+  Stage scores: {'opener': 1, 'carrying_conversation': 0, 'linkedin_connection': 1, 'move_on': 0, 'farewell': 0}
+  Dimension scores: {'critical_thinking': 1.9618377727349086, 'communication': 1.1730118526318714, 'emotional_intelligence': 1.7325476915282272}
+  Total score: 2
+  Badge level: Bronze
+  Skill level: advanced_basic
+
+Generating conversation for ADVANCED_HIGH
+Generated conversation for ADVANCED_HIGH
+Evaluated conversation for ADVANCED_HIGH
+  Stage scores: {'opener': 0, 'carrying_conversation': 0, 'linkedin_connection': 1, 'move_on': 0, 'farewell': 0}
+  Dimension scores: {'critical_thinking': 1.9740721890220274, 'communication': 1.4558083209557493, 'emotional_intelligence': 1.63213252039203}
+  Total score: 1
+  Badge level: Bronze
+  Skill level: advanced_high
+
+
+Badge Distribution Summary:
+  Novice: Bronze=3, Silver=0, Gold=0, Total=3
+  Intermediate: Bronze=3, Silver=0, Gold=0, Total=3
+  Advanced: Bronze=3, Silver=0, Gold=0, Total=3
+  Total: Bronze=9, Silver=0, Gold=0, Total=9
+
+
+Detailed Badge Distribution by Gradient:
+  Novice_low: Badge=Bronze, Fallback=No
+  Novice_basic: Badge=Bronze, Fallback=No
+  Novice_high: Badge=Bronze, Fallback=No
+  Intermediate_low: Badge=Bronze, Fallback=No
+  Intermediate_basic: Badge=Bronze, Fallback=No
+  Intermediate_high: Badge=Bronze, Fallback=No
+  Advanced_low: Badge=Bronze, Fallback=No
+  Advanced_basic: Badge=Bronze, Fallback=No
+  Advanced_high: Badge=Bronze, Fallback=No
+
+Finished generating conversations

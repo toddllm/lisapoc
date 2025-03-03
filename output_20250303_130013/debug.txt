@@ -1,0 +1,20 @@
+
+Generating conversation for NOVICE_LOW
+Generated conversation for NOVICE_LOW
+Evaluated conversation for NOVICE_LOW
+  Stage scores: {'opener': 2, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.9781799451500113, 'communication': 1.8851894588520386, 'emotional_intelligence': 2.074424184473814}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: novice_low
+Error generating conversation for NOVICE_LOW: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 895, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 807, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for NOVICE_BASIC

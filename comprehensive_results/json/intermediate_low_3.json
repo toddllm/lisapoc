@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "skill_level": "intermediate_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:38.109747",
+    "conversation_id": "intermediate_low_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake, a Software Engineer at TechCorp. How's the event going for you so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm Alex. The event's been pretty good. Lots of interesting people here. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great, meeting a lot of talented folks. So, what do you do, Alex?",
+      "user_response": "I'm in marketing at a tech startup. We focus on SaaS products. It's always exciting to hear about new AI systems. How long have you been with TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I've been with TechCorp for about five years now. It's been a fantastic journey, especially working on AI projects. What do you enjoy most about your role in marketing?",
+      "user_response": "I really like the creative side of it. Coming up with campaigns that resonate with people is rewarding. How do you find working in AI? It seems like it's constantly evolving."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI is always changing, which keeps things exciting. Are you on LinkedIn? It would be great to connect and share insights.",
+      "user_response": "Yes, I'm on LinkedIn. Let me find you on there. It's always good to expand my network with professionals like you."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sounds good. I should probably mingle a bit more and meet a few other people. It was great chatting with you, Alex.",
+      "user_response": "Definitely, I should do the same. Thanks for the conversation, Jake."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Have a good rest of the event, Alex. Looking forward to connecting on LinkedIn.",
+      "user_response": "Thanks, Jake. Enjoy the rest of the event too. See you on LinkedIn."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

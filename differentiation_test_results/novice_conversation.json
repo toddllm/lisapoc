@@ -1,0 +1,224 @@
+{
+  "skill_level": "novice",
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer specializing in AI systems at TechCorp. Nice to meet you!",
+      "user_response": "Hey. I'm here for the free snacks."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Haha, they do have some good snacks here. So, what brings you to this event?",
+      "user_response": "Uh, my boss made me come. I don't really like these things."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I can understand that. Sometimes it's just about meeting new people and learning something new. What do you do for work?",
+      "user_response": "I work in an office. It's boring."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I see. Well, if you're interested, I can share some tips on making these events more enjoyable. Would you like to connect on LinkedIn?",
+      "user_response": "Sure. I need more connections on LinkedIn. Give me yours."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Absolutely, happy to connect. Let me know if you ever want to chat more about AI or tech in general.",
+      "user_response": "Uh, okay. I'm going to get more snacks now."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, enjoy the snacks! It was nice meeting you.",
+      "user_response": "Yeah. Bye."
+    }
+  ],
+  "evaluation": {
+    "timestamp": "2025-03-02T23:46:09.515084",
+    "stages": {
+      "opener": {
+        "score": 0,
+        "feedback": "The response is informal and lacks engagement. It does not effectively open a conversation or demonstrate networking skills.",
+        "improvement": "Consider asking a question that invites the other person to share about themselves or the event, such as 'What brings you here today?' or 'Is this your first time at one of these events?'",
+        "user_response": "Hey. I'm here for the free snacks.",
+        "skill_scores": {
+          "critical_thinking": 0,
+          "communication": 0,
+          "emotional_intelligence": 0
+        }
+      },
+      "carry": {
+        "score": 0,
+        "feedback": "The response is minimal and does not engage the other person in conversation. It lacks depth and fails to demonstrate effective networking skills.",
+        "improvement": "To improve, the response could include a question or comment that invites further discussion, such as asking about the other person's work or sharing more about what makes the job boring.",
+        "user_response": "I work in an office. It's boring.",
+        "skill_scores": {
+          "critical_thinking": 0,
+          "communication": 0,
+          "emotional_intelligence": 0
+        }
+      },
+      "linkedin": {
+        "score": 0,
+        "feedback": "The response is direct but lacks politeness and consideration. It does not demonstrate effective networking skills, as it comes across as self-serving and demanding.",
+        "improvement": "To improve, the response should be more polite and considerate, such as asking if the other person would like to connect and expressing genuine interest in maintaining a professional relationship.",
+        "user_response": "Sure. I need more connections on LinkedIn. Give me yours.",
+        "skill_scores": {
+          "critical_thinking": 0,
+          "communication": 0,
+          "emotional_intelligence": 0
+        }
+      },
+      "moveon": {
+        "score": 1,
+        "feedback": "The response is basic and lacks strategic networking skills. It does not effectively communicate the intention to move on in a professional manner.",
+        "improvement": "Consider using a more polite and strategic approach, such as expressing a desire to connect with others or acknowledging the conversation before moving on.",
+        "user_response": "Uh, okay. I'm going to get more snacks now.",
+        "skill_scores": {
+          "critical_thinking": 1,
+          "communication": 1,
+          "emotional_intelligence": 1
+        }
+      },
+      "farewell": {
+        "score": 0,
+        "feedback": "The response 'Yeah. Bye.' is very basic and lacks the elements of effective networking. It does not demonstrate any effort to leave a positive impression or maintain a connection.",
+        "improvement": "To improve, the response should be more engaging and polite. A simple 'It was nice meeting you' or 'Thanks for the conversation' would be more effective.",
+        "user_response": "Yeah. Bye.",
+        "skill_scores": {
+          "critical_thinking": 0,
+          "communication": 0,
+          "emotional_intelligence": 0
+        }
+      }
+    },
+    "skill_scores": {
+      "critical_thinking": 0.3,
+      "communication": 0.3,
+      "emotional_intelligence": 0.3
+    },
+    "total_score": 1,
+    "badges": {
+      "critical_thinking": "Bronze",
+      "communication": "Bronze",
+      "emotional_intelligence": "Bronze"
+    },
+    "detailed_feedback": [
+      {
+        "stage": "opener",
+        "response": "Hey. I'm here for the free snacks.",
+        "evaluation": {
+          "score": 0,
+          "feedback": "The response is informal and lacks engagement. It does not effectively open a conversation or demonstrate networking skills.",
+          "improvement": "Consider asking a question that invites the other person to share about themselves or the event, such as 'What brings you here today?' or 'Is this your first time at one of these events?'",
+          "skill_scores": {
+            "critical_thinking": 0,
+            "communication": 0,
+            "emotional_intelligence": 0
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response does not show analysis of the situation or make logical connections to the networking context.",
+            "communication": "The language is too casual and does not maintain a good conversation flow. It lacks balance and proper networking etiquette.",
+            "emotional_intelligence": "The response does not show awareness of social cues or demonstrate genuine interest in the other person. It lacks politeness and consideration."
+          }
+        }
+      },
+      {
+        "stage": "carry",
+        "response": "Uh, my boss made me come. I don't really like these things.",
+        "evaluation": {
+          "score": 0,
+          "feedback": "The response is poor for networking as it does not engage the other person or show interest in the conversation. It also conveys a negative attitude towards the event.",
+          "improvement": "Try to find a positive aspect of the event to comment on or ask the other person about their experience. This can help shift the conversation to a more engaging and positive direction.",
+          "skill_scores": {
+            "critical_thinking": 0,
+            "communication": 0,
+            "emotional_intelligence": 0
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response lacks analysis or strategic question choice. It does not make any logical connections or adapt to the context appropriately.",
+            "communication": "The language is negative and does not maintain a good conversation flow. It fails to balance speaking and listening effectively.",
+            "emotional_intelligence": "The response shows a lack of awareness of social cues and does not demonstrate genuine interest or empathy. It is not polite or considerate in the context of networking."
+          }
+        }
+      },
+      {
+        "stage": "carry",
+        "response": "I work in an office. It's boring.",
+        "evaluation": {
+          "score": 0,
+          "feedback": "The response is minimal and does not engage the other person in conversation. It lacks depth and fails to demonstrate effective networking skills.",
+          "improvement": "To improve, the response could include a question or comment that invites further discussion, such as asking about the other person's work or sharing more about what makes the job boring.",
+          "skill_scores": {
+            "critical_thinking": 0,
+            "communication": 0,
+            "emotional_intelligence": 0
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response does not show any analysis or strategic thinking. It misses an opportunity to connect or explore the topic further.",
+            "communication": "The language is clear but does not maintain conversation flow or balance speaking and listening. It does not demonstrate networking etiquette.",
+            "emotional_intelligence": "The response lacks awareness of social cues and does not show genuine interest or empathy. It does not build relationships."
+          }
+        }
+      },
+      {
+        "stage": "linkedin",
+        "response": "Sure. I need more connections on LinkedIn. Give me yours.",
+        "evaluation": {
+          "score": 0,
+          "feedback": "The response is direct but lacks politeness and consideration. It does not demonstrate effective networking skills, as it comes across as self-serving and demanding.",
+          "improvement": "To improve, the response should be more polite and considerate, such as asking if the other person would like to connect and expressing genuine interest in maintaining a professional relationship.",
+          "skill_scores": {
+            "critical_thinking": 0,
+            "communication": 0,
+            "emotional_intelligence": 0
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response does not show analysis of the situation or adapt to the context. It lacks strategic question choice and does not consider the other person's perspective.",
+            "communication": "The language is clear but inappropriate for networking. It does not maintain good conversation flow and lacks proper networking etiquette.",
+            "emotional_intelligence": "The response shows a lack of awareness of social cues and does not demonstrate genuine interest or empathy. It is not polite or considerate, which hinders relationship-building."
+          }
+        }
+      },
+      {
+        "stage": "moveon",
+        "response": "Uh, okay. I'm going to get more snacks now.",
+        "evaluation": {
+          "score": 1,
+          "feedback": "The response is basic and lacks strategic networking skills. It does not effectively communicate the intention to move on in a professional manner.",
+          "improvement": "Consider using a more polite and strategic approach, such as expressing a desire to connect with others or acknowledging the conversation before moving on.",
+          "skill_scores": {
+            "critical_thinking": 1,
+            "communication": 1,
+            "emotional_intelligence": 1
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response does not demonstrate analysis of the situation or strategic thinking. It lacks a clear purpose for moving on.",
+            "communication": "The language is casual and lacks professionalism. It does not maintain a good conversation flow or demonstrate proper networking etiquette.",
+            "emotional_intelligence": "The response shows limited awareness of social cues and lacks politeness. It does not demonstrate empathy or relationship-building skills."
+          }
+        }
+      },
+      {
+        "stage": "farewell",
+        "response": "Yeah. Bye.",
+        "evaluation": {
+          "score": 0,
+          "feedback": "The response 'Yeah. Bye.' is very basic and lacks the elements of effective networking. It does not demonstrate any effort to leave a positive impression or maintain a connection.",
+          "improvement": "To improve, the response should be more engaging and polite. A simple 'It was nice meeting you' or 'Thanks for the conversation' would be more effective.",
+          "skill_scores": {
+            "critical_thinking": 0,
+            "communication": 0,
+            "emotional_intelligence": 0
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response does not show any analysis or adaptation to the context. It is abrupt and does not consider the importance of leaving a positive impression.",
+            "communication": "The language is too brief and lacks clarity or appropriateness for a networking context. It does not facilitate a smooth conversation flow.",
+            "emotional_intelligence": "The response lacks awareness of social cues and does not demonstrate politeness or consideration. It fails to show any interest in relationship-building."
+          }
+        }
+      }
+    ],
+    "badge_level": "Bronze",
+    "percentile_score": 5.6
+  }
+}

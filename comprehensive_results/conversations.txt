@@ -1,0 +1,844 @@
+NETWORKING SKILLS EVALUATION - CONVERSATIONS
+===========================================
+
+Generated on: 2025-03-03 01:08:40
+
+Total conversations: 27
+
+================================================================================
+CONVERSATION: advanced_basic_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: advanced_basic_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: advanced_basic_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: advanced_high_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: advanced_high_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: advanced_high_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: advanced_low_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: advanced_low_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: advanced_low_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_basic_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_basic_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_basic_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_high_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_high_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_high_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_low_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_low_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: intermediate_low_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_basic_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_basic_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_basic_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_high_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_high_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_high_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_low_1.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_low_2.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+
+================================================================================
+CONVERSATION: novice_low_3.json
+================================================================================
+
+METADATA:
+Skill Level: Unknown
+Persona: Unknown
+
+EVALUATION:
+overall_score: 0
+critical_thinking_score: 0
+communication_score: 0
+emotional_intelligence_score: 0
+badge_level: Bronze
+response_evaluations: []
+
+CONVERSATION TRANSCRIPT:
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+Unknown: 
+
+
+

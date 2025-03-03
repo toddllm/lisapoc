@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "skill_level": "intermediate_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:09.520452",
+    "conversation_id": "intermediate_low_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake, a Software Engineer at TechCorp. How are you enjoying the event so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm finding the event pretty informative. How about you? Have you been to many of these?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Yeah, I've been to a few. It's always great to see the latest trends in AI. What brings you to this event?",
+      "user_response": "I'm really interested in AI as well, so I came to learn more about it and meet people in the industry. Are you working on any exciting AI projects right now?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, I'm currently involved in developing AI systems for healthcare at TechCorp. It's a fascinating area. Are you on LinkedIn? Maybe we can connect there.",
+      "user_response": "Yes, I am on LinkedIn. I'd love to connect with you and learn more about your projects. I'll send you a request if that's okay."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "That sounds great. I should probably mingle a bit more, but it was nice chatting. Anything else you'd like to know before I move on?",
+      "user_response": "I think that's it for now. It was great to hear about your work. I'll definitely follow up on LinkedIn."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for the conversation. Enjoy the rest of the event!",
+      "user_response": "Thanks, Jake. You too. Have a good one!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

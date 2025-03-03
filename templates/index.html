@@ -35,40 +35,50 @@
         </div>
 
         <div class="main-panel">
-            <div id="timer">Time Left: 5:00</div>
+            <div id="timer" style="display: none;">Time Left: 5:00</div>
             
             <div class="persona-selector">
                 <h3>Select Your Conversation Partner</h3>
                 <div class="persona-cards">
-                    <div class="persona-card" data-persona="jake">
-                        <div class="avatar jake">
-                            <!-- Avatar SVG will be updated via JavaScript -->
-                        </div>
-                        <h4>Jake</h4>
-                        <p>Software Engineer</p>
-                        <p class="description">A friendly software engineer specializing in AI and machine learning.</p>
-                        <button onclick="selectPersona('jake')">Select Jake</button>
+                    {% for id, persona in personas.items() %}
+                    <div class="persona-card">
+                        {% if persona.avatar.type == 'image' %}
+                            <img src="{{ persona.avatar.url }}" class="persona-card-avatar" alt="{{ persona.name }}">
+                        {% else %}
+                            <svg class="avatar" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="{{ persona.avatar.color }}"/>
+                                {% if persona.avatar.hair == 'long' %}
+                                <path d="M30 30 C30 50 70 50 70 30 L70 60 C70 80 30 80 30 60 Z" fill="#4a4a4a" data-type="hair"/>
+                                {% endif %}
+                                <circle cx="35" cy="40" r="5" fill="black"/>
+                                <circle cx="65" cy="40" r="5" fill="black"/>
+                                <path id="mouth" stroke="black" fill="none" 
+                                    d="M40 60 Q50 {% if persona.avatar.expression == 'professional' %}65{% else %}70{% endif %} 60 60"/>
+                            </svg>
+                        {% endif %}
+                        <h4>{{ persona.name }}</h4>
+                        <p>{{ persona.role }}</p>
+                        <div class="description">{{ persona.description }}</div>
+                        <button onclick="selectPersona('{{ id }}')">Select</button>
                     </div>
-                    <div class="persona-card" data-persona="sarah">
-                        <div class="avatar sarah">
-                            <!-- Avatar SVG will be updated via JavaScript -->
-                        </div>
-                        <h4>Sarah</h4>
-                        <p>Product Manager</p>
-                        <p class="description">A strategic product manager with experience in tech startups.</p>
-                        <button onclick="selectPersona('sarah')">Select Sarah</button>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             
-            <div id="avatar-container">
-                <svg id="avatar" width="100" height="100">
-                    <circle cx="50" cy="50" r="40" fill="yellow" />
-                    <circle cx="35" cy="40" r="5" fill="black" />
-                    <circle cx="65" cy="40" r="5" fill="black" />
-                    <path id="mouth" d="M40 60 Q50 70 60 60" stroke="black" fill="none" />
-                </svg>
-                <h2>Jake</h2>
+            <div id="avatar-container" style="display: none;">
+                <div id="avatar-wrapper">
+                    {% if persona and persona.avatar.type == 'image' %}
+                        <img id="avatar" class="avatar-image" src="{{ persona.avatar.url }}" alt="{{ persona.name }}">
+                    {% else %}
+                        <svg id="avatar" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" fill="#4CAF50"/>
+                            <circle cx="35" cy="40" r="5" fill="black"/>
+                            <circle cx="65" cy="40" r="5" fill="black"/>
+                            <path id="mouth" d="M40 60 Q50 70 60 60" stroke="black" fill="none"/>
+                        </svg>
+                    {% endif %}
+                </div>
+                <h2>{% if persona %}{{ persona.name }}{% endif %}</h2>
             </div>
             
             <button id="start-btn">Start conversation</button>

@@ -1,0 +1,841 @@
+COMPREHENSIVE DEBUG LOG - NETWORKING CONVERSATIONS
+=================================================
+
+Generated on: 2025-03-03 01:34:16
+
+Python path: /Users/tdeshane/grok/lisa, /Users/tdeshane/.local/share/uv/python/cpython-3.11.11-macos-aarch64-none/lib/python311.zip, /Users/tdeshane/.local/share/uv/python/cpython-3.11.11-macos-aarch64-none/lib/python3.11, /Users/tdeshane/.local/share/uv/python/cpython-3.11.11-macos-aarch64-none/lib/python3.11/lib-dynload, /Users/tdeshane/grok/lisa/.venv/lib/python3.11/site-packages
+
+MODULE LOADING
+=============
+
+Attempting to import synthetic_conversation_gpt...
+Success! Available attributes: ['Any', 'BADGE_THRESHOLDS', 'ConversationEvaluator', 'ConversationGenerator', 'Dict', 'EXAMPLE_RESPONSES', 'List', 'PERSONAS', 'SKILL_AREA_WEIGHTS', 'SKILL_LEVELS', 'STAGES', 'SUCCESS_CRITERIA', 'Tuple', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'argparse', 'datetime', 'generate_and_evaluate', 'generate_report', 'json', 'main', 'openai', 'os', 'pd', 'plt', 'random', 'requests', 'tqdm']
+
+Looking for generator class...
+Checking attribute: Any, type: <class 'typing._AnyMeta'>
+Attempting to instantiate: Any
+Failed to instantiate Any: Any cannot be instantiated
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2142, in regenerate_all_to_text
+    generator = attr()
+                ^^^^^^
+  File "/Users/tdeshane/.local/share/uv/python/cpython-3.11.11-macos-aarch64-none/lib/python3.11/typing.py", line 538, in __new__
+    raise TypeError("Any cannot be instantiated")
+TypeError: Any cannot be instantiated
+
+Checking attribute: BADGE_THRESHOLDS, type: <class 'dict'>
+Checking attribute: ConversationEvaluator, type: <class 'type'>
+Attempting to instantiate: ConversationEvaluator
+Created generator instance using ConversationEvaluator
+Generator methods: ['evaluate_conversation', 'evaluate_response']
+Checking attribute: ConversationGenerator, type: <class 'type'>
+Attempting to instantiate: ConversationGenerator
+Created generator instance using ConversationGenerator
+Generator methods: ['generate_conversation']
+Found suitable generator method in ConversationGenerator
+Attempting to import conversation_evaluator_gpt...
+Failed to import conversation_evaluator_gpt: No module named 'conversation_evaluator_gpt'
+Attempting to import conversation_evaluator...
+Failed to import conversation_evaluator: No module named 'conversation_evaluator'
+Attempting to import evaluator...
+Failed to import evaluator: No module named 'evaluator'
+No dedicated evaluator module found. Using generator module for evaluation.
+Looking for evaluator class...
+Checking attribute: Any, type: <class 'typing._AnyMeta'>
+Attempting to instantiate: Any
+Failed to instantiate Any: Any cannot be instantiated
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2193, in regenerate_all_to_text
+    evaluator = attr()
+                ^^^^^^
+  File "/Users/tdeshane/.local/share/uv/python/cpython-3.11.11-macos-aarch64-none/lib/python3.11/typing.py", line 538, in __new__
+    raise TypeError("Any cannot be instantiated")
+TypeError: Any cannot be instantiated
+
+Checking attribute: BADGE_THRESHOLDS, type: <class 'dict'>
+Checking attribute: ConversationEvaluator, type: <class 'type'>
+Attempting to instantiate: ConversationEvaluator
+Created evaluator instance using ConversationEvaluator
+Evaluator methods: ['evaluate_conversation', 'evaluate_response']
+Found suitable evaluator method in ConversationEvaluator
+GENERATION CONFIGURATION
+=======================
+
+Generating skill gradients manually...
+Skill gradients:
+('novice_low', 'Novice (low)')
+('novice_basic', 'Novice (basic)')
+('novice_high', 'Novice (high)')
+('intermediate_low', 'Intermediate (low)')
+('intermediate_basic', 'Intermediate (basic)')
+('intermediate_high', 'Intermediate (high)')
+('advanced_low', 'Advanced (low)')
+('advanced_basic', 'Advanced (basic)')
+('advanced_high', 'Advanced (high)')
+
+Personas: ['INTERVIEWER']
+
+
+================================================================================
+DEBUG: NOVICE_LOW - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_low",
+  "persona": "INTERVIEWER",
+  "label": "Novice (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_low (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: NOVICE_LOW - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_low",
+  "persona": "INTERVIEWER",
+  "label": "Novice (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_low (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: NOVICE_LOW - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_low",
+  "persona": "INTERVIEWER",
+  "label": "Novice (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_low (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: NOVICE_BASIC - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_basic",
+  "persona": "INTERVIEWER",
+  "label": "Novice (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_basic (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: NOVICE_BASIC - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_basic",
+  "persona": "INTERVIEWER",
+  "label": "Novice (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_basic (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: NOVICE_BASIC - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_basic",
+  "persona": "INTERVIEWER",
+  "label": "Novice (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_basic (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: NOVICE_HIGH - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_high",
+  "persona": "INTERVIEWER",
+  "label": "Novice (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_high (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: NOVICE_HIGH - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_high",
+  "persona": "INTERVIEWER",
+  "label": "Novice (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_high (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: NOVICE_HIGH - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "novice_high",
+  "persona": "INTERVIEWER",
+  "label": "Novice (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing novice_high (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_LOW - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_low",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_low (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_LOW - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_low",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_low (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_LOW - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_low",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_low (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_BASIC - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_basic",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_basic (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_BASIC - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_basic",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_basic (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_BASIC - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_basic",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_basic (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_HIGH - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_high",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_high (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_HIGH - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_high",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_high (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: INTERMEDIATE_HIGH - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "intermediate_high",
+  "persona": "INTERVIEWER",
+  "label": "Intermediate (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing intermediate_high (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_LOW - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_low",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_low (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_LOW - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_low",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_low (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_LOW - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_low",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (low)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_low (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_BASIC - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_basic",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_basic (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_BASIC - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_basic",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_basic (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_BASIC - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_basic",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (basic)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_basic (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_HIGH - CONVERSATION 1 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_high",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_high (#1): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_HIGH - CONVERSATION 2 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_high",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_high (#2): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+================================================================================
+DEBUG: ADVANCED_HIGH - CONVERSATION 3 - INTERVIEWER
+================================================================================
+
+GENERATING CONVERSATION
+----------------------
+
+Prompt:
+{
+  "skill_level": "advanced_high",
+  "persona": "INTERVIEWER",
+  "label": "Advanced (high)"
+}
+
+Attempting to generate conversation...
+Using generate_conversation() method
+ERROR ENCOUNTERED
+Error processing advanced_high (#3): ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+Stack trace:
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 2294, in regenerate_all_to_text
+    conversation = generator.generate_conversation(prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ConversationGenerator.generate_conversation() missing 1 required positional argument: 'skill_level'
+
+
+
+SUMMARY
+-------
+
+Generation Summary:
+Total conversations: 27
+Successful conversations: 0
+Failed conversations: 27

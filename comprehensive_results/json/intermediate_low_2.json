@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "skill_level": "intermediate_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:25.386752",
+    "conversation_id": "intermediate_low_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer at TechCorp. How's the event going for you so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm Alex. The event's been pretty good, lots of interesting people here. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Yeah, it's been great. I've been learning a lot from different folks. So, what line of work are you in?",
+      "user_response": "I'm in marketing for a mid-sized firm. It's always interesting to see how tech and marketing can intersect. How long have you been at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I've been with TechCorp for about five years now, mostly working on AI systems. It's a fascinating field. What kind of marketing strategies do you find most effective in your line of work?",
+      "user_response": "Well, we focus a lot on digital marketing and content creation. It's crucial to stay updated with trends. AI, like what you do, is definitely something we\u2019re keeping an eye on. Do you see a lot of AI in marketing now?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI is becoming integral in marketing analytics and personalization. Are you on LinkedIn? It would be great to connect there.",
+      "user_response": "Yes, I am. Let's definitely connect. It's always good to expand the network with people from different fields."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "I should probably mingle a bit more. It's been great talking with you, Alex.",
+      "user_response": "Yeah, same here. I think I need to catch up with a colleague, but let's stay in touch."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting, Alex. Have a good rest of the event.",
+      "user_response": "Thank you, Jake. You too. Enjoy the event!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

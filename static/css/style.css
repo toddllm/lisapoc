@@ -72,6 +72,10 @@ h1 {
 #avatar-container {
     text-align: center;
     margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
 #input-area {
@@ -198,6 +202,10 @@ button {
     width: 200px;
     text-align: center;
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .persona-card:hover {
@@ -241,6 +249,24 @@ button {
     width: 80px;
     height: 80px;
     margin: 0 auto;
+}
+
+.avatar-image {
+    width: 480px;
+    height: 320px;
+    border-radius: 12px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+.persona-card-avatar {
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: contain;
+    margin: 0 auto 10px auto;
+    display: block;
 }
 
 .nav-links {
@@ -326,4 +352,12 @@ button {
     height: 100%;
     background-color: #4CAF50;
     transition: width 2s ease-in-out;
+}
+
+.system-message {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
 }

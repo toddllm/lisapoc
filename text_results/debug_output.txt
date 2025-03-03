@@ -1,0 +1,16 @@
+COMPREHENSIVE DEBUG OUTPUT - NETWORKING SKILLS EVALUATION
+======================================================
+
+Generated on: 2025-03-03 01:23:03
+
+IMPORTING MODULES
+----------------
+ERROR: Error importing modules: No module named 'conversation_evaluator_gpt'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_comprehensive_report.py", line 1929, in run_text_only_evaluation
+    import conversation_evaluator_gpt
+ModuleNotFoundError: No module named 'conversation_evaluator_gpt'
+
+
+synthetic_conversation_gpt module exists with contents: ['Any', 'BADGE_THRESHOLDS', 'ConversationEvaluator', 'ConversationGenerator', 'Dict', 'EXAMPLE_RESPONSES', 'List', 'PERSONAS', 'SKILL_AREA_WEIGHTS', 'SKILL_LEVELS', 'STAGES', 'SUCCESS_CRITERIA', 'Tuple', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'argparse', 'datetime', 'generate_and_evaluate', 'generate_report', 'json', 'main', 'openai', 'os', 'pd', 'plt', 'random', 'requests', 'tqdm']
+conversation_evaluator_gpt module cannot be imported

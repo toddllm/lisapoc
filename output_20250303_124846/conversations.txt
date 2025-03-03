@@ -1,0 +1,851 @@
+# Conversation: NOVICE_LOW
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: NOVICE_LOW (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Conversation: NOVICE_BASIC
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: NOVICE_BASIC (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Conversation: NOVICE_HIGH
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: NOVICE_HIGH (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Conversation: INTERMEDIATE_LOW
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: INTERMEDIATE_LOW (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Conversation: INTERMEDIATE_BASIC
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: INTERMEDIATE_BASIC (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Conversation: INTERMEDIATE_HIGH
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: INTERMEDIATE_HIGH (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Conversation: ADVANCED_LOW
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: ADVANCED_LOW (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Conversation: ADVANCED_BASIC
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: ADVANCED_BASIC (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Conversation: ADVANCED_HIGH
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation
+
+# Conversation: ADVANCED_HIGH (FALLBACK)
+
+
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+
+
+# Evaluation (FALLBACK)
+
+
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+
+
+--------------------------------------------------------------------------------
+
+# Badge Distribution Summary
+
+| Skill Level | Bronze | Silver | Gold | Total |
+|-------------|--------|--------|------|-------|
+| Novice | 6 | 0 | 0 | 6 |
+| Intermediate | 6 | 0 | 0 | 6 |
+| Advanced | 6 | 0 | 0 | 6 |
+| **Total** | **18** | **0** | **0** | **18** |
+
+
+# Detailed Badge Distribution by Gradient
+
+| Skill Level | Gradient | Badge | Fallback |
+|-------------|----------|-------|----------|
+| Novice | Low | Bronze | No |
+| Novice | Low | Bronze | Yes |
+| Novice | Basic | Bronze | No |
+| Novice | Basic | Bronze | Yes |
+| Novice | High | Bronze | No |
+| Novice | High | Bronze | Yes |
+| Intermediate | Low | Bronze | No |
+| Intermediate | Low | Bronze | Yes |
+| Intermediate | Basic | Bronze | No |
+| Intermediate | Basic | Bronze | Yes |
+| Intermediate | High | Bronze | No |
+| Intermediate | High | Bronze | Yes |
+| Advanced | Low | Bronze | No |
+| Advanced | Low | Bronze | Yes |
+| Advanced | Basic | Bronze | No |
+| Advanced | Basic | Bronze | Yes |
+| Advanced | High | Bronze | No |
+| Advanced | High | Bronze | Yes |

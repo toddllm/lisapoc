@@ -1,0 +1,44 @@
+================================================================================
+NETWORKING CONVERSATION EVALUATION: INTERMEDIATE_BASIC
+================================================================================
+Persona: default
+Timestamp: 2025-03-03T00:22:38.995141
+Conversation ID: intermediate_basic_1
+
+--------------------------------------------------------------------------------
+CONVERSATION TRANSCRIPT
+--------------------------------------------------------------------------------
+[Exchange 1] Stage: opener
+User: 
+Assistant: 
+
+[Exchange 2] Stage: carry
+User: 
+Assistant: 
+
+[Exchange 3] Stage: linkedin
+User: 
+Assistant: 
+
+[Exchange 4] Stage: moveon
+User: 
+Assistant: 
+
+[Exchange 5] Stage: farewell
+User: 
+Assistant: 
+
+--------------------------------------------------------------------------------
+EVALUATION SUMMARY
+--------------------------------------------------------------------------------
+Overall Score: 0
+Badge Level: Bronze
+
+Skill Scores:
+- Critical Thinking: 0
+- Communication: 0
+- Emotional Intelligence: 0
+
+--------------------------------------------------------------------------------
+DETAILED EVALUATION
+--------------------------------------------------------------------------------

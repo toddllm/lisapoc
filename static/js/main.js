@@ -112,6 +112,9 @@ function returnToSelection() {
     // Reset timer display
     document.getElementById('timer').textContent = 'Time Left: 5:00';
     timeLeft = 300;
+    
+    // Hide timer when returning to selection
+    document.getElementById('timer').style.display = 'none';
 }
 
 function restartConversation() {
@@ -135,13 +138,16 @@ document.getElementById('start-btn').addEventListener('click', () => {
     document.getElementById('end-btn').style.display = 'inline';
     document.getElementById('input-area').style.display = 'block';
     startTimer();
+    
+    // Just initialize the conversation without AI response
     fetch('/start', { method: 'POST' })
         .then(response => response.json())
         .then(data => {
-            // Use the current persona name
-            const currentPersona = document.querySelector('#avatar-container h2').textContent;
-            displayMessage(currentPersona, data.response);
-            playAudio(data.audio);
+            if (data.status === 'success') {
+                // Show prompt to user
+                document.getElementById('conversation').innerHTML = 
+                    '<p class="system-message">Start the conversation by introducing yourself...</p>';
+            }
         });
 });
 
@@ -263,14 +269,79 @@ function selectPersona(personaId) {
     .then(response => response.json())
     .then(data => {
         if (data.status === 'success') {
-            console.log('Selected persona:', data.persona); // Debug log
+            console.log('Selected persona:', data.persona);
             
             // Show avatar container first
             const avatarContainer = document.getElementById('avatar-container');
             avatarContainer.style.display = 'block';
             
-            // Update avatar appearance
-            updateAvatar(data.persona.avatar);
+            // Clear existing avatar
+            const oldAvatar = document.getElementById('avatar');
+            if (oldAvatar) {
+                oldAvatar.remove();
+            }
+            
+            // Create new avatar based on type
+            if (data.persona.avatar.type === 'image') {
+                const img = document.createElement('img');
+                img.id = 'avatar';
+                img.src = data.persona.avatar.url;
+                img.classList.add('avatar-image');
+                img.alt = data.persona.name;
+                avatarContainer.insertBefore(img, avatarContainer.querySelector('h2'));
+            } else {
+                // Create SVG avatar for non-image types
+                const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                svg.setAttribute('id', 'avatar');
+                svg.setAttribute('viewBox', '0 0 100 100');
+                svg.classList.add('avatar');
+                
+                // Create base circle
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                circle.setAttribute('cx', '50');
+                circle.setAttribute('cy', '50');
+                circle.setAttribute('r', '40');
+                circle.setAttribute('fill', data.persona.avatar.color);
+                svg.appendChild(circle);
+                
+                // Add eyes
+                const leftEye = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                leftEye.setAttribute('cx', '35');
+                leftEye.setAttribute('cy', '40');
+                leftEye.setAttribute('r', '5');
+                leftEye.setAttribute('fill', 'black');
+                svg.appendChild(leftEye);
+                
+                const rightEye = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                rightEye.setAttribute('cx', '65');
+                rightEye.setAttribute('cy', '40');
+                rightEye.setAttribute('r', '5');
+                rightEye.setAttribute('fill', 'black');
+                svg.appendChild(rightEye);
+                
+                // Add hair if needed
+                if (data.persona.avatar.hair === 'long') {
+                    const hair = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    hair.setAttribute('d', 'M30 30 C30 50 70 50 70 30 L70 60 C70 80 30 80 30 60 Z');
+                    hair.setAttribute('fill', '#4a4a4a');
+                    hair.setAttribute('data-type', 'hair');
+                    svg.insertBefore(hair, circle);
+                }
+                
+                // Add mouth
+                const mouth = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                mouth.setAttribute('id', 'mouth');
+                mouth.setAttribute('stroke', 'black');
+                mouth.setAttribute('fill', 'none');
+                if (data.persona.avatar.expression === 'professional') {
+                    mouth.setAttribute('d', 'M40 60 Q50 65 60 60');
+                } else {
+                    mouth.setAttribute('d', 'M40 60 Q50 70 60 60');
+                }
+                svg.appendChild(mouth);
+                
+                avatarContainer.insertBefore(svg, avatarContainer.querySelector('h2'));
+            }
             
             // Update name display
             avatarContainer.querySelector('h2').textContent = data.persona.name;
@@ -284,6 +355,9 @@ function selectPersona(personaId) {
             
             // Reset conversation history
             document.getElementById('conversation').innerHTML = '';
+            
+            // Show timer when persona is selected
+            document.getElementById('timer').style.display = 'block';
         } else {
             console.error('Failed to select persona:', data.message);
         }
@@ -291,59 +365,6 @@ function selectPersona(personaId) {
     .catch(error => {
         console.error('Error selecting persona:', error);
     });
-}
-
-function updateAvatar(avatarConfig) {
-    const avatar = document.getElementById('avatar');
-    
-    // Clear existing avatar content
-    while (avatar.firstChild) {
-        avatar.removeChild(avatar.firstChild);
-    }
-    
-    // Create base circle
-    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    circle.setAttribute('cx', '50');
-    circle.setAttribute('cy', '50');
-    circle.setAttribute('r', '40');
-    circle.setAttribute('fill', avatarConfig.color);
-    avatar.appendChild(circle);
-    
-    // Add eyes
-    const leftEye = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    leftEye.setAttribute('cx', '35');
-    leftEye.setAttribute('cy', '40');
-    leftEye.setAttribute('r', '5');
-    leftEye.setAttribute('fill', 'black');
-    avatar.appendChild(leftEye);
-    
-    const rightEye = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    rightEye.setAttribute('cx', '65');
-    rightEye.setAttribute('cy', '40');
-    rightEye.setAttribute('r', '5');
-    rightEye.setAttribute('fill', 'black');
-    avatar.appendChild(rightEye);
-    
-    // Add hair if needed
-    if (avatarConfig.hair === 'long') {
-        const hair = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        hair.setAttribute('d', 'M30 30 C30 50 70 50 70 30 L70 60 C70 80 30 80 30 60 Z');
-        hair.setAttribute('fill', '#4a4a4a');
-        hair.setAttribute('data-type', 'hair');
-        avatar.insertBefore(hair, circle);
-    }
-    
-    // Add mouth
-    const mouth = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    mouth.setAttribute('id', 'mouth');
-    mouth.setAttribute('stroke', 'black');
-    mouth.setAttribute('fill', 'none');
-    if (avatarConfig.expression === 'professional') {
-        mouth.setAttribute('d', 'M40 60 Q50 65 60 60');
-    } else {
-        mouth.setAttribute('d', 'M40 60 Q50 70 60 60');
-    }
-    avatar.appendChild(mouth);
 }
 
 // Show persona selector initially, hide start button

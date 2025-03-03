@@ -1,0 +1,4 @@
+conversation_id,skill_level,gradient,total_score,badge_level,critical_thinking,communication,emotional_intelligence
+jake_novice_0.0,novice,0.0,2,Bronze,0.7,0.8,0.5
+jake_intermediate_0.0,intermediate,0.0,18,Bronze,5.5,7.4,5.1
+jake_advanced_0.0,advanced,0.0,14,Bronze,4.6,5.2,4.2

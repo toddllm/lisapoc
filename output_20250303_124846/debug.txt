@@ -1,0 +1,162 @@
+
+Generating conversation for NOVICE_LOW
+Generated conversation for NOVICE_LOW
+Evaluated conversation for NOVICE_LOW
+  Stage scores: {'opener': 1, 'carrying_conversation': 2, 'linkedin_connection': 1, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.8003924779432867, 'communication': 1.9208899764960092, 'emotional_intelligence': 1.787028836118086}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: novice_low
+Error generating conversation for NOVICE_LOW: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for NOVICE_BASIC
+Generated conversation for NOVICE_BASIC
+Evaluated conversation for NOVICE_BASIC
+  Stage scores: {'opener': 1, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 2, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.5638484801174706, 'communication': 1.5533134293438577, 'emotional_intelligence': 1.6853401253737346}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: novice_basic
+Error generating conversation for NOVICE_BASIC: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for NOVICE_HIGH
+Generated conversation for NOVICE_HIGH
+Evaluated conversation for NOVICE_HIGH
+  Stage scores: {'opener': 1, 'carrying_conversation': 2, 'linkedin_connection': 1, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.7737969717844266, 'communication': 1.5946881024245054, 'emotional_intelligence': 1.6336612007694975}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: novice_high
+Error generating conversation for NOVICE_HIGH: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for INTERMEDIATE_LOW
+Generated conversation for INTERMEDIATE_LOW
+Evaluated conversation for INTERMEDIATE_LOW
+  Stage scores: {'opener': 2, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.970458789090252, 'communication': 1.9280027572509981, 'emotional_intelligence': 1.605365324272029}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: intermediate_low
+Error generating conversation for INTERMEDIATE_LOW: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for INTERMEDIATE_BASIC
+Generated conversation for INTERMEDIATE_BASIC
+Evaluated conversation for INTERMEDIATE_BASIC
+  Stage scores: {'opener': 1, 'carrying_conversation': 2, 'linkedin_connection': 1, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.6787186953470845, 'communication': 1.7554568249917288, 'emotional_intelligence': 1.5285231947957298}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: intermediate_basic
+Error generating conversation for INTERMEDIATE_BASIC: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for INTERMEDIATE_HIGH
+Generated conversation for INTERMEDIATE_HIGH
+Evaluated conversation for INTERMEDIATE_HIGH
+  Stage scores: {'opener': 2, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.805100788638711, 'communication': 1.7646505562235557, 'emotional_intelligence': 1.5835597199212095}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: intermediate_high
+Error generating conversation for INTERMEDIATE_HIGH: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for ADVANCED_LOW
+Generated conversation for ADVANCED_LOW
+Evaluated conversation for ADVANCED_LOW
+  Stage scores: {'opener': 1, 'carrying_conversation': 1, 'linkedin_connection': 2, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.9050389406399224, 'communication': 1.883670223247654, 'emotional_intelligence': 1.624385342994058}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: advanced_low
+Error generating conversation for ADVANCED_LOW: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for ADVANCED_BASIC
+Generated conversation for ADVANCED_BASIC
+Evaluated conversation for ADVANCED_BASIC
+  Stage scores: {'opener': 2, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 1, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.9902935602889573, 'communication': 1.9940746463220382, 'emotional_intelligence': 1.602348238941606}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: advanced_basic
+Error generating conversation for ADVANCED_BASIC: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'
+
+Generating conversation for ADVANCED_HIGH
+Generated conversation for ADVANCED_HIGH
+Evaluated conversation for ADVANCED_HIGH
+  Stage scores: {'opener': 1, 'carrying_conversation': 1, 'linkedin_connection': 1, 'move_on': 2, 'farewell': 1}
+  Dimension scores: {'critical_thinking': 1.9888106900141476, 'communication': 2.0571907723536724, 'emotional_intelligence': 2.0604310197779756}
+  Total score: 6
+  Badge level: Bronze
+  Skill level: advanced_high
+Error generating conversation for ADVANCED_HIGH: 'strengths'
+Traceback (most recent call last):
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 786, in main
+    formatted_eval = format_evaluation_for_output(evaluation)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tdeshane/grok/lisa/generate_simple.py", line 698, in format_evaluation_for_output
+    for strength in evaluation['strengths']:
+                    ~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'strengths'

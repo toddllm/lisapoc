@@ -1,0 +1,377 @@
+2025-03-02 23:55:21,140 - INFO - Starting comprehensive evaluation with API key: sk-pr...YEcA
+2025-03-02 23:55:21,141 - INFO - Created output directory structure in comprehensive_results
+2025-03-02 23:55:21,141 - INFO - Generated 9 skill gradients
+2025-03-02 23:55:21,141 - INFO - Initializing conversation generator and evaluator
+2025-03-02 23:56:53,354 - INFO - Starting comprehensive evaluation with API key: sk-pr...YEcA
+2025-03-02 23:56:53,354 - INFO - Created output directory structure in comprehensive_results
+2025-03-02 23:56:53,354 - INFO - Generated 9 skill gradients
+2025-03-02 23:56:53,354 - INFO - Initializing conversation generator and evaluator
+2025-03-02 23:56:53,354 - INFO - Generating conversation for novice_basic (novice with gradient 0.0)
+2025-03-02 23:57:03,390 - INFO - Conversation for novice_basic generated in 10.04 seconds with 6 exchanges
+2025-03-02 23:57:03,390 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-02 23:57:46,639 - INFO - Evaluation for novice_basic completed in 43.25 seconds with score 0
+2025-03-02 23:57:46,640 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_1.json
+2025-03-02 23:57:46,641 - INFO - Saved text results to comprehensive_results/txt/novice_basic_1.txt
+2025-03-02 23:57:46,641 - INFO - Generating conversation for novice_basic (novice with gradient 0.0)
+2025-03-02 23:57:54,122 - INFO - Conversation for novice_basic generated in 7.48 seconds with 6 exchanges
+2025-03-02 23:57:54,123 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-02 23:58:34,566 - INFO - Evaluation for novice_basic completed in 40.44 seconds with score 2
+2025-03-02 23:58:34,568 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_2.json
+2025-03-02 23:58:34,570 - INFO - Saved text results to comprehensive_results/txt/novice_basic_2.txt
+2025-03-02 23:58:34,570 - INFO - Generating conversation for novice_basic (novice with gradient 0.0)
+2025-03-02 23:58:44,682 - INFO - Conversation for novice_basic generated in 10.11 seconds with 6 exchanges
+2025-03-02 23:58:44,682 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-02 23:59:26,681 - INFO - Evaluation for novice_basic completed in 42.00 seconds with score 1
+2025-03-02 23:59:26,684 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_3.json
+2025-03-02 23:59:26,685 - INFO - Saved text results to comprehensive_results/txt/novice_basic_3.txt
+2025-03-02 23:59:26,685 - INFO - Generating conversation for intermediate_basic (intermediate with gradient 0.0)
+2025-03-02 23:59:37,637 - INFO - Conversation for intermediate_basic generated in 10.95 seconds with 6 exchanges
+2025-03-02 23:59:37,637 - INFO - Evaluating conversation for intermediate_basic with 6 exchanges
+2025-03-03 00:00:20,396 - INFO - Evaluation for intermediate_basic completed in 42.76 seconds with score 13
+2025-03-03 00:00:20,398 - INFO - Saved JSON results to comprehensive_results/json/intermediate_basic_1.json
+2025-03-03 00:00:20,398 - INFO - Saved text results to comprehensive_results/txt/intermediate_basic_1.txt
+2025-03-03 00:00:20,398 - INFO - Generating conversation for intermediate_basic (intermediate with gradient 0.0)
+2025-03-03 00:00:34,879 - INFO - Conversation for intermediate_basic generated in 14.48 seconds with 6 exchanges
+2025-03-03 00:00:34,879 - INFO - Evaluating conversation for intermediate_basic with 6 exchanges
+2025-03-03 00:04:14,108 - INFO - Starting comprehensive evaluation with API key: sk-pr...YEcA
+2025-03-03 00:04:14,108 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 00:04:14,108 - INFO - Generated 9 skill gradients
+2025-03-03 00:04:14,108 - INFO - Initializing conversation generator and evaluator
+2025-03-03 00:04:14,109 - INFO - Generating conversation for novice_basic (novice with gradient 0.0)
+2025-03-03 00:04:24,540 - INFO - Conversation for novice_basic generated in 10.43 seconds with 6 exchanges
+2025-03-03 00:04:24,541 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-03 00:05:09,142 - INFO - Evaluation for novice_basic completed in 44.60 seconds with score 1
+2025-03-03 00:05:09,143 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_1.json
+2025-03-03 00:05:09,143 - INFO - Saved text results to comprehensive_results/txt/novice_basic_1.txt
+2025-03-03 00:05:09,143 - INFO - Generating conversation for novice_basic (novice with gradient 0.0)
+2025-03-03 00:05:23,522 - INFO - Conversation for novice_basic generated in 14.38 seconds with 6 exchanges
+2025-03-03 00:05:23,523 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-03 00:06:08,905 - INFO - Evaluation for novice_basic completed in 45.38 seconds with score 1
+2025-03-03 00:06:08,907 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_2.json
+2025-03-03 00:06:08,908 - INFO - Saved text results to comprehensive_results/txt/novice_basic_2.txt
+2025-03-03 00:06:08,908 - INFO - Generating conversation for novice_basic (novice with gradient 0.0)
+2025-03-03 00:06:18,529 - INFO - Conversation for novice_basic generated in 9.62 seconds with 6 exchanges
+2025-03-03 00:06:18,529 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-03 00:07:00,332 - INFO - Evaluation for novice_basic completed in 41.80 seconds with score 2
+2025-03-03 00:07:00,335 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_3.json
+2025-03-03 00:07:00,344 - INFO - Saved text results to comprehensive_results/txt/novice_basic_3.txt
+2025-03-03 00:07:00,344 - INFO - Generating conversation for intermediate_basic (intermediate with gradient 0.0)
+2025-03-03 00:07:14,069 - INFO - Conversation for intermediate_basic generated in 13.73 seconds with 6 exchanges
+2025-03-03 00:07:14,070 - INFO - Evaluating conversation for intermediate_basic with 6 exchanges
+2025-03-03 00:07:56,187 - INFO - Evaluation for intermediate_basic completed in 42.12 seconds with score 15
+2025-03-03 00:07:56,189 - INFO - Saved JSON results to comprehensive_results/json/intermediate_basic_1.json
+2025-03-03 00:07:56,189 - INFO - Saved text results to comprehensive_results/txt/intermediate_basic_1.txt
+2025-03-03 00:07:56,189 - INFO - Generating conversation for intermediate_basic (intermediate with gradient 0.0)
+2025-03-03 00:08:11,525 - INFO - Conversation for intermediate_basic generated in 15.34 seconds with 6 exchanges
+2025-03-03 00:08:11,525 - INFO - Evaluating conversation for intermediate_basic with 6 exchanges
+2025-03-03 00:08:51,651 - INFO - Evaluation for intermediate_basic completed in 40.13 seconds with score 16
+2025-03-03 00:08:51,651 - INFO - Saved JSON results to comprehensive_results/json/intermediate_basic_2.json
+2025-03-03 00:08:51,652 - INFO - Saved text results to comprehensive_results/txt/intermediate_basic_2.txt
+2025-03-03 00:08:51,652 - INFO - Generating conversation for intermediate_basic (intermediate with gradient 0.0)
+2025-03-03 00:09:04,248 - INFO - Conversation for intermediate_basic generated in 12.60 seconds with 6 exchanges
+2025-03-03 00:09:04,248 - INFO - Evaluating conversation for intermediate_basic with 6 exchanges
+2025-03-03 00:09:45,128 - INFO - Evaluation for intermediate_basic completed in 40.88 seconds with score 15
+2025-03-03 00:09:45,129 - INFO - Saved JSON results to comprehensive_results/json/intermediate_basic_3.json
+2025-03-03 00:09:45,129 - INFO - Saved text results to comprehensive_results/txt/intermediate_basic_3.txt
+2025-03-03 00:09:45,130 - INFO - Generating conversation for advanced_basic (advanced with gradient 0.0)
+2025-03-03 00:09:59,845 - INFO - Conversation for advanced_basic generated in 14.72 seconds with 6 exchanges
+2025-03-03 00:09:59,845 - INFO - Evaluating conversation for advanced_basic with 6 exchanges
+2025-03-03 00:10:44,835 - INFO - Evaluation for advanced_basic completed in 44.99 seconds with score 18
+2025-03-03 00:10:44,836 - INFO - Saved JSON results to comprehensive_results/json/advanced_basic_1.json
+2025-03-03 00:10:44,836 - INFO - Saved text results to comprehensive_results/txt/advanced_basic_1.txt
+2025-03-03 00:10:44,836 - INFO - Generating conversation for advanced_basic (advanced with gradient 0.0)
+2025-03-03 00:11:00,537 - INFO - Conversation for advanced_basic generated in 15.70 seconds with 6 exchanges
+2025-03-03 00:11:00,537 - INFO - Evaluating conversation for advanced_basic with 6 exchanges
+2025-03-03 00:11:40,803 - INFO - Evaluation for advanced_basic completed in 40.27 seconds with score 17
+2025-03-03 00:11:40,804 - INFO - Saved JSON results to comprehensive_results/json/advanced_basic_2.json
+2025-03-03 00:11:40,804 - INFO - Saved text results to comprehensive_results/txt/advanced_basic_2.txt
+2025-03-03 00:11:40,804 - INFO - Generating conversation for advanced_basic (advanced with gradient 0.0)
+2025-03-03 00:11:57,525 - INFO - Conversation for advanced_basic generated in 16.72 seconds with 6 exchanges
+2025-03-03 00:11:57,525 - INFO - Evaluating conversation for advanced_basic with 6 exchanges
+2025-03-03 00:12:32,459 - INFO - Evaluation for advanced_basic completed in 34.93 seconds with score 18
+2025-03-03 00:12:32,460 - INFO - Saved JSON results to comprehensive_results/json/advanced_basic_3.json
+2025-03-03 00:12:32,461 - INFO - Saved text results to comprehensive_results/txt/advanced_basic_3.txt
+2025-03-03 00:12:32,461 - INFO - Generating conversation for novice_low (novice with gradient 0.2)
+2025-03-03 00:12:32,461 - ERROR - Error generating conversation: 'novice but slightly better'
+2025-03-03 00:12:40,842 - INFO - Conversation for novice_low generated in 8.38 seconds with 6 exchanges
+2025-03-03 00:12:40,842 - INFO - Evaluating conversation for novice_low with 6 exchanges
+2025-03-03 00:13:16,709 - INFO - Evaluation for novice_low completed in 35.87 seconds with score 0
+2025-03-03 00:13:16,711 - INFO - Saved JSON results to comprehensive_results/json/novice_low_1.json
+2025-03-03 00:13:16,711 - INFO - Saved text results to comprehensive_results/txt/novice_low_1.txt
+2025-03-03 00:13:16,711 - INFO - Generating conversation for novice_low (novice with gradient 0.2)
+2025-03-03 00:13:16,711 - ERROR - Error generating conversation: 'novice but slightly better'
+2025-03-03 00:13:26,506 - INFO - Conversation for novice_low generated in 9.80 seconds with 6 exchanges
+2025-03-03 00:13:26,506 - INFO - Evaluating conversation for novice_low with 6 exchanges
+2025-03-03 00:14:11,896 - INFO - Evaluation for novice_low completed in 45.39 seconds with score 0
+2025-03-03 00:14:11,896 - INFO - Saved JSON results to comprehensive_results/json/novice_low_2.json
+2025-03-03 00:14:11,897 - INFO - Saved text results to comprehensive_results/txt/novice_low_2.txt
+2025-03-03 00:14:11,897 - INFO - Generating conversation for novice_low (novice with gradient 0.2)
+2025-03-03 00:14:11,897 - ERROR - Error generating conversation: 'novice but slightly better'
+2025-03-03 00:14:20,529 - INFO - Conversation for novice_low generated in 8.63 seconds with 6 exchanges
+2025-03-03 00:14:20,529 - INFO - Evaluating conversation for novice_low with 6 exchanges
+2025-03-03 00:14:59,971 - INFO - Evaluation for novice_low completed in 39.44 seconds with score 1
+2025-03-03 00:14:59,972 - INFO - Saved JSON results to comprehensive_results/json/novice_low_3.json
+2025-03-03 00:14:59,972 - INFO - Saved text results to comprehensive_results/txt/novice_low_3.txt
+2025-03-03 00:14:59,972 - INFO - Generating conversation for intermediate_low (intermediate with gradient 0.2)
+2025-03-03 00:14:59,973 - ERROR - Error generating conversation: 'intermediate but slightly better'
+2025-03-03 00:15:10,829 - INFO - Conversation for intermediate_low generated in 10.86 seconds with 5 exchanges
+2025-03-03 00:15:10,829 - INFO - Evaluating conversation for intermediate_low with 5 exchanges
+2025-03-03 00:15:41,769 - INFO - Evaluation for intermediate_low completed in 30.94 seconds with score 12
+2025-03-03 00:15:41,770 - INFO - Saved JSON results to comprehensive_results/json/intermediate_low_1.json
+2025-03-03 00:15:41,771 - INFO - Saved text results to comprehensive_results/txt/intermediate_low_1.txt
+2025-03-03 00:15:41,771 - INFO - Generating conversation for intermediate_low (intermediate with gradient 0.2)
+2025-03-03 00:15:41,771 - ERROR - Error generating conversation: 'intermediate but slightly better'
+2025-03-03 00:17:04,831 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 00:17:04,831 - INFO - Initializing conversation generator and evaluator
+2025-03-03 00:17:04,831 - INFO - Generating conversation for novice_basic (novice)
+2025-03-03 00:17:15,202 - INFO - Conversation for novice_basic generated in 10.37 seconds with 6 exchanges
+2025-03-03 00:18:54,149 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 00:18:54,149 - INFO - Initializing conversation generator and evaluator
+2025-03-03 00:18:54,149 - INFO - Generating conversation for novice_basic (novice)
+2025-03-03 00:19:01,436 - INFO - Conversation for novice_basic generated in 7.29 seconds with 5 exchanges
+2025-03-03 00:19:01,437 - INFO - Evaluating conversation for novice_basic with 5 exchanges
+2025-03-03 00:19:01,437 - INFO - Evaluation for novice_basic completed in 0.00 seconds with score 0
+2025-03-03 00:20:00,281 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 00:20:00,281 - INFO - Initializing conversation generator and evaluator
+2025-03-03 00:20:00,281 - INFO - Generating conversation for novice_basic (novice)
+2025-03-03 00:20:07,603 - INFO - Conversation for novice_basic generated in 7.32 seconds with 6 exchanges
+2025-03-03 00:20:07,603 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-03 00:20:07,603 - INFO - Evaluation for novice_basic completed in 0.00 seconds with score 0
+2025-03-03 00:21:07,605 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 00:21:07,605 - INFO - Initializing conversation generator and evaluator
+2025-03-03 00:21:07,605 - INFO - Generating conversation for novice_basic (novice)
+2025-03-03 00:21:17,410 - INFO - Conversation for novice_basic generated in 9.80 seconds with 6 exchanges
+2025-03-03 00:21:17,410 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-03 00:21:17,410 - INFO - Evaluation for novice_basic completed in 0.00 seconds with score 0
+2025-03-03 00:21:17,411 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_1.json
+2025-03-03 00:21:17,411 - INFO - Saved text results to comprehensive_results/txt/novice_basic_1.txt
+2025-03-03 00:21:17,411 - INFO - Generating conversation for novice_basic (novice)
+2025-03-03 00:21:25,808 - INFO - Conversation for novice_basic generated in 8.40 seconds with 6 exchanges
+2025-03-03 00:21:25,809 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-03 00:21:25,809 - INFO - Evaluation for novice_basic completed in 0.00 seconds with score 0
+2025-03-03 00:21:25,809 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_2.json
+2025-03-03 00:21:25,809 - INFO - Saved text results to comprehensive_results/txt/novice_basic_2.txt
+2025-03-03 00:21:25,809 - INFO - Generating conversation for novice_basic (novice)
+2025-03-03 00:21:35,486 - INFO - Conversation for novice_basic generated in 9.68 seconds with 6 exchanges
+2025-03-03 00:21:35,486 - INFO - Evaluating conversation for novice_basic with 6 exchanges
+2025-03-03 00:21:35,486 - INFO - Evaluation for novice_basic completed in 0.00 seconds with score 0
+2025-03-03 00:21:35,487 - INFO - Saved JSON results to comprehensive_results/json/novice_basic_3.json
+2025-03-03 00:21:35,487 - INFO - Saved text results to comprehensive_results/txt/novice_basic_3.txt
+2025-03-03 00:21:35,487 - INFO - Generating conversation for novice_low (novice)
+2025-03-03 00:21:44,040 - INFO - Conversation for novice_low generated in 8.55 seconds with 6 exchanges
+2025-03-03 00:21:44,040 - INFO - Evaluating conversation for novice_low with 6 exchanges
+2025-03-03 00:21:44,040 - INFO - Evaluation for novice_low completed in 0.00 seconds with score 0
+2025-03-03 00:21:44,041 - INFO - Saved JSON results to comprehensive_results/json/novice_low_1.json
+2025-03-03 00:21:44,041 - INFO - Saved text results to comprehensive_results/txt/novice_low_1.txt
+2025-03-03 00:21:44,041 - INFO - Generating conversation for novice_low (novice)
+2025-03-03 00:21:54,418 - INFO - Conversation for novice_low generated in 10.38 seconds with 6 exchanges
+2025-03-03 00:21:54,418 - INFO - Evaluating conversation for novice_low with 6 exchanges
+2025-03-03 00:21:54,418 - INFO - Evaluation for novice_low completed in 0.00 seconds with score 0
+2025-03-03 00:21:54,419 - INFO - Saved JSON results to comprehensive_results/json/novice_low_2.json
+2025-03-03 00:21:54,419 - INFO - Saved text results to comprehensive_results/txt/novice_low_2.txt
+2025-03-03 00:21:54,419 - INFO - Generating conversation for novice_low (novice)
+2025-03-03 00:22:02,499 - INFO - Conversation for novice_low generated in 8.08 seconds with 6 exchanges
+2025-03-03 00:22:02,500 - INFO - Evaluating conversation for novice_low with 6 exchanges
+2025-03-03 00:22:02,500 - INFO - Evaluation for novice_low completed in 0.00 seconds with score 0
+2025-03-03 00:22:02,501 - INFO - Saved JSON results to comprehensive_results/json/novice_low_3.json
+2025-03-03 00:22:02,502 - INFO - Saved text results to comprehensive_results/txt/novice_low_3.txt
+2025-03-03 00:22:02,502 - INFO - Generating conversation for novice_high (novice)
+2025-03-03 00:22:10,494 - INFO - Conversation for novice_high generated in 7.99 seconds with 6 exchanges
+2025-03-03 00:22:10,494 - INFO - Evaluating conversation for novice_high with 6 exchanges
+2025-03-03 00:22:10,494 - INFO - Evaluation for novice_high completed in 0.00 seconds with score 0
+2025-03-03 00:22:10,494 - INFO - Saved JSON results to comprehensive_results/json/novice_high_1.json
+2025-03-03 00:22:10,495 - INFO - Saved text results to comprehensive_results/txt/novice_high_1.txt
+2025-03-03 00:22:10,495 - INFO - Generating conversation for novice_high (novice)
+2025-03-03 00:22:20,352 - INFO - Conversation for novice_high generated in 9.86 seconds with 7 exchanges
+2025-03-03 00:22:20,352 - INFO - Evaluating conversation for novice_high with 7 exchanges
+2025-03-03 00:22:20,352 - INFO - Evaluation for novice_high completed in 0.00 seconds with score 0
+2025-03-03 00:22:20,353 - INFO - Saved JSON results to comprehensive_results/json/novice_high_2.json
+2025-03-03 00:22:20,354 - INFO - Saved text results to comprehensive_results/txt/novice_high_2.txt
+2025-03-03 00:22:20,354 - INFO - Generating conversation for novice_high (novice)
+2025-03-03 00:22:29,272 - INFO - Conversation for novice_high generated in 8.92 seconds with 6 exchanges
+2025-03-03 00:22:29,272 - INFO - Evaluating conversation for novice_high with 6 exchanges
+2025-03-03 00:22:29,272 - INFO - Evaluation for novice_high completed in 0.00 seconds with score 0
+2025-03-03 00:22:29,273 - INFO - Saved JSON results to comprehensive_results/json/novice_high_3.json
+2025-03-03 00:22:29,273 - INFO - Saved text results to comprehensive_results/txt/novice_high_3.txt
+2025-03-03 00:22:29,273 - INFO - Generating conversation for intermediate_basic (intermediate)
+2025-03-03 00:22:38,994 - INFO - Conversation for intermediate_basic generated in 9.72 seconds with 5 exchanges
+2025-03-03 00:22:38,994 - INFO - Evaluating conversation for intermediate_basic with 5 exchanges
+2025-03-03 00:22:38,994 - INFO - Evaluation for intermediate_basic completed in 0.00 seconds with score 0
+2025-03-03 00:22:38,995 - INFO - Saved JSON results to comprehensive_results/json/intermediate_basic_1.json
+2025-03-03 00:22:38,995 - INFO - Saved text results to comprehensive_results/txt/intermediate_basic_1.txt
+2025-03-03 00:22:38,995 - INFO - Generating conversation for intermediate_basic (intermediate)
+2025-03-03 00:22:48,577 - INFO - Conversation for intermediate_basic generated in 9.58 seconds with 6 exchanges
+2025-03-03 00:22:48,577 - INFO - Evaluating conversation for intermediate_basic with 6 exchanges
+2025-03-03 00:22:48,577 - INFO - Evaluation for intermediate_basic completed in 0.00 seconds with score 0
+2025-03-03 00:22:48,578 - INFO - Saved JSON results to comprehensive_results/json/intermediate_basic_2.json
+2025-03-03 00:22:48,578 - INFO - Saved text results to comprehensive_results/txt/intermediate_basic_2.txt
+2025-03-03 00:22:48,578 - INFO - Generating conversation for intermediate_basic (intermediate)
+2025-03-03 00:23:00,222 - INFO - Conversation for intermediate_basic generated in 11.64 seconds with 6 exchanges
+2025-03-03 00:23:00,222 - INFO - Evaluating conversation for intermediate_basic with 6 exchanges
+2025-03-03 00:23:00,222 - INFO - Evaluation for intermediate_basic completed in 0.00 seconds with score 0
+2025-03-03 00:23:00,223 - INFO - Saved JSON results to comprehensive_results/json/intermediate_basic_3.json
+2025-03-03 00:23:00,223 - INFO - Saved text results to comprehensive_results/txt/intermediate_basic_3.txt
+2025-03-03 00:23:00,223 - INFO - Generating conversation for intermediate_low (intermediate)
+2025-03-03 00:23:09,520 - INFO - Conversation for intermediate_low generated in 9.30 seconds with 5 exchanges
+2025-03-03 00:23:09,520 - INFO - Evaluating conversation for intermediate_low with 5 exchanges
+2025-03-03 00:23:09,520 - INFO - Evaluation for intermediate_low completed in 0.00 seconds with score 0
+2025-03-03 00:23:09,520 - INFO - Saved JSON results to comprehensive_results/json/intermediate_low_1.json
+2025-03-03 00:23:09,521 - INFO - Saved text results to comprehensive_results/txt/intermediate_low_1.txt
+2025-03-03 00:23:09,521 - INFO - Generating conversation for intermediate_low (intermediate)
+2025-03-03 00:23:25,386 - INFO - Conversation for intermediate_low generated in 15.86 seconds with 6 exchanges
+2025-03-03 00:23:25,386 - INFO - Evaluating conversation for intermediate_low with 6 exchanges
+2025-03-03 00:23:25,386 - INFO - Evaluation for intermediate_low completed in 0.00 seconds with score 0
+2025-03-03 00:23:25,387 - INFO - Saved JSON results to comprehensive_results/json/intermediate_low_2.json
+2025-03-03 00:23:25,387 - INFO - Saved text results to comprehensive_results/txt/intermediate_low_2.txt
+2025-03-03 00:23:25,387 - INFO - Generating conversation for intermediate_low (intermediate)
+2025-03-03 00:23:38,109 - INFO - Conversation for intermediate_low generated in 12.72 seconds with 6 exchanges
+2025-03-03 00:23:38,109 - INFO - Evaluating conversation for intermediate_low with 6 exchanges
+2025-03-03 00:23:38,109 - INFO - Evaluation for intermediate_low completed in 0.00 seconds with score 0
+2025-03-03 00:23:38,110 - INFO - Saved JSON results to comprehensive_results/json/intermediate_low_3.json
+2025-03-03 00:23:38,110 - INFO - Saved text results to comprehensive_results/txt/intermediate_low_3.txt
+2025-03-03 00:23:38,110 - INFO - Generating conversation for intermediate_high (intermediate)
+2025-03-03 00:23:51,717 - INFO - Conversation for intermediate_high generated in 13.61 seconds with 6 exchanges
+2025-03-03 00:23:51,718 - INFO - Evaluating conversation for intermediate_high with 6 exchanges
+2025-03-03 00:23:51,718 - INFO - Evaluation for intermediate_high completed in 0.00 seconds with score 0
+2025-03-03 00:23:51,718 - INFO - Saved JSON results to comprehensive_results/json/intermediate_high_1.json
+2025-03-03 00:23:51,719 - INFO - Saved text results to comprehensive_results/txt/intermediate_high_1.txt
+2025-03-03 00:23:51,719 - INFO - Generating conversation for intermediate_high (intermediate)
+2025-03-03 00:24:04,441 - INFO - Conversation for intermediate_high generated in 12.72 seconds with 6 exchanges
+2025-03-03 00:24:04,441 - INFO - Evaluating conversation for intermediate_high with 6 exchanges
+2025-03-03 00:24:04,441 - INFO - Evaluation for intermediate_high completed in 0.00 seconds with score 0
+2025-03-03 00:24:04,441 - INFO - Saved JSON results to comprehensive_results/json/intermediate_high_2.json
+2025-03-03 00:24:04,441 - INFO - Saved text results to comprehensive_results/txt/intermediate_high_2.txt
+2025-03-03 00:24:04,441 - INFO - Generating conversation for intermediate_high (intermediate)
+2025-03-03 00:24:16,523 - INFO - Conversation for intermediate_high generated in 12.08 seconds with 6 exchanges
+2025-03-03 00:24:16,523 - INFO - Evaluating conversation for intermediate_high with 6 exchanges
+2025-03-03 00:24:16,523 - INFO - Evaluation for intermediate_high completed in 0.00 seconds with score 0
+2025-03-03 00:24:16,524 - INFO - Saved JSON results to comprehensive_results/json/intermediate_high_3.json
+2025-03-03 00:24:16,524 - INFO - Saved text results to comprehensive_results/txt/intermediate_high_3.txt
+2025-03-03 00:24:16,524 - INFO - Generating conversation for advanced_basic (advanced)
+2025-03-03 00:24:30,417 - INFO - Conversation for advanced_basic generated in 13.89 seconds with 6 exchanges
+2025-03-03 00:24:30,417 - INFO - Evaluating conversation for advanced_basic with 6 exchanges
+2025-03-03 00:24:30,417 - INFO - Evaluation for advanced_basic completed in 0.00 seconds with score 0
+2025-03-03 00:24:30,418 - INFO - Saved JSON results to comprehensive_results/json/advanced_basic_1.json
+2025-03-03 00:24:30,418 - INFO - Saved text results to comprehensive_results/txt/advanced_basic_1.txt
+2025-03-03 00:24:30,418 - INFO - Generating conversation for advanced_basic (advanced)
+2025-03-03 00:24:44,010 - INFO - Conversation for advanced_basic generated in 13.59 seconds with 6 exchanges
+2025-03-03 00:24:44,010 - INFO - Evaluating conversation for advanced_basic with 6 exchanges
+2025-03-03 00:24:44,010 - INFO - Evaluation for advanced_basic completed in 0.00 seconds with score 0
+2025-03-03 00:24:44,011 - INFO - Saved JSON results to comprehensive_results/json/advanced_basic_2.json
+2025-03-03 00:24:44,011 - INFO - Saved text results to comprehensive_results/txt/advanced_basic_2.txt
+2025-03-03 00:24:44,011 - INFO - Generating conversation for advanced_basic (advanced)
+2025-03-03 00:24:55,526 - INFO - Conversation for advanced_basic generated in 11.51 seconds with 7 exchanges
+2025-03-03 00:24:55,526 - INFO - Evaluating conversation for advanced_basic with 7 exchanges
+2025-03-03 00:24:55,526 - INFO - Evaluation for advanced_basic completed in 0.00 seconds with score 0
+2025-03-03 00:24:55,527 - INFO - Saved JSON results to comprehensive_results/json/advanced_basic_3.json
+2025-03-03 00:24:55,528 - INFO - Saved text results to comprehensive_results/txt/advanced_basic_3.txt
+2025-03-03 00:24:55,528 - INFO - Generating conversation for advanced_low (advanced)
+2025-03-03 00:25:12,312 - INFO - Conversation for advanced_low generated in 16.78 seconds with 6 exchanges
+2025-03-03 00:25:12,312 - INFO - Evaluating conversation for advanced_low with 6 exchanges
+2025-03-03 00:25:12,312 - INFO - Evaluation for advanced_low completed in 0.00 seconds with score 0
+2025-03-03 00:25:12,313 - INFO - Saved JSON results to comprehensive_results/json/advanced_low_1.json
+2025-03-03 00:25:12,313 - INFO - Saved text results to comprehensive_results/txt/advanced_low_1.txt
+2025-03-03 00:25:12,313 - INFO - Generating conversation for advanced_low (advanced)
+2025-03-03 00:25:27,972 - INFO - Conversation for advanced_low generated in 15.66 seconds with 6 exchanges
+2025-03-03 00:25:27,972 - INFO - Evaluating conversation for advanced_low with 6 exchanges
+2025-03-03 00:25:27,972 - INFO - Evaluation for advanced_low completed in 0.00 seconds with score 0
+2025-03-03 00:25:27,973 - INFO - Saved JSON results to comprehensive_results/json/advanced_low_2.json
+2025-03-03 00:25:27,973 - INFO - Saved text results to comprehensive_results/txt/advanced_low_2.txt
+2025-03-03 00:25:27,973 - INFO - Generating conversation for advanced_low (advanced)
+2025-03-03 00:25:45,705 - INFO - Conversation for advanced_low generated in 17.73 seconds with 6 exchanges
+2025-03-03 00:25:45,706 - INFO - Evaluating conversation for advanced_low with 6 exchanges
+2025-03-03 00:25:45,706 - INFO - Evaluation for advanced_low completed in 0.00 seconds with score 0
+2025-03-03 00:25:45,707 - INFO - Saved JSON results to comprehensive_results/json/advanced_low_3.json
+2025-03-03 00:25:45,707 - INFO - Saved text results to comprehensive_results/txt/advanced_low_3.txt
+2025-03-03 00:25:45,707 - INFO - Generating conversation for advanced_high (advanced)
+2025-03-03 00:25:58,869 - INFO - Conversation for advanced_high generated in 13.16 seconds with 6 exchanges
+2025-03-03 00:25:58,870 - INFO - Evaluating conversation for advanced_high with 6 exchanges
+2025-03-03 00:25:58,870 - INFO - Evaluation for advanced_high completed in 0.00 seconds with score 0
+2025-03-03 00:25:58,870 - INFO - Saved JSON results to comprehensive_results/json/advanced_high_1.json
+2025-03-03 00:25:58,871 - INFO - Saved text results to comprehensive_results/txt/advanced_high_1.txt
+2025-03-03 00:25:58,871 - INFO - Generating conversation for advanced_high (advanced)
+2025-03-03 00:26:11,210 - INFO - Conversation for advanced_high generated in 12.34 seconds with 6 exchanges
+2025-03-03 00:26:11,210 - INFO - Evaluating conversation for advanced_high with 6 exchanges
+2025-03-03 00:26:11,210 - INFO - Evaluation for advanced_high completed in 0.00 seconds with score 0
+2025-03-03 00:26:11,210 - INFO - Saved JSON results to comprehensive_results/json/advanced_high_2.json
+2025-03-03 00:26:11,211 - INFO - Saved text results to comprehensive_results/txt/advanced_high_2.txt
+2025-03-03 00:26:11,211 - INFO - Generating conversation for advanced_high (advanced)
+2025-03-03 00:26:23,613 - INFO - Conversation for advanced_high generated in 12.40 seconds with 6 exchanges
+2025-03-03 00:26:23,613 - INFO - Evaluating conversation for advanced_high with 6 exchanges
+2025-03-03 00:26:23,613 - INFO - Evaluation for advanced_high completed in 0.00 seconds with score 0
+2025-03-03 00:26:23,613 - INFO - Saved JSON results to comprehensive_results/json/advanced_high_3.json
+2025-03-03 00:26:23,613 - INFO - Saved text results to comprehensive_results/txt/advanced_high_3.txt
+2025-03-03 00:28:50,304 - INFO - Exporting results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:30:48,513 - INFO - Exporting results to CSV: comprehensive_results/comprehensive_results.csv
+2025-03-03 00:30:48,671 - INFO - Exporting results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:30:48,692 - INFO - Creating visualizations in comprehensive_results/visualizations/visualizations
+2025-03-03 00:32:01,278 - INFO - Exporting results to CSV: comprehensive_results/comprehensive_results.csv
+2025-03-03 00:32:01,309 - INFO - Exporting results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:32:02,168 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:32:02,168 - INFO - Generating PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:32:18,390 - INFO - Exporting results to CSV: comprehensive_results/comprehensive_results.csv
+2025-03-03 00:32:18,418 - INFO - Exporting results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:32:19,261 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:32:19,261 - INFO - Generating PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:33:44,572 - INFO - Exporting results to CSV: comprehensive_results/comprehensive_results.csv
+2025-03-03 00:33:44,601 - INFO - Exporting results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:33:45,460 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:33:45,460 - INFO - Generating PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:35:00,982 - INFO - Exporting results to CSV: comprehensive_results/comprehensive_results.csv
+2025-03-03 00:35:01,009 - INFO - Exporting results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:35:01,838 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:35:01,839 - INFO - Generating PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:41:28,430 - INFO - Exporting results to CSV: comprehensive_results/comprehensive_results.csv
+2025-03-03 00:41:28,484 - INFO - Exporting comprehensive results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:41:29,327 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:41:29,327 - INFO - Generating comprehensive PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:41:29,715 - ERROR - Error generating PDF report: Not enough horizontal space to render a single character
+2025-03-03 00:48:05,201 - INFO - Exporting results to CSV: comprehensive_results/comprehensive_results.csv
+2025-03-03 00:48:05,255 - INFO - Exporting comprehensive results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:48:06,106 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:48:06,106 - INFO - Generating comprehensive PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:48:06,490 - ERROR - Error generating PDF report: Not enough horizontal space to render a single character
+2025-03-03 00:50:08,591 - INFO - Exporting results to CSV: comprehensive_results/comprehensive_results.csv
+2025-03-03 00:50:08,647 - INFO - Exporting comprehensive results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:50:09,495 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:50:09,495 - INFO - Generating comprehensive PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:50:09,882 - ERROR - Error generating PDF report: Character "•" at index 0 in text is outside the range of characters supported by the font used: "helvetica". Please consider using a Unicode font.
+2025-03-03 00:54:08,098 - INFO - Exporting results to CSV: comprehensive_results.csv
+2025-03-03 00:54:08,099 - INFO - Exporting comprehensive results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:54:08,647 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:54:08,647 - INFO - Generating comprehensive PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:54:09,026 - ERROR - Error generating PDF report: Character "•" at index 0 in text is outside the range of characters supported by the font used: "helvetica". Please consider using a Unicode font.
+2025-03-03 00:57:20,276 - INFO - Exporting results to CSV: comprehensive_results.csv
+2025-03-03 00:57:20,795 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:57:20,795 - INFO - Exporting comprehensive results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:57:20,839 - INFO - Generating comprehensive PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:57:21,215 - ERROR - Error generating PDF report: Character "•" at index 0 in text is outside the range of characters supported by the font used: "helvetica". Please consider using a Unicode font.
+2025-03-03 00:59:01,330 - INFO - Exporting results to CSV: comprehensive_results.csv
+2025-03-03 00:59:01,832 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 00:59:01,832 - INFO - Exporting comprehensive results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 00:59:01,876 - INFO - Generating comprehensive PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 00:59:02,257 - ERROR - Error generating PDF report: Not enough horizontal space to render a single character
+2025-03-03 01:00:53,607 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:01:12,166 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:02:59,619 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:04:04,348 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:05:34,038 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:07:05,724 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:08:33,944 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:08:40,859 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:08:40,861 - INFO - Exporting results to CSV: comprehensive_results.csv
+2025-03-03 01:08:41,372 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 01:08:41,373 - INFO - Exporting comprehensive results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 01:08:41,415 - INFO - Generating comprehensive PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 01:08:41,793 - ERROR - Error generating PDF report: Not enough horizontal space to render a single character
+2025-03-03 01:10:42,208 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:10:42,210 - INFO - Exporting results to CSV: comprehensive_results.csv
+2025-03-03 01:10:42,712 - INFO - Created visualizations in comprehensive_results/visualizations
+2025-03-03 01:10:42,712 - INFO - Exporting comprehensive results to Excel: comprehensive_results/comprehensive_results.xlsx
+2025-03-03 01:10:42,755 - INFO - Generating comprehensive PDF report: comprehensive_results/comprehensive_report.pdf
+2025-03-03 01:10:43,137 - ERROR - Error generating PDF report: Not enough horizontal space to render a single character
+2025-03-03 01:14:25,610 - INFO - Created output directory structure in comprehensive_results
+2025-03-03 01:21:06,688 - INFO - Starting text-only evaluation
+2025-03-03 01:21:06,688 - ERROR - Error importing modules: module 'synthetic_conversation_gpt' has no attribute 'SyntheticConversationGPT'
+2025-03-03 01:23:03,962 - INFO - Starting text-only evaluation
+2025-03-03 01:23:03,963 - ERROR - Error importing modules: No module named 'conversation_evaluator_gpt'

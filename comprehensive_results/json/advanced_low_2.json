@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "skill_level": "advanced_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:25:27.972931",
+    "conversation_id": "advanced_low_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer specializing in AI systems at TechCorp. How about you? What brings you to the event today?",
+      "user_response": "Hi Jake, nice to meet you. I'm Alex, and I work in business development for a technology startup focusing on scalable AI solutions. I'm here to explore potential collaborations and learn about the latest industry trends. What kind of AI systems are you working on at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm currently working on developing more intuitive AI-driven customer support systems. What about your startup? What makes your AI solutions stand out?",
+      "user_response": "That's fascinating, Jake. Our startup specializes in creating AI models that adapt to user behavior in real-time, which we believe can revolutionize personalized marketing strategies. It's exciting to see how AI is pushing boundaries in different sectors. How do you see AI evolving in customer support over the next few years?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I think AI will become even more predictive and proactive, enhancing user experience by anticipating needs before they arise. How do you envision the role of business development evolving alongside these AI advancements?",
+      "user_response": "I completely agree. As AI systems become more sophisticated, business development will likely shift towards forming strategic partnerships that leverage these technologies. It's about building ecosystems rather than just client lists. Have you noticed any emerging trends that are shaping your work at TechCorp?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely. The integration of AI with IoT devices is gaining traction. We should definitely keep each other updated on these trends. Would you be open to connecting on LinkedIn to exchange more insights?",
+      "user_response": "I'd love that, Jake. Staying connected with industry peers is invaluable, especially as these technologies evolve so rapidly. I'll send you a request so we can continue this conversation online."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sounds great! I see someone from our team that I need to catch up with. Would you excuse me for a moment?",
+      "user_response": "Of course, Jake. It was a pleasure speaking with you. I'll look forward to our continued conversation on LinkedIn."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Likewise, Alex. It's been great talking to you. Enjoy the rest of the event!",
+      "user_response": "Thank you, Jake. I really enjoyed our conversation. Have a great time at the event!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

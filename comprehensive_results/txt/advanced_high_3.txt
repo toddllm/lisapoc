@@ -1,0 +1,48 @@
+================================================================================
+NETWORKING CONVERSATION EVALUATION: ADVANCED_HIGH
+================================================================================
+Persona: default
+Timestamp: 2025-03-03T00:26:23.613634
+Conversation ID: advanced_high_3
+
+--------------------------------------------------------------------------------
+CONVERSATION TRANSCRIPT
+--------------------------------------------------------------------------------
+[Exchange 1] Stage: opener
+User: 
+Assistant: 
+
+[Exchange 2] Stage: carry
+User: 
+Assistant: 
+
+[Exchange 3] Stage: carry
+User: 
+Assistant: 
+
+[Exchange 4] Stage: linkedin
+User: 
+Assistant: 
+
+[Exchange 5] Stage: moveon
+User: 
+Assistant: 
+
+[Exchange 6] Stage: farewell
+User: 
+Assistant: 
+
+--------------------------------------------------------------------------------
+EVALUATION SUMMARY
+--------------------------------------------------------------------------------
+Overall Score: 0
+Badge Level: Bronze
+
+Skill Scores:
+- Critical Thinking: 0
+- Communication: 0
+- Emotional Intelligence: 0
+
+--------------------------------------------------------------------------------
+DETAILED EVALUATION
+--------------------------------------------------------------------------------

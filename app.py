@@ -20,19 +20,23 @@ tts_model.to("cuda" if torch.cuda.is_available() else "cpu")
 def load_personas():
     try:
         with open('personas.json', 'r') as f:
-            return json.load(f)
+            personas = json.load(f)
+            # Force update Jake's avatar every time
+            if 'jake' in personas:
+                personas['jake']['avatar'] = {
+                    "type": "image",
+                    "url": "/static/images/neutral-male-processed.png"
+                }
+            return personas
     except FileNotFoundError:
         print("Warning: personas.json not found, using default personas")
-        return {}  # Return empty dict if file doesn't exist
+        return {}
 
 def save_personas(personas):
     with open('personas.json', 'w') as f:
         json.dump(personas, f, indent=4)
 
-# Load personas first
-PERSONAS = load_personas()
-
-# Define system prompts
+# Define system prompts first
 SYSTEM_PROMPTS = {
     "jake": """You are Jake, a software engineer at a networking event. Keep responses natural and focused on making a genuine connection.
 
@@ -69,9 +73,21 @@ Example flow:
 5. Suggest LinkedIn connection when rapport is established"""
 }
 
-# Update system prompts in personas
-for persona_id in PERSONAS:
-    PERSONAS[persona_id]['system_prompt'] = SYSTEM_PROMPTS.get(persona_id, '')
+# Load personas
+PERSONAS = load_personas()
+
+# Update avatars in loaded personas
+if 'jake' in PERSONAS:
+    PERSONAS['jake']['avatar'] = {
+        "type": "image",
+        "url": "/static/images/neutral-male-processed.png"
+    }
+
+if 'sarah' in PERSONAS:
+    PERSONAS['sarah']['avatar'] = {
+        "type": "image",
+        "url": "/static/images/neutral-female-processed.png"
+    }
 
 # If no personas loaded, create default ones
 if not PERSONAS:
@@ -82,9 +98,8 @@ if not PERSONAS:
             "voice": "p273",
             "speed": 1.3,
             "avatar": {
-                "color": "#4CAF50",
-                "hair": "short",
-                "expression": "friendly"
+                "type": "image",
+                "url": "/static/images/neutral-male-processed.png"
             },
             "description": "A friendly software engineer specializing in AI and machine learning. Jake is enthusiastic about tech and loves connecting with fellow developers.",
             "system_prompt": SYSTEM_PROMPTS["jake"]
@@ -95,16 +110,18 @@ if not PERSONAS:
             "voice": "p226",
             "speed": 1.4,
             "avatar": {
-                "color": "#2196F3",
-                "hair": "long",
-                "expression": "professional"
+                "type": "image",
+                "url": "/static/images/neutral-female-processed.png"
             },
             "description": "A strategic product manager with experience in tech startups. Sarah is great at understanding user needs and building relationships.",
             "system_prompt": SYSTEM_PROMPTS["sarah"]
         }
     }
-    # Save default personas
     save_personas(PERSONAS)
+
+# Update system prompts in personas
+for persona_id in PERSONAS:
+    PERSONAS[persona_id]['system_prompt'] = SYSTEM_PROMPTS.get(persona_id, '')
 
 FEEDBACK_PROMPT = """Analyze this networking conversation and provide specific, constructive feedback.
 Focus on:
@@ -113,27 +130,39 @@ Focus on:
 3. Active listening and engagement
 4. Professional relationship building
 
+Compute coins (1-10) based on these criteria:
+• +2 coins: Clear introduction and role statement
+• +2 coins: Active listening with relevant follow-up questions
+• +2 coins: Sharing relevant professional experiences
+• +2 coins: Building genuine rapport/common ground
+• +2 coins: Successfully exchanging LinkedIn contacts
+
 Format the response as JSON with these keys:
 {
     "goal_status": "Completed" or "Incomplete",
-    "coins": number from 1-10 based on overall performance,
+    "coins": number from 1-10 based on criteria above,
     "strengths": [
-        "Critical thinking strength",
-        "Communication strength",
-        "Emotional intelligence strength"
+        "• Clear introduction and role statement",
+        "• Active listening with follow-up questions",
+        "• Genuine interest in shared topics"
     ],
     "improvements": [
-        "Critical thinking improvement",
-        "Communication improvement",
-        "Emotional intelligence improvement"
+        "• More specific questions about work experience",
+        "• Earlier focus on common professional interests",
+        "• Direct LinkedIn connection request"
     ],
     "key_moments": [
-        "Notable moment 1",
-        "Notable moment 2"
+        "• Strong opening with clear introduction",
+        "• Missed opportunity for deeper technical discussion"
     ]
 }
 
-Ensure each strength and improvement is specific and actionable."""
+Style guide:
+- Start each point with a bullet (•)
+- Use short, actionable phrases
+- Focus on specific behaviors and moments
+- Avoid complete sentences
+- Keep each point under 8 words"""
 
 def get_openai_response(history):
     print("Current conversation history:")
@@ -222,9 +251,10 @@ def generate_feedback(conversation_history):
 @app.route('/')
 def index():
     # Start with Jake as default persona
+    default_persona = PERSONAS['jake']
     session['current_persona'] = 'jake'
     session['history'] = [{'role': 'system', 'content': PERSONAS['jake']['system_prompt']}]
-    return render_template('index.html', personas=PERSONAS)
+    return render_template('index.html', personas=PERSONAS, persona=default_persona)
 
 @app.route('/select_persona', methods=['POST'])
 def select_persona():
@@ -246,17 +276,11 @@ def start_conversation():
     
     # Reset history to just the system prompt
     session['history'] = [{'role': 'system', 'content': PERSONAS[current_persona]['system_prompt']}]
-    
-    # Get initial greeting
-    response_text = get_openai_response(session['history'])
-    session['history'].append({'role': 'assistant', 'content': response_text})
     session.modified = True
     
-    audio_file = generate_audio(response_text)
-    
+    # Don't generate initial greeting, just return success
     return jsonify({
-        'response': response_text,
-        'audio': audio_file,
+        'status': 'success',
         'persona': PERSONAS[current_persona]['name']
     })
 

@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "skill_level": "intermediate_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:48.577826",
+    "conversation_id": "intermediate_basic_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. How are you finding the event so far?",
+      "user_response": "Hi Jake, I'm doing well, thanks. The event's been pretty interesting. Lots of different people and topics. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great! I've had some fascinating discussions about AI advancements. What brings you here today?",
+      "user_response": "I'm here to learn more about tech trends and meet people in the industry. AI is really exciting these days. How long have you been working with AI?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I've been with TechCorp for about five years now, focusing on AI systems. What's your area of interest?",
+      "user_response": "That sounds impressive. I'm currently exploring data analytics, but I'm quite curious about how AI can enhance data processing. Have you seen any interesting applications lately?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI is transforming data processing in many ways. By the way, are you on LinkedIn? It'd be great to connect and share some insights.",
+      "user_response": "Yes, I'm on LinkedIn. Connecting sounds good. I like keeping up with industry updates there."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, I'll send you a request. I should probably mingle a bit more. It's been nice chatting!",
+      "user_response": "Sure, I understand. It's been nice talking to you too. Enjoy the rest of the event."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for the conversation. Have a good rest of the event!",
+      "user_response": "Thanks, Jake. You too. Take care!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "skill_level": "novice_low",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:02.500753",
+    "conversation_id": "novice_low_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake, a Software Engineer at TechCorp. How are you doing?",
+      "user_response": "Hey. I'm fine, I guess."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Great to hear! I specialize in AI systems. What brings you to this event?",
+      "user_response": "Oh. I'm just here. I don't really know much about AI."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "No worries, it's always good to explore new fields. Are you interested in tech?",
+      "user_response": "Uh, not really. I wanted to see if there are any cool jobs."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I see. Well, if you're looking into tech fields, it might be useful to connect on LinkedIn. Would you like to exchange profiles?",
+      "user_response": "Yeah, whatever. Give me your LinkedIn."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sure thing! Let me send you the link. Is there anything else you'd like to know about the tech industry?",
+      "user_response": "Nah, I'm bored. I'm going to talk to someone else."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, no problem. It was nice meeting you.",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

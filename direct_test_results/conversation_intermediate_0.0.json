@@ -1,0 +1,80 @@
+{
+  "conversation_id": "jake_intermediate_0.0",
+  "persona": "jake",
+  "skill_level": "intermediate",
+  "gradient": 0.0,
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. What brings you to this event?",
+      "user_response": "Hi Jake! I'm here to learn more about the tech industry and meet new people. How's the event going for you so far?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great, lots of interesting discussions. I specialize in AI systems. What about you? What do you do?",
+      "user_response": "I work in digital marketing, but I'm really interested in how AI is changing the field. How long have you been working with AI?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I've been in AI for about 5 years now. Are you on LinkedIn? We could connect and share more insights.",
+      "user_response": "Yes, I am! I would love to connect and learn more about your work at TechCorp."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great! I'll send you a request. I should probably mingle a bit more and catch up with some colleagues.",
+      "user_response": "That sounds good. I think I need to say hello to a few other people too."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting, and I look forward to connecting on LinkedIn. Have a good rest of the event!",
+      "user_response": "Thank you, Jake. It was nice meeting you. Enjoy the rest of the event!"
+    }
+  ],
+  "evaluation": {
+    "timestamp": "2025-03-02T23:30:18.744190",
+    "stages": {
+      "opener": {
+        "score": 3,
+        "feedback": "This is an optimal response that demonstrates excellent networking skills. It clearly states the speaker's purpose for attending, invites the other person to share their experience, and sets a positive tone for the conversation.",
+        "improvement": "To enhance this response, consider adding a specific question related to the tech industry to further engage Jake and show a deeper interest in his perspective.",
+        "user_response": "Hi Jake! I'm here to learn more about the tech industry and meet new people. How's the event going for you so far?"
+      },
+      "carry": {
+        "score": 3,
+        "feedback": "This is an optimal response that demonstrates excellent networking skills. The speaker shares their own interest in AI, which is relevant to their field, and asks a question that invites the other person to share their experience, keeping the conversation engaging and focused.",
+        "improvement": "To further enhance the conversation, the speaker could follow up with a specific question about the other person's experiences or insights in AI, which could deepen the discussion.",
+        "user_response": "I work in digital marketing, but I'm really interested in how AI is changing the field. How long have you been working with AI?"
+      },
+      "linkedin": {
+        "score": 3,
+        "feedback": "This response is optimal as it effectively expresses enthusiasm for connecting on LinkedIn and shows genuine interest in the other person's work. It is polite, engaging, and makes the ask feel natural.",
+        "improvement": "Continue to maintain this level of engagement and interest in future networking interactions.",
+        "user_response": "Yes, I am! I would love to connect and learn more about your work at TechCorp."
+      },
+      "moveon": {
+        "score": 2,
+        "feedback": "The response is polite and effectively communicates the intention to move on, but it could be more personalized or engaging.",
+        "improvement": "Consider adding a specific reason for moving on or expressing interest in reconnecting later to make the transition smoother.",
+        "user_response": "That sounds good. I think I need to say hello to a few other people too."
+      },
+      "farewell": {
+        "score": 3,
+        "feedback": "This is an optimal response that demonstrates excellent networking skills. It expresses gratitude, acknowledges the person's name, and wishes them well, which is polite and engaging.",
+        "improvement": "No significant improvements needed. Consider following up with a specific action, like suggesting a LinkedIn connection, if appropriate.",
+        "user_response": "Thank you, Jake. It was nice meeting you. Enjoy the rest of the event!"
+      }
+    },
+    "skill_scores": {
+      "critical_thinking": 4.6,
+      "communication": 5.2,
+      "emotional_intelligence": 4.2
+    },
+    "total_score": 14,
+    "badges": {
+      "critical_thinking": "Silver",
+      "communication": "Gold",
+      "emotional_intelligence": "Silver"
+    },
+    "badge_level": "Bronze"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "skill_level": "novice_basic",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:21:35.487084",
+    "conversation_id": "novice_basic_3"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I'm a Software Engineer at TechCorp. How about you?",
+      "user_response": "Uh, hey. I'm Alex."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Nice to meet you, Alex. I'm really into AI systems. What brings you here?",
+      "user_response": "Oh, I just came for the snacks. I guess I should talk to people, too."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Well, events like these are great for meeting people. Are you in tech as well?",
+      "user_response": "Sure. I mean, I'm trying to get a tech job. It's hard."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I can relate to that. Would you like to connect on LinkedIn? I might be able to help with some tips.",
+      "user_response": "Uh, yeah. I need more connections on LinkedIn. What's your name again?"
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "It's Jake. Feel free to add me anytime. So, have you been finding any interesting opportunities lately?",
+      "user_response": "Um, not really. Anyway, I'm going to get more food."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, enjoy the event, Alex. It was nice meeting you.",
+      "user_response": "Yeah, bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

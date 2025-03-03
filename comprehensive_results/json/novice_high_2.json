@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "skill_level": "novice_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:22:20.352628",
+    "conversation_id": "novice_high_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there, I'm Jake. I work as a Software Engineer at TechCorp. Nice to meet you!",
+      "user_response": "Hey. I'm not really into these events."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I understand they can be a bit overwhelming. So, what brings you here today?",
+      "user_response": "Uh, I guess I need to find a job. That's it."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "Job hunting can be tough. What kind of role are you looking for?",
+      "user_response": "Whatever comes up, really. Anyway, I used to work in retail."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "That's interesting. Retail can teach you a lot about customer interactions. Are you planning to switch industries?",
+      "user_response": "I don't know, maybe. I just want to earn more money."
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I see. Well, if you're interested in tech, there are a lot of different paths you could explore. Let's connect on LinkedIn if you'd like.",
+      "user_response": "Sure. I need more connections on LinkedIn."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, feel free to reach out if you have any questions. It was nice chatting with you.",
+      "user_response": "Gotta go."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Alright, take care. Good luck with your job search!",
+      "user_response": "Bye."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

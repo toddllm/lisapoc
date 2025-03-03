@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "skill_level": "intermediate_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:24:04.441242",
+    "conversation_id": "intermediate_high_2"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. How are you finding the event?",
+      "user_response": "Hi Jake, nice to meet you! I'm enjoying it so far. How about yourself?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It\u2019s been great. I\u2019ve met a lot of interesting people. So, what brings you to this event?",
+      "user_response": "I'm here to learn more about the latest trends in AI. I work in digital marketing, and AI is becoming quite relevant in our strategies. What kind of AI systems do you work on?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I specialize in developing AI systems for predictive analytics. It's fascinating how AI is impacting different fields, including marketing. How long have you been in digital marketing?",
+      "user_response": "I've been in digital marketing for about three years now. It's always changing, which keeps things exciting. Do you see any recent AI trends that could influence marketing strategies?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "Absolutely, AI-driven personalization is a big trend. Are you on LinkedIn? I\u2019d love to connect and share some articles on the topic.",
+      "user_response": "Yes, I'm on LinkedIn. I'd be happy to connect with you there and learn more about those articles."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, I'll send you a request. I should probably mingle a bit more. It was nice chatting with you.",
+      "user_response": "Sure thing, it was great meeting you too, Jake."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting. Have a good rest of the event!",
+      "user_response": "Thanks, you too! Enjoy the rest of the event."
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

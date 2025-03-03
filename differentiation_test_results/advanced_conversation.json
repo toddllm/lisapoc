@@ -1,0 +1,224 @@
+{
+  "skill_level": "advanced",
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake, a Software Engineer at TechCorp. How about you, what brings you to this event?",
+      "user_response": "Hi Jake, it's a pleasure to meet you. I'm here to explore the latest trends in AI and meet like-minded professionals. Events like this are a goldmine for gaining fresh perspectives. How have you found it so far?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been quite insightful. I've been particularly interested in how AI is evolving in autonomous systems. What about you, do you work in a related field?",
+      "user_response": "Absolutely, I work in AI research, focusing on ethical AI implementation in autonomous vehicles. It's fascinating to see how the industry is addressing these challenges. I'd love to hear more about your work at TechCorp and how you're integrating AI into your projects."
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "At TechCorp, we're developing AI systems to enhance efficiency in data analysis. The ethical aspect in your field sounds crucial. How do you ensure ethical standards in your projects?",
+      "user_response": "We prioritize transparency and accountability by incorporating ethical guidelines right from the design phase. It's about creating AI that not only performs well but also aligns with societal values. Your focus on data analysis is intriguing; how do you handle the balance between data privacy and innovation?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "That's a great question. We emphasize data anonymization techniques to maintain privacy while extracting valuable insights. I'd love to exchange ideas further. Would you be interested in connecting on LinkedIn?",
+      "user_response": "That sounds like a perfect approach. I'd be delighted to connect on LinkedIn. It's fantastic to share insights with professionals like yourself who are pushing the boundaries of AI responsibly."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great! Well, I should probably circulate and meet a few more people. But this has been such an engaging conversation.",
+      "user_response": "Absolutely, I totally understand. Networking events like these are all about making those connections. Let's definitely keep in touch and continue this conversation online."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Definitely. It was a real pleasure meeting you. Enjoy the rest of the event!",
+      "user_response": "Likewise, Jake. It's been wonderful talking with you. Have a great evening and let's stay in touch!"
+    }
+  ],
+  "evaluation": {
+    "timestamp": "2025-03-02T23:47:57.937498",
+    "stages": {
+      "opener": {
+        "score": 3,
+        "feedback": "This response is optimal for the opener stage. It introduces the speaker, states their purpose for attending, and invites the other person to share their experience, which demonstrates excellent networking skills.",
+        "improvement": "To maintain this high level of engagement, ensure to actively listen to Jake's response and ask follow-up questions based on his input.",
+        "user_response": "Hi Jake, it's a pleasure to meet you. I'm here to explore the latest trends in AI and meet like-minded professionals. Events like this are a goldmine for gaining fresh perspectives. How have you found it so far?",
+        "skill_scores": {
+          "critical_thinking": 3,
+          "communication": 3,
+          "emotional_intelligence": 3
+        }
+      },
+      "carry": {
+        "score": 3,
+        "feedback": "This response demonstrates excellent networking skills by engaging with the topic deeply and posing a thoughtful question that encourages further discussion.",
+        "improvement": "Continue to engage with similar depth and thoughtfulness in future conversations.",
+        "user_response": "We prioritize transparency and accountability by incorporating ethical guidelines right from the design phase. It's about creating AI that not only performs well but also aligns with societal values. Your focus on data analysis is intriguing; how do you handle the balance between data privacy and innovation?",
+        "skill_scores": {
+          "critical_thinking": 3,
+          "communication": 3,
+          "emotional_intelligence": 3
+        }
+      },
+      "linkedin": {
+        "score": 3,
+        "feedback": "This response is optimal for the LinkedIn stage of a networking conversation. It is polite, shows genuine interest, and is well-articulated. The response effectively invites a connection while acknowledging the other person's expertise.",
+        "improvement": "To maintain this high level of networking skill, continue to tailor responses to the specific context and individual, ensuring each interaction feels personalized.",
+        "user_response": "That sounds like a perfect approach. I'd be delighted to connect on LinkedIn. It's fantastic to share insights with professionals like yourself who are pushing the boundaries of AI responsibly.",
+        "skill_scores": {
+          "critical_thinking": 3,
+          "communication": 3,
+          "emotional_intelligence": 3
+        }
+      },
+      "moveon": {
+        "score": 2,
+        "feedback": "The response is polite and acknowledges the purpose of networking events, which is effective. It suggests continuing the conversation online, which is a good strategy for maintaining connections. However, it could be more direct in signaling the intention to move on.",
+        "improvement": "To improve, the response could include a more explicit indication of the need to move on, such as mentioning a specific person or reason for needing to circulate.",
+        "user_response": "Absolutely, I totally understand. Networking events like these are all about making those connections. Let's definitely keep in touch and continue this conversation online.",
+        "skill_scores": {
+          "critical_thinking": 2,
+          "communication": 2,
+          "emotional_intelligence": 3
+        }
+      },
+      "farewell": {
+        "score": 3,
+        "feedback": "This response is optimal for the farewell stage of a networking conversation. It is polite, expresses genuine interest in maintaining the connection, and ends the conversation on a positive note.",
+        "improvement": "To maintain this high level of networking skill, continue to personalize farewells and express genuine interest in future interactions.",
+        "user_response": "Likewise, Jake. It's been wonderful talking with you. Have a great evening and let's stay in touch!",
+        "skill_scores": {
+          "critical_thinking": 3,
+          "communication": 3,
+          "emotional_intelligence": 3
+        }
+      }
+    },
+    "skill_scores": {
+      "critical_thinking": 4.7,
+      "communication": 4.7,
+      "emotional_intelligence": 5.0
+    },
+    "total_score": 17,
+    "badges": {
+      "critical_thinking": "Gold",
+      "communication": "Gold",
+      "emotional_intelligence": "Gold"
+    },
+    "detailed_feedback": [
+      {
+        "stage": "opener",
+        "response": "Hi Jake, it's a pleasure to meet you. I'm here to explore the latest trends in AI and meet like-minded professionals. Events like this are a goldmine for gaining fresh perspectives. How have you found it so far?",
+        "evaluation": {
+          "score": 3,
+          "feedback": "This response is optimal for the opener stage. It introduces the speaker, states their purpose for attending, and invites the other person to share their experience, which demonstrates excellent networking skills.",
+          "improvement": "To maintain this high level of engagement, ensure to actively listen to Jake's response and ask follow-up questions based on his input.",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows a clear understanding of the networking context by stating a specific interest and inviting the other person to share their experience.",
+            "communication": "The language is clear and appropriate, maintaining a good conversation flow and demonstrating proper networking etiquette.",
+            "emotional_intelligence": "The response shows awareness of social cues, genuine interest in the event, and invites the other person to share their thoughts, fostering relationship-building."
+          }
+        }
+      },
+      {
+        "stage": "carry",
+        "response": "Absolutely, I work in AI research, focusing on ethical AI implementation in autonomous vehicles. It's fascinating to see how the industry is addressing these challenges. I'd love to hear more about your work at TechCorp and how you're integrating AI into your projects.",
+        "evaluation": {
+          "score": 3,
+          "feedback": "The response is optimal, demonstrating excellent networking skills by sharing relevant information about their own work and expressing genuine interest in the other person's work.",
+          "improvement": "Continue to engage with specific questions or comments that show deeper understanding or curiosity about the other person's work.",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows excellent analysis by connecting their work to the broader industry context and strategically asking about the other person's work.",
+            "communication": "The language is clear and maintains a good flow, effectively balancing sharing information and asking questions.",
+            "emotional_intelligence": "The response demonstrates genuine interest and awareness of social cues, fostering a positive and engaging conversation."
+          }
+        }
+      },
+      {
+        "stage": "carry",
+        "response": "We prioritize transparency and accountability by incorporating ethical guidelines right from the design phase. It's about creating AI that not only performs well but also aligns with societal values. Your focus on data analysis is intriguing; how do you handle the balance between data privacy and innovation?",
+        "evaluation": {
+          "score": 3,
+          "feedback": "This response demonstrates excellent networking skills by engaging with the topic deeply and posing a thoughtful question that encourages further discussion.",
+          "improvement": "Continue to engage with similar depth and thoughtfulness in future conversations.",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows strong analysis and logical connections by discussing ethical guidelines and societal values, and strategically asks about data privacy and innovation.",
+            "communication": "The language is clear and maintains a good flow, effectively balancing speaking and listening by acknowledging the other person's focus and asking a relevant question.",
+            "emotional_intelligence": "The response shows awareness of social cues and demonstrates genuine interest by connecting the discussion to societal values and asking a considerate question."
+          }
+        }
+      },
+      {
+        "stage": "linkedin",
+        "response": "That sounds like a perfect approach. I'd be delighted to connect on LinkedIn. It's fantastic to share insights with professionals like yourself who are pushing the boundaries of AI responsibly.",
+        "evaluation": {
+          "score": 3,
+          "feedback": "This response is optimal for the LinkedIn stage of a networking conversation. It is polite, shows genuine interest, and is well-articulated. The response effectively invites a connection while acknowledging the other person's expertise.",
+          "improvement": "To maintain this high level of networking skill, continue to tailor responses to the specific context and individual, ensuring each interaction feels personalized.",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response demonstrates excellent critical thinking by acknowledging the context and making a logical connection between the conversation and the invitation to connect.",
+            "communication": "The language is clear, professional, and maintains a positive conversation flow. It demonstrates excellent networking etiquette.",
+            "emotional_intelligence": "The response shows strong emotional intelligence by being polite, considerate, and expressing genuine interest in the other person's work."
+          }
+        }
+      },
+      {
+        "stage": "moveon",
+        "response": "Absolutely, I totally understand. Networking events like these are all about making those connections. Let's definitely keep in touch and continue this conversation online.",
+        "evaluation": {
+          "score": 2,
+          "feedback": "The response is polite and acknowledges the purpose of networking events, which is effective. It suggests continuing the conversation online, which is a good strategy for maintaining connections. However, it could be more direct in signaling the intention to move on.",
+          "improvement": "To improve, the response could include a more explicit indication of the need to move on, such as mentioning a specific person or reason for needing to circulate.",
+          "skill_scores": {
+            "critical_thinking": 2,
+            "communication": 2,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows an understanding of the networking context and suggests a logical next step, but lacks a clear reason for moving on.",
+            "communication": "The language is clear and maintains a good flow, but could be more direct in signaling the move to another conversation.",
+            "emotional_intelligence": "The response is considerate and polite, showing awareness of social norms and a genuine interest in maintaining the connection."
+          }
+        }
+      },
+      {
+        "stage": "farewell",
+        "response": "Likewise, Jake. It's been wonderful talking with you. Have a great evening and let's stay in touch!",
+        "evaluation": {
+          "score": 3,
+          "feedback": "This response is optimal for the farewell stage of a networking conversation. It is polite, expresses genuine interest in maintaining the connection, and ends the conversation on a positive note.",
+          "improvement": "To maintain this high level of networking skill, continue to personalize farewells and express genuine interest in future interactions.",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows excellent analysis of the situation by acknowledging the conversation and suggesting future contact.",
+            "communication": "The language is clear and appropriate, maintaining a good flow and demonstrating proper networking etiquette.",
+            "emotional_intelligence": "The response shows strong awareness of social cues, is polite, considerate, and demonstrates genuine interest in maintaining the relationship."
+          }
+        }
+      }
+    ],
+    "badge_level": "Gold",
+    "percentile_score": 94.4
+  }
+}

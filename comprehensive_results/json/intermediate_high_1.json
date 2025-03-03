@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "skill_level": "intermediate_high",
+    "persona": "default",
+    "timestamp": "2025-03-03T00:23:51.718255",
+    "conversation_id": "intermediate_high_1"
+  },
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi there! I'm Jake, a Software Engineer at TechCorp. How are you finding the event so far?",
+      "user_response": "Hi Jake, nice to meet you. I'm enjoying it! It's a good chance to meet people from different fields. How about you?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm having a great time too. It's always interesting to hear different perspectives in tech. What do you do?",
+      "user_response": "I'm in digital marketing, focusing on tech startups. It's fascinating to see how AI is impacting marketing strategies. How do you find working in AI?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "AI is an exciting field, especially with its rapid evolution. At TechCorp, I get to work on innovative projects that really push boundaries. Have you had any interesting experiences with AI in your field?",
+      "user_response": "Yeah, we've started using AI tools for data analysis in campaigns. It's really improved our efficiency. I'd love to learn more about how AI systems are developed. Do you work on a specific part of the AI process?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I mainly focus on machine learning algorithms. It's a lot of fun to see them come to life. Are you on LinkedIn? Maybe we can connect and share more insights.",
+      "user_response": "Absolutely, I'm on LinkedIn. It would be great to stay in touch and maybe exchange some ideas about AI and marketing."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Sounds good! I should probably mingle a bit more and see who else is here. It's been great talking to you.",
+      "user_response": "Yes, definitely. I should do the same and meet a few more people. Thanks for the chat, Jake."
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks for chatting. Have a great rest of the event!",
+      "user_response": "Thank you, Jake. Enjoy the event too!"
+    }
+  ],
+  "evaluation": {
+    "overall_score": 0,
+    "critical_thinking_score": 0,
+    "communication_score": 0,
+    "emotional_intelligence_score": 0,
+    "badge_level": "Bronze",
+    "response_evaluations": []
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "skill_level": "intermediate",
+  "conversation": [
+    {
+      "stage": "opener",
+      "ai_prompt": "Hi, I'm Jake. I work as a Software Engineer at TechCorp. It's nice to meet you!",
+      "user_response": "Hi Jake, I'm Sam. It's nice to meet you too! How are you finding the event so far?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "It's been great. Lots of interesting people here. So, what do you do, Sam?",
+      "user_response": "I'm currently in marketing at a small startup. We focus on digital solutions. What kind of projects are you working on at TechCorp?"
+    },
+    {
+      "stage": "carry",
+      "ai_prompt": "I'm working on developing AI systems for better data analysis. It's pretty exciting stuff. How about your startup, any interesting projects lately?",
+      "user_response": "Yeah, we're trying to expand our social media strategies. It's a learning curve, but we're making progress. Your work sounds fascinating! How long have you been in AI?"
+    },
+    {
+      "stage": "linkedin",
+      "ai_prompt": "I've been in AI for about five years now. Are you on LinkedIn? Maybe we could connect there.",
+      "user_response": "Yes, I am on LinkedIn. That sounds like a good idea. I'd love to stay in touch and learn more about your work."
+    },
+    {
+      "stage": "moveon",
+      "ai_prompt": "Great, I'll send you a request. I should probably mingle a bit more, but it was really nice talking to you.",
+      "user_response": "Absolutely, it was great chatting with you too, Jake. Enjoy the rest of the event!"
+    },
+    {
+      "stage": "farewell",
+      "ai_prompt": "Thanks, Sam! Have a good rest of the event.",
+      "user_response": "Thanks, Jake. Take care!"
+    }
+  ],
+  "evaluation": {
+    "timestamp": "2025-03-02T23:47:03.163597",
+    "stages": {
+      "opener": {
+        "score": 3,
+        "feedback": "This response is an optimal opener that demonstrates excellent networking skills. It introduces the speaker, acknowledges the other person, and asks an open-ended question that invites further conversation.",
+        "improvement": "To enhance this already strong response, Sam could add a specific detail about the event to personalize the question further.",
+        "user_response": "Hi Jake, I'm Sam. It's nice to meet you too! How are you finding the event so far?",
+        "skill_scores": {
+          "critical_thinking": 3,
+          "communication": 3,
+          "emotional_intelligence": 3
+        }
+      },
+      "carry": {
+        "score": 3,
+        "feedback": "The response is optimal as it effectively carries the conversation forward by sharing relevant information about their own work, expressing genuine interest in the other person's work, and asking a strategic question to learn more.",
+        "improvement": "To enhance this response further, the speaker could include a follow-up question or comment that relates their own work to the other person's field, fostering a deeper connection.",
+        "user_response": "Yeah, we're trying to expand our social media strategies. It's a learning curve, but we're making progress. Your work sounds fascinating! How long have you been in AI?",
+        "skill_scores": {
+          "critical_thinking": 3,
+          "communication": 3,
+          "emotional_intelligence": 3
+        }
+      },
+      "linkedin": {
+        "score": 3,
+        "feedback": "The response is optimal as it demonstrates excellent networking skills by expressing a desire to connect on LinkedIn and showing genuine interest in the other person's work.",
+        "improvement": "To further enhance the response, the speaker could explicitly suggest connecting on LinkedIn by saying, 'Why don't we connect on LinkedIn?'",
+        "user_response": "Yes, I am on LinkedIn. That sounds like a good idea. I'd love to stay in touch and learn more about your work.",
+        "skill_scores": {
+          "critical_thinking": 3,
+          "communication": 3,
+          "emotional_intelligence": 3
+        }
+      },
+      "moveon": {
+        "score": 2,
+        "feedback": "The response is polite and provides a clear indication that the conversation is ending. It maintains a positive tone and acknowledges the other person, which is effective for networking.",
+        "improvement": "To enhance the response, the speaker could include a reason for moving on or express a desire to connect again in the future, which would demonstrate more strategic thinking and relationship-building.",
+        "user_response": "Absolutely, it was great chatting with you too, Jake. Enjoy the rest of the event!",
+        "skill_scores": {
+          "critical_thinking": 2,
+          "communication": 3,
+          "emotional_intelligence": 2
+        }
+      },
+      "farewell": {
+        "score": 2,
+        "feedback": "The response is polite and acknowledges the other person by name, which is a good practice in networking. However, it could be improved by adding a more personal touch or expressing interest in future interactions.",
+        "improvement": "Consider adding a personal touch or expressing interest in future interactions, such as 'It was great meeting you, Jake. I hope we can stay in touch!'",
+        "user_response": "Thanks, Jake. Take care!",
+        "skill_scores": {
+          "critical_thinking": 2,
+          "communication": 2,
+          "emotional_intelligence": 2
+        }
+      }
+    },
+    "skill_scores": {
+      "critical_thinking": 4.4,
+      "communication": 4.7,
+      "emotional_intelligence": 4.4
+    },
+    "total_score": 16,
+    "badges": {
+      "critical_thinking": "Gold",
+      "communication": "Gold",
+      "emotional_intelligence": "Gold"
+    },
+    "detailed_feedback": [
+      {
+        "stage": "opener",
+        "response": "Hi Jake, I'm Sam. It's nice to meet you too! How are you finding the event so far?",
+        "evaluation": {
+          "score": 3,
+          "feedback": "This response is an optimal opener that demonstrates excellent networking skills. It introduces the speaker, acknowledges the other person, and asks an open-ended question that invites further conversation.",
+          "improvement": "To enhance this already strong response, Sam could add a specific detail about the event to personalize the question further.",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows good analysis of the situation by introducing oneself and asking a relevant question about the event.",
+            "communication": "The language is clear and appropriate, maintaining a good conversation flow and demonstrating proper networking etiquette.",
+            "emotional_intelligence": "The response shows awareness of social cues, demonstrates genuine interest, and is polite and considerate."
+          }
+        }
+      },
+      {
+        "stage": "carry",
+        "response": "I'm currently in marketing at a small startup. We focus on digital solutions. What kind of projects are you working on at TechCorp?",
+        "evaluation": {
+          "score": 3,
+          "feedback": "The response is optimal as it effectively continues the conversation by sharing relevant information about the speaker's role and company, and then strategically asks an open-ended question about the other person's work, showing genuine interest.",
+          "improvement": "To enhance this response further, the speaker could add a brief comment on why they find the other person's company or industry interesting, which would deepen the engagement.",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows excellent analysis and strategic question choice by linking the speaker's role to a question about the other person's projects.",
+            "communication": "The language is clear and maintains a good flow, effectively balancing sharing and inquiry.",
+            "emotional_intelligence": "The response demonstrates genuine interest and awareness of social cues by asking about the other person's work, which is considerate and relationship-building."
+          }
+        }
+      },
+      {
+        "stage": "carry",
+        "response": "Yeah, we're trying to expand our social media strategies. It's a learning curve, but we're making progress. Your work sounds fascinating! How long have you been in AI?",
+        "evaluation": {
+          "score": 3,
+          "feedback": "The response is optimal as it effectively carries the conversation forward by sharing relevant information about their own work, expressing genuine interest in the other person's work, and asking a strategic question to learn more.",
+          "improvement": "To enhance this response further, the speaker could include a follow-up question or comment that relates their own work to the other person's field, fostering a deeper connection.",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response demonstrates strong critical thinking by making a logical connection between their own work and the other person's field, and by asking a strategic question.",
+            "communication": "The language is clear and maintains a good flow, effectively balancing sharing information and asking questions.",
+            "emotional_intelligence": "The response shows genuine interest and awareness of social cues, and it is polite and considerate, fostering relationship-building."
+          }
+        }
+      },
+      {
+        "stage": "linkedin",
+        "response": "Yes, I am on LinkedIn. That sounds like a good idea. I'd love to stay in touch and learn more about your work.",
+        "evaluation": {
+          "score": 3,
+          "feedback": "The response is optimal as it demonstrates excellent networking skills by expressing a desire to connect on LinkedIn and showing genuine interest in the other person's work.",
+          "improvement": "To further enhance the response, the speaker could explicitly suggest connecting on LinkedIn by saying, 'Why don't we connect on LinkedIn?'",
+          "skill_scores": {
+            "critical_thinking": 3,
+            "communication": 3,
+            "emotional_intelligence": 3
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows good analysis of the situation by recognizing the value of staying in touch and learning more about the other person's work.",
+            "communication": "The language is clear and maintains a good flow, demonstrating proper networking etiquette.",
+            "emotional_intelligence": "The response shows awareness of social cues, genuine interest, and is polite and considerate, fostering relationship-building."
+          }
+        }
+      },
+      {
+        "stage": "moveon",
+        "response": "Absolutely, it was great chatting with you too, Jake. Enjoy the rest of the event!",
+        "evaluation": {
+          "score": 2,
+          "feedback": "The response is polite and provides a clear indication that the conversation is ending. It maintains a positive tone and acknowledges the other person, which is effective for networking.",
+          "improvement": "To enhance the response, the speaker could include a reason for moving on or express a desire to connect again in the future, which would demonstrate more strategic thinking and relationship-building.",
+          "skill_scores": {
+            "critical_thinking": 2,
+            "communication": 3,
+            "emotional_intelligence": 2
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows some analysis of the situation by acknowledging the conversation and wishing the other person well, but it lacks a strategic element like a reason for moving on.",
+            "communication": "The language is clear, polite, and maintains a good flow, effectively closing the conversation.",
+            "emotional_intelligence": "The response is polite and considerate, but it could show more genuine interest by expressing a desire to reconnect or providing a reason for moving on."
+          }
+        }
+      },
+      {
+        "stage": "farewell",
+        "response": "Thanks, Jake. Take care!",
+        "evaluation": {
+          "score": 2,
+          "feedback": "The response is polite and acknowledges the other person by name, which is a good practice in networking. However, it could be improved by adding a more personal touch or expressing interest in future interactions.",
+          "improvement": "Consider adding a personal touch or expressing interest in future interactions, such as 'It was great meeting you, Jake. I hope we can stay in touch!'",
+          "skill_scores": {
+            "critical_thinking": 2,
+            "communication": 2,
+            "emotional_intelligence": 2
+          },
+          "skill_feedback": {
+            "critical_thinking": "The response shows some analysis by using the person's name, which is a good strategy, but it lacks depth in terms of future engagement.",
+            "communication": "The language is clear and appropriate, maintaining a polite tone, but could be more engaging.",
+            "emotional_intelligence": "The response is polite and considerate, showing some awareness of social cues, but could demonstrate more genuine interest in continuing the relationship."
+          }
+        }
+      }
+    ],
+    "badge_level": "Gold",
+    "percentile_score": 88.9
+  }
+}
