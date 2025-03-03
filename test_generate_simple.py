@@ -58,26 +58,65 @@ class TestConversationEvaluation(unittest.TestCase):
         """Test that badge levels are correctly determined based on scores."""
         # This will test the determine_badge_level function
         
-        # Example:
-        # dimension_scores = {
-        #     'critical_thinking': 4.5,
-        #     'communication': 4.3,
-        #     'emotional_intelligence': 3.9
-        # }
-        # total_score = 15
-        # badge = determine_badge_level(dimension_scores, total_score)
-        # self.assertEqual(badge, 'Gold')
+        # Test novice cases with different gradients
+        dimension_scores = {
+            'critical_thinking': 2.0,
+            'communication': 2.0,
+            'emotional_intelligence': 2.0
+        }
+        total_score = 8
         
-        # Test Silver case
-        # dimension_scores = {
-        #     'critical_thinking': 3.5,
-        #     'communication': 3.3,
-        #     'emotional_intelligence': 3.0
-        # }
-        # total_score = 8
-        # badge = determine_badge_level(dimension_scores, total_score)
-        # self.assertEqual(badge, 'Silver')
-        pass
+        # Novice low should get Bronze
+        badge = determine_badge_level(dimension_scores, total_score, "novice_low")
+        self.assertEqual(badge, 'Bronze')
+        
+        # Novice high with same scores should be harder to get Bronze
+        badge = determine_badge_level(dimension_scores, total_score, "novice_high")
+        self.assertEqual(badge, 'Bronze')  # Still Bronze but with higher thresholds
+        
+        # Test intermediate cases with different gradients
+        dimension_scores = {
+            'critical_thinking': 3.5,
+            'communication': 3.5,
+            'emotional_intelligence': 3.0
+        }
+        total_score = 10
+        
+        # Intermediate low should get Silver
+        badge = determine_badge_level(dimension_scores, total_score, "intermediate_low")
+        self.assertEqual(badge, 'Silver')
+        
+        # Intermediate high with same scores might be harder to get Silver
+        badge = determine_badge_level(dimension_scores, total_score, "intermediate_high")
+        self.assertEqual(badge, 'Silver')  # Still Silver but with higher thresholds
+        
+        # Test advanced cases with different gradients
+        dimension_scores = {
+            'critical_thinking': 4.0,
+            'communication': 4.0,
+            'emotional_intelligence': 3.5
+        }
+        total_score = 12
+        
+        # Advanced low might get Gold with these scores
+        badge = determine_badge_level(dimension_scores, total_score, "advanced_low")
+        self.assertEqual(badge, 'Gold')
+        
+        # Advanced high should be harder to get Gold
+        badge = determine_badge_level(dimension_scores, total_score, "advanced_high")
+        self.assertEqual(badge, 'Silver')  # Only Silver due to higher Gold threshold
+        
+        # Test exceptional advanced high case
+        dimension_scores = {
+            'critical_thinking': 4.5,
+            'communication': 4.5,
+            'emotional_intelligence': 4.5
+        }
+        total_score = 14
+        
+        # Advanced high with exceptional scores should get Gold
+        badge = determine_badge_level(dimension_scores, total_score, "advanced_high")
+        self.assertEqual(badge, 'Gold')
     
     def test_parse_evaluation_response(self):
         """Test that evaluation responses are correctly parsed."""

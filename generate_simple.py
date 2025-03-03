@@ -262,89 +262,103 @@ def calculate_dimension_scores(stage_scores: Dict[str, int]) -> Dict[str, float]
     
     return dimension_scores
 
-def determine_badge_level(dimension_scores: Dict[str, float], total_score: int, skill_level: str) -> str:
+def determine_badge_level(dimension_scores, total_score, skill_level=None):
     """
-    Determine the appropriate badge level based on dimension scores, total score, and skill level.
+    Determine the badge level based on dimension scores and total score.
     
     Args:
-        dimension_scores: Dictionary of scores for each dimension
-        total_score: Total score across all stages
-        skill_level: The skill level of the conversation (novice_*, intermediate_*, advanced_*)
+        dimension_scores (dict): Dictionary of dimension scores
+        total_score (float): Total score
+        skill_level (str): Skill level of the user (novice_low, novice_basic, novice_high, etc.)
         
     Returns:
-        Badge level (Bronze, Silver, Gold, or No Badge)
+        str: Badge level (Bronze, Silver, or Gold)
     """
-    # Extract dimension scores
+    # Extract skill category and gradient from skill_level
+    skill_category = None
+    gradient = None
+    
+    if skill_level:
+        parts = skill_level.lower().split('_')
+        if len(parts) >= 1:
+            skill_category = parts[0]  # novice, intermediate, or advanced
+        if len(parts) >= 2:
+            gradient = parts[1]  # low, basic, or high
+    
+    # Default thresholds
+    bronze_threshold = 6
+    silver_threshold = 9
+    gold_threshold = 12
+    
+    # Dimension minimum thresholds
+    bronze_dim_min = 1.5
+    silver_dim_min = 2.5
+    gold_dim_min = 3.5
+    
+    # Adjust thresholds based on skill category
+    if skill_category == 'novice':
+        # Novices should mostly get Bronze
+        bronze_threshold = 5  # Easier to get Bronze
+        silver_threshold = 10  # Harder to get Silver
+        gold_threshold = 15   # Very hard to get Gold
+        
+        # Adjust based on gradient within novice
+        if gradient == 'high':
+            silver_threshold = 9  # Slightly easier for high novices to get Silver
+        elif gradient == 'low':
+            bronze_threshold = 4  # Even easier for low novices to get Bronze
+            
+    elif skill_category == 'intermediate':
+        # Intermediates should mostly get Silver
+        bronze_threshold = 6
+        silver_threshold = 8  # Easier to get Silver
+        gold_threshold = 13   # Harder to get Gold
+        
+        # Adjust based on gradient within intermediate
+        if gradient == 'high':
+            gold_threshold = 12  # Slightly easier for high intermediates to get Gold
+        elif gradient == 'low':
+            bronze_threshold = 5  # Easier for low intermediates to avoid Bronze
+            
+    elif skill_category == 'advanced':
+        # Advanced should get Silver or Gold
+        bronze_threshold = 7  # Harder to get Bronze
+        silver_threshold = 8  # Easy to get Silver
+        gold_threshold = 12   # Possible to get Gold
+        
+        # Adjust based on gradient within advanced
+        if gradient == 'high':
+            bronze_threshold = 8  # Very hard for high advanced to get Bronze
+            gold_threshold = 13   # Harder for high advanced to get Gold (more challenging)
+        elif gradient == 'low':
+            gold_threshold = 11   # Slightly easier for low advanced to get Gold
+    
+    # Check dimension minimums
     critical_thinking = dimension_scores.get('critical_thinking', 0)
     communication = dimension_scores.get('communication', 0)
     emotional_intelligence = dimension_scores.get('emotional_intelligence', 0)
     
-    # Extract skill base (novice, intermediate, advanced)
-    skill_base = skill_level.split('_')[0].lower() if '_' in skill_level else skill_level.lower()
-    
-    # Adjust badge thresholds based on skill level
-    if skill_base == 'novice':
-        # Novices should mostly get Bronze, occasionally Silver
-        if (total_score >= 12 and 
-            critical_thinking >= 4 and 
-            communication >= 4 and 
-            emotional_intelligence >= 4):
-            return "Silver"  # Exceptional novice
-        elif (total_score >= 5 and 
-              critical_thinking >= 1 and 
-              communication >= 1 and 
-              emotional_intelligence >= 1):
-            return "Bronze"  # Standard novice
-        else:
-            return "No Badge"
-            
-    elif skill_base == 'intermediate':
-        # Intermediates should mostly get Silver, occasionally Gold or Bronze
-        if (total_score >= 12 and 
-            critical_thinking >= 4 and 
-            communication >= 4 and 
-            emotional_intelligence >= 4):
-            return "Gold"  # Exceptional intermediate
-        elif (total_score >= 7 and 
-              critical_thinking >= 2 and 
-              communication >= 2 and 
-              emotional_intelligence >= 2):
-            return "Silver"  # Standard intermediate
-        elif (total_score >= 3):
-            return "Bronze"  # Struggling intermediate
-        else:
-            return "No Badge"
-            
-    elif skill_base == 'advanced':
-        # Advanced should mostly get Gold, occasionally Silver
-        if (total_score >= 10 and 
-            critical_thinking >= 3 and 
-            communication >= 3 and 
-            emotional_intelligence >= 3):
-            return "Gold"  # Standard advanced
-        elif (total_score >= 5):
-            return "Silver"  # Struggling advanced
-        else:
-            return "Bronze"  # Very poor advanced
-    
-    # Default fallback using original logic
-    if (total_score >= 11 and 
-        critical_thinking >= 5 and 
-        communication >= 5 and 
-        emotional_intelligence >= 5):
-        return "Gold"
-    elif (total_score >= 6 and 
-          critical_thinking >= 3 and 
-          communication >= 3 and 
-          emotional_intelligence >= 3):
-        return "Silver"
-    elif (total_score >= 1 and 
-          critical_thinking >= 1 and 
-          communication >= 1 and 
-          emotional_intelligence >= 1):
-        return "Bronze"
+    # Determine badge level based on total score and dimension minimums
+    if total_score >= gold_threshold and all([
+        critical_thinking >= gold_dim_min,
+        communication >= gold_dim_min,
+        emotional_intelligence >= gold_dim_min
+    ]):
+        return 'Gold'
+    elif total_score >= silver_threshold and all([
+        critical_thinking >= silver_dim_min,
+        communication >= silver_dim_min,
+        emotional_intelligence >= silver_dim_min
+    ]):
+        return 'Silver'
+    elif total_score >= bronze_threshold and all([
+        critical_thinking >= bronze_dim_min,
+        communication >= bronze_dim_min,
+        emotional_intelligence >= bronze_dim_min
+    ]):
+        return 'Bronze'
     else:
-        return "No Badge"
+        return 'Bronze'  # Default to Bronze for any conversation that doesn't meet minimum criteria
 
 def parse_evaluation_response(response_text: str) -> Dict[str, Any]:
     """
@@ -554,115 +568,89 @@ def format_evaluation_for_output(evaluation: Dict[str, Any]) -> str:
     return output
 
 def main():
-    """Main function to generate conversations and save to text."""
-    print(f"{Colors.HEADER}Starting OpenAI conversation generation...{Colors.ENDC}")
-    
-    # Create output directory
-    output_dir = "simple_output"
-    os.makedirs(output_dir, exist_ok=True)
-    
-    # Output file paths
-    output_file = os.path.join(output_dir, "conversations.txt")
-    debug_file = os.path.join(output_dir, "debug.txt")
-    
-    # Initialize OpenAI client
-    client = get_openai_client()
-    
-    # Open files
-    with open(output_file, 'w', encoding='utf-8') as output_f, \
-         open(debug_file, 'w', encoding='utf-8') as debug_f:
+    """Main function to generate conversations and save them to a file."""
+    try:
+        # Create output directory if it doesn't exist
+        os.makedirs('simple_output', exist_ok=True)
         
-        # Write headers
-        output_f.write("NETWORKING CONVERSATIONS (OpenAI Generated)\n")
-        output_f.write("=======================================\n\n")
-        output_f.write(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
-        
-        debug_f.write("DEBUG LOG - NETWORKING CONVERSATIONS\n")
-        debug_f.write("===================================\n\n")
-        debug_f.write(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
-        
-        # Set up skill levels
-        skill_bases = ['novice', 'intermediate', 'advanced']
-        gradients = ['low', 'basic', 'high']
-        persona = "INTERVIEWER"
-        
-        # Track stats
-        total = 0
-        successful = 0
-        
-        # Generate and evaluate conversations
-        for base in skill_bases:
-            for gradient in gradients:
-                skill_level = f"{base}_{gradient}"
-                
-                for i in range(1, 4):
-                    total += 1
-                    print(f"{Colors.BLUE}Generating: {skill_level.upper()} - #{i}{Colors.ENDC}")
+        # Open files for writing
+        with open('simple_output/conversations.txt', 'w') as f, open('simple_output/debug.txt', 'w') as debug_f:
+            debug_f.write("Starting conversation generation\n")
+            
+            # Define skill levels and gradients
+            skill_levels = ['novice', 'intermediate', 'advanced']
+            gradients = ['low', 'basic', 'high']
+            
+            # Generate conversations for each skill level and gradient
+            for skill_level in skill_levels:
+                for gradient in gradients:
+                    full_skill_level = f"{skill_level}_{gradient}".upper()
+                    debug_f.write(f"\nGenerating conversation for {full_skill_level}\n")
                     
-                    # Write conversation header
-                    output_f.write(f"\n{'=' * 80}\n")
-                    output_f.write(f"{skill_level.upper()} - CONVERSATION {i}\n")
-                    output_f.write(f"{'=' * 80}\n\n")
-                    
-                    # Generate conversation
-                    conversation = generate_conversation(client, skill_level, persona)
-                    if conversation:
-                        # Write conversation
-                        output_f.write("CONVERSATION:\n\n")
-                        for msg in conversation:
-                            output_f.write(f"{msg['role']}: {msg['content']}\n\n")
-                        
-                        # Debug log
-                        debug_f.write(f"\n{'-' * 40}\n")
-                        debug_f.write(f"DEBUG: {skill_level.upper()} - #{i}\n")
-                        debug_f.write(f"{'-' * 40}\n")
-                        debug_f.write(f"Conversation length: {len(conversation)} messages\n")
-                        
-                        # Analyze conversation stages
-                        stages = analyze_conversation_stages(conversation)
-                        debug_f.write("Detected stages:\n")
-                        for stage, indices in stages.items():
-                            debug_f.write(f"  {stage}: {indices}\n")
+                    try:
+                        # Generate conversation
+                        conversation = generate_conversation(full_skill_level)
+                        debug_f.write(f"Generated conversation for {full_skill_level}\n")
                         
                         # Evaluate conversation
-                        print(f"{Colors.CYAN}Evaluating conversation...{Colors.ENDC}")
-                        evaluation = evaluate_conversation(client, conversation, skill_level)
-                        
-                        # Debug log evaluation
-                        debug_f.write("\nEvaluation results:\n")
+                        evaluation = evaluate_conversation(conversation)
+                        debug_f.write(f"Evaluated conversation for {full_skill_level}\n")
                         debug_f.write(f"  Stage scores: {evaluation['stage_scores']}\n")
                         debug_f.write(f"  Dimension scores: {evaluation['dimension_scores']}\n")
                         debug_f.write(f"  Total score: {evaluation['total_score']}\n")
-                        debug_f.write(f"  Badge level: {evaluation['badge_level']}\n")
-                        debug_f.write(f"  Skill level: {skill_level}\n")
                         
-                        # Format and write evaluation
-                        formatted_evaluation = format_evaluation_for_output(evaluation)
-                        output_f.write("\n" + formatted_evaluation + "\n")
+                        # Determine badge level with skill level
+                        skill_level_for_badge = f"{skill_level}_{gradient}".lower()
+                        badge_level = determine_badge_level(
+                            evaluation['dimension_scores'], 
+                            evaluation['total_score'],
+                            skill_level_for_badge
+                        )
+                        evaluation['badge_level'] = badge_level
                         
-                        successful += 1
-                        print(f"{Colors.GREEN}Successfully generated and evaluated.{Colors.ENDC}")
-                        print(f"{Colors.GREEN}Badge Level: {evaluation['badge_level']}{Colors.ENDC}")
-                    else:
-                        output_f.write("Failed to generate conversation.\n\n")
-                        print(f"{Colors.RED}Failed to generate conversation.{Colors.ENDC}")
-                    
-                    # Add delay to avoid rate limits
-                    time.sleep(2)
-        
-        # Write summary
-        summary = f"\nGeneration Summary:\n" + \
-                 f"Total conversations: {total}\n" + \
-                 f"Successful conversations: {successful}\n" + \
-                 f"Failed conversations: {total - successful}\n"
-        
-        output_f.write(summary)
-        debug_f.write(summary)
-        
-        print(summary)
-        print(f"{Colors.GREEN}Process complete!{Colors.ENDC}")
-        print(f"Output saved to: {output_file}")
-        print(f"Debug log saved to: {debug_file}")
+                        debug_f.write(f"  Badge level: {badge_level}\n")
+                        debug_f.write(f"  Skill level: {skill_level_for_badge}\n")
+                        
+                        # Write to file
+                        f.write(f"# Conversation for {full_skill_level}\n\n")
+                        f.write(conversation)
+                        f.write("\n\n")
+                        f.write(f"## Evaluation for {full_skill_level}\n\n")
+                        f.write(f"Badge Level: {badge_level}\n\n")
+                        f.write(f"Total Score: {evaluation['total_score']}\n\n")
+                        f.write("Dimension Scores:\n")
+                        for dimension, score in evaluation['dimension_scores'].items():
+                            f.write(f"- {dimension.replace('_', ' ').title()}: {score}\n")
+                        f.write("\n")
+                        f.write("Stage Scores:\n")
+                        for stage, score in evaluation['stage_scores'].items():
+                            f.write(f"- {stage.replace('_', ' ').title()}: {score}\n")
+                        f.write("\n")
+                        f.write("Feedback:\n")
+                        f.write(evaluation['feedback'])
+                        f.write("\n\n")
+                        f.write("-" * 80)
+                        f.write("\n\n")
+                        
+                    except Exception as e:
+                        debug_f.write(f"Error generating or evaluating conversation for {full_skill_level}: {str(e)}\n")
+                        traceback.print_exc(file=debug_f)
+                        
+                        # Use fallback data
+                        f.write(f"# Conversation for {full_skill_level} (FALLBACK)\n\n")
+                        f.write(FALLBACK_CONVERSATION)
+                        f.write("\n\n")
+                        f.write(f"## Evaluation for {full_skill_level} (FALLBACK)\n\n")
+                        f.write(FALLBACK_EVALUATION)
+                        f.write("\n\n")
+                        f.write("-" * 80)
+                        f.write("\n\n")
+            
+            debug_f.write("\nFinished generating conversations\n")
+            
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        traceback.print_exc()
 
 if __name__ == "__main__":
     main() 
