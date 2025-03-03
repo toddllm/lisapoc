@@ -500,7 +500,7 @@ def evaluate_conversation(conversation):
     
     # Generate base scores based on skill level
     if skill_level == "novice":
-        base_stage_score = 1.0  # Out of 3
+        base_stage_score = 1.5  # Out of 3
         base_dimension_score = 2.0  # Out of 5
     elif skill_level == "intermediate":
         base_stage_score = 2.0  # Out of 3
@@ -532,16 +532,16 @@ def evaluate_conversation(conversation):
         variation = random.uniform(-0.5, 0.5)
         score = adjusted_stage_base + variation
         # Round to nearest integer and ensure within bounds
-        stage_scores[stage] = min(3, max(0, round(score)))
+        stage_scores[stage] = min(3, max(1, round(score)))  # Minimum score of 1 to ensure higher totals
     
     # Calculate total score (0-15 points total)
     total_score = sum(stage_scores.values())
     
     # Create dimension scores (1-5 scale)
     dimension_scores = {
-        'critical_thinking': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
-        'communication': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
-        'emotional_intelligence': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.5, 0.5)))
+        'critical_thinking': min(5.0, max(1.5, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
+        'communication': min(5.0, max(1.5, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
+        'emotional_intelligence': min(5.0, max(1.5, adjusted_dimension_base + random.uniform(-0.5, 0.5)))
     }
     
     # Generate feedback
@@ -556,9 +556,9 @@ def evaluate_conversation(conversation):
     
     feedback += f"For a {skill_level}_{gradient} level, the performance is "
     
-    if total_score < 6:
+    if total_score < 8:
         feedback += "below expectations."
-    elif total_score < 10:
+    elif total_score < 12:
         feedback += "meeting expectations."
     else:
         feedback += "exceeding expectations."
