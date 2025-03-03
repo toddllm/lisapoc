@@ -516,18 +516,18 @@ def evaluate_conversation(conversation):
             target_total = 8  # Bronze, close to Silver
     elif skill_level == "intermediate":
         if gradient == "low":
-            target_total = 8  # Bronze/Silver boundary
+            target_total = 7  # Silver (adjusted from 8)
         elif gradient == "basic":
-            target_total = 9  # Silver
+            target_total = 8  # Silver (adjusted from 9)
         else:  # high
-            target_total = 10  # Silver
+            target_total = 9  # Silver (adjusted from 10)
     else:  # advanced
         if gradient == "low":
-            target_total = 10  # Silver
+            target_total = 8  # Silver (adjusted from 10)
         elif gradient == "basic":
-            target_total = 12  # Gold boundary
+            target_total = 10  # Gold boundary (adjusted from 12)
         else:  # high
-            target_total = 14  # Gold
+            target_total = 12  # Gold (adjusted from 14)
     
     # Create stage scores (0-3 points per stage)
     # Distribute points to reach target total
