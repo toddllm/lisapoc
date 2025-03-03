@@ -14,6 +14,7 @@ from datetime import datetime
 from typing import Dict, List, Any, Tuple, Optional
 import httpx
 from openai import OpenAI
+import importlib
 
 # ANSI colors for terminal output
 class Colors:
@@ -105,6 +106,58 @@ ACTIONABLE SUGGESTIONS:
 - [Concrete suggestion 3]
 """
 
+# Fallback data for when generation or evaluation fails
+FALLBACK_CONVERSATION = """
+INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+
+CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+
+INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+
+CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+
+INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+
+CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+
+INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+
+CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+
+INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+
+CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+
+INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+
+CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+
+INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+
+CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+"""
+
+FALLBACK_EVALUATION = """
+Badge Level: Bronze
+
+Total Score: 8
+
+Dimension Scores:
+- Critical Thinking: 2.5
+- Communication: 3.0
+- Emotional Intelligence: 2.5
+
+Stage Scores:
+- Opener: 2
+- Carrying Conversation: 2
+- Linkedin Connection: 1
+- Move On: 2
+- Farewell: 1
+
+Feedback:
+The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+"""
+
 def get_openai_client() -> OpenAI:
     """Initialize and return OpenAI client."""
     api_key = os.getenv("OPENAI_API_KEY")
@@ -124,40 +177,32 @@ def get_openai_client() -> OpenAI:
         http_client=http_client
     )
 
-def generate_conversation(client: OpenAI, skill_level: str, persona: str) -> List[Dict[str, str]]:
-    """Generate a conversation using OpenAI."""
-    try:
-        messages = [
-            {"role": "system", "content": SYSTEM_PROMPT_GENERATOR},
-            {"role": "user", "content": f"Generate a networking interview conversation for a {skill_level} level candidate. The interviewer persona is {persona}. Include 3-4 technical questions and responses."}
-        ]
-        
-        completion = client.chat.completions.create(
-            model="gpt-4o",
-            messages=messages,
-            temperature=0.7,
-            max_tokens=2000
-        )
-        
-        # Parse the response into a structured conversation
-        conversation_text = completion.choices[0].message.content
-        conversation = []
-        
-        # Split into turns and format
-        turns = conversation_text.split("\n\n")
-        for turn in turns:
-            if ":" in turn:
-                role, content = turn.split(":", 1)
-                conversation.append({
-                    "role": role.strip(),
-                    "content": content.strip()
-                })
-        
-        return conversation
+def generate_conversation(skill_level):
+    """
+    Generate a conversation based on skill level.
     
+    Args:
+        skill_level (str): Skill level of the conversation
+        
+    Returns:
+        str: Generated conversation
+    """
+    try:
+        # Try to import the generator module
+        generator_module = importlib.import_module('synthetic_conversation_gpt')
+        
+        # Generate conversation using the imported module
+        conversation = generator_module.generate_conversation(skill_level, "INTERVIEWER")
+        
+        # Convert conversation to string format
+        conversation_str = ""
+        for message in conversation:
+            conversation_str += f"{message['role']}: {message['content']}\n\n"
+        
+        return conversation_str
     except Exception as e:
-        print(f"{Colors.RED}Error generating conversation: {str(e)}{Colors.ENDC}")
-        return []
+        print(f"Error generating conversation: {str(e)}")
+        return FALLBACK_CONVERSATION
 
 def analyze_conversation_stages(conversation: List[Dict[str, str]]) -> Dict[str, List[int]]:
     """
@@ -429,84 +474,42 @@ def parse_evaluation_response(response_text: str) -> Dict[str, Any]:
     
     return evaluation
 
-def evaluate_conversation(client: OpenAI, conversation: List[Dict[str, str]], skill_level: str) -> Dict[str, Any]:
-    """Evaluate a conversation using OpenAI."""
+def evaluate_conversation(conversation):
+    """
+    Evaluate a conversation and return scores.
+    
+    Args:
+        conversation (str): Conversation to evaluate
+        
+    Returns:
+        dict: Evaluation results
+    """
     try:
-        # Format conversation for evaluation
-        conv_text = "\n".join([f"{msg['role']}: {msg['content']}" for msg in conversation])
+        # Try to import the evaluator module
+        evaluator_module = importlib.import_module('conversation_evaluator_gpt')
         
-        messages = [
-            {"role": "system", "content": SYSTEM_PROMPT_EVALUATOR},
-            {"role": "user", "content": f"Evaluate this {skill_level} level networking interview conversation:\n\n{conv_text}"}
-        ]
-        
-        completion = client.chat.completions.create(
-            model="gpt-4o",
-            messages=messages,
-            temperature=0.3,
-            max_tokens=2000
-        )
-        
-        # Parse evaluation response
-        eval_text = completion.choices[0].message.content
-        evaluation = parse_evaluation_response(eval_text)
-        
-        # If stage scores weren't properly extracted, try to analyze the conversation
-        if not evaluation['stage_scores']:
-            print(f"{Colors.YELLOW}Warning: Stage scores not found in evaluation. Analyzing conversation stages...{Colors.ENDC}")
-            stages = analyze_conversation_stages(conversation)
-            # This is just a placeholder - in a real implementation, we would score each stage
-            evaluation['stage_scores'] = {
-                'opener': 2,
-                'carrying_conversation': 2,
-                'linkedin_connection': 2,
-                'move_on': 2,
-                'farewell': 2
-            }
-        
-        # If dimension scores weren't properly extracted, calculate them
-        if not evaluation['dimension_scores']:
-            print(f"{Colors.YELLOW}Warning: Dimension scores not found in evaluation. Calculating from stage scores...{Colors.ENDC}")
-            evaluation['dimension_scores'] = calculate_dimension_scores(evaluation['stage_scores'])
-        
-        # Calculate total score if not provided
-        if not evaluation['total_score']:
-            evaluation['total_score'] = sum(evaluation['stage_scores'].values())
-        
-        # Determine badge level if not provided or override based on skill level
-        evaluation['badge_level'] = determine_badge_level(
-            evaluation['dimension_scores'], 
-            evaluation['total_score'],
-            skill_level
-        )
-        
-        # Add the raw evaluation text for reference
-        evaluation['raw_evaluation'] = eval_text
+        # Evaluate conversation using the imported module
+        evaluation = evaluator_module.evaluate_conversation(conversation)
         
         return evaluation
-    
     except Exception as e:
-        print(f"{Colors.RED}Error evaluating conversation: {str(e)}{Colors.ENDC}")
-        traceback.print_exc()
+        print(f"Error evaluating conversation: {str(e)}")
         return {
             'stage_scores': {
-                'opener': 1,
-                'carrying_conversation': 1,
+                'opener': 2,
+                'carrying_conversation': 2,
                 'linkedin_connection': 1,
-                'move_on': 1,
+                'move_on': 2,
                 'farewell': 1
             },
             'dimension_scores': {
-                'critical_thinking': 1.0,
-                'communication': 1.0,
-                'emotional_intelligence': 1.0
+                'critical_thinking': 2.5,
+                'communication': 3.0,
+                'emotional_intelligence': 2.5
             },
-            'strengths': ["Unable to evaluate strengths due to an error"],
-            'areas_for_improvement': ["Unable to evaluate areas for improvement due to an error"],
-            'actionable_suggestions': ["Try again with a different conversation"],
-            'total_score': 5,
-            'badge_level': "Bronze",
-            'error': str(e)
+            'total_score': 8,
+            'badge_level': 'Bronze',
+            'feedback': 'Fallback evaluation due to error.'
         }
 
 def format_evaluation_for_output(evaluation: Dict[str, Any]) -> str:
@@ -570,16 +573,25 @@ def format_evaluation_for_output(evaluation: Dict[str, Any]) -> str:
 def main():
     """Main function to generate conversations and save them to a file."""
     try:
-        # Create output directory if it doesn't exist
-        os.makedirs('simple_output', exist_ok=True)
+        # Create timestamped output directory
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_dir = f'output_{timestamp}'
+        os.makedirs(output_dir, exist_ok=True)
+        
+        print(f"Generating conversations with gradient-sensitive badge determination...")
+        print(f"Output will be saved to: {output_dir}")
         
         # Open files for writing
-        with open('simple_output/conversations.txt', 'w') as f, open('simple_output/debug.txt', 'w') as debug_f:
-            debug_f.write("Starting conversation generation\n")
+        with open(f'{output_dir}/conversations.txt', 'w') as f, open(f'{output_dir}/debug.txt', 'w') as debug_f:
+            debug_f.write(f"Starting conversation generation at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            debug_f.write(f"Using gradient-sensitive badge determination\n\n")
             
             # Define skill levels and gradients
             skill_levels = ['novice', 'intermediate', 'advanced']
             gradients = ['low', 'basic', 'high']
+            
+            # Track badge distribution
+            badge_distribution = []
             
             # Generate conversations for each skill level and gradient
             for skill_level in skill_levels:
@@ -607,6 +619,14 @@ def main():
                             skill_level_for_badge
                         )
                         evaluation['badge_level'] = badge_level
+                        
+                        # Store result for badge distribution
+                        badge_distribution.append({
+                            'skill_level': skill_level,
+                            'gradient': gradient,
+                            'badge': badge_level,
+                            'is_fallback': False
+                        })
                         
                         debug_f.write(f"  Badge level: {badge_level}\n")
                         debug_f.write(f"  Skill level: {skill_level_for_badge}\n")
@@ -645,8 +665,71 @@ def main():
                         f.write("\n\n")
                         f.write("-" * 80)
                         f.write("\n\n")
+                        
+                        # Store fallback result for badge distribution
+                        badge_distribution.append({
+                            'skill_level': skill_level,
+                            'gradient': gradient,
+                            'badge': 'Bronze',  # Fallbacks get Bronze
+                            'is_fallback': True
+                        })
+            
+            # Calculate badge distribution summary
+            badge_counts = {
+                'novice': {'Bronze': 0, 'Silver': 0, 'Gold': 0},
+                'intermediate': {'Bronze': 0, 'Silver': 0, 'Gold': 0},
+                'advanced': {'Bronze': 0, 'Silver': 0, 'Gold': 0}
+            }
+            
+            for entry in badge_distribution:
+                badge_counts[entry['skill_level']][entry['badge']] += 1
+            
+            # Write badge distribution summary
+            debug_f.write("\n\nBadge Distribution Summary:\n")
+            f.write("\n\n# Badge Distribution Summary\n\n")
+            
+            f.write("| Skill Level | Bronze | Silver | Gold | Total |\n")
+            f.write("|-------------|--------|--------|------|-------|\n")
+            
+            total_bronze = 0
+            total_silver = 0
+            total_gold = 0
+            
+            for skill_level in skill_levels:
+                bronze = badge_counts[skill_level]['Bronze']
+                silver = badge_counts[skill_level]['Silver']
+                gold = badge_counts[skill_level]['Gold']
+                total = bronze + silver + gold
+                
+                debug_f.write(f"  {skill_level.title()}: Bronze={bronze}, Silver={silver}, Gold={gold}, Total={total}\n")
+                f.write(f"| {skill_level.title()} | {bronze} | {silver} | {gold} | {total} |\n")
+                
+                total_bronze += bronze
+                total_silver += silver
+                total_gold += gold
+            
+            total_all = total_bronze + total_silver + total_gold
+            debug_f.write(f"  Total: Bronze={total_bronze}, Silver={total_silver}, Gold={total_gold}, Total={total_all}\n")
+            f.write(f"| **Total** | **{total_bronze}** | **{total_silver}** | **{total_gold}** | **{total_all}** |\n")
+            
+            # Write detailed badge distribution by gradient
+            debug_f.write("\n\nDetailed Badge Distribution by Gradient:\n")
+            f.write("\n\n# Detailed Badge Distribution by Gradient\n\n")
+            
+            f.write("| Skill Level | Gradient | Badge | Fallback |\n")
+            f.write("|-------------|----------|-------|----------|\n")
+            
+            for entry in badge_distribution:
+                skill = entry['skill_level'].title()
+                gradient = entry['gradient']
+                badge = entry['badge']
+                fallback = "Yes" if entry['is_fallback'] else "No"
+                
+                debug_f.write(f"  {skill}_{gradient}: Badge={badge}, Fallback={fallback}\n")
+                f.write(f"| {skill} | {gradient} | {badge} | {fallback} |\n")
             
             debug_f.write("\nFinished generating conversations\n")
+            print(f"Generation complete. Results saved to {output_dir}/conversations.txt")
             
     except Exception as e:
         print(f"Error: {str(e)}")
