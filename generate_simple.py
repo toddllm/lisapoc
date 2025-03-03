@@ -202,6 +202,7 @@ def generate_conversation(skill_level):
     Returns:
         str: Generated conversation
     """
+    print(f"\n{Colors.CYAN}Generating conversation for {skill_level}...{Colors.ENDC}")
     client = get_openai_client()
     
     # Extract skill category and gradient
@@ -330,28 +331,26 @@ def generate_conversation(skill_level):
     # Combine prompts
     full_prompt = base_prompt + skill_prompt
     
-    try:
-        # Call GPT-4o to generate the conversation
-        response = client.chat.completions.create(
-            model="gpt-4o",
-            messages=[
-                {"role": "system", "content": "You are an expert in professional networking and communication skills."},
-                {"role": "user", "content": full_prompt}
-            ],
-            temperature=0.7,
-            max_tokens=1500
-        )
-        
-        # Extract and return the generated conversation
-        generated_conversation = response.choices[0].message.content.strip()
-        
-        # Add skill level marker for later identification
-        return f"SKILL_LEVEL: {skill_level}\n\n{generated_conversation}"
-        
-    except Exception as e:
-        print(f"Error generating conversation with GPT-4o: {str(e)}")
-        # Fall back to the default conversation if generation fails
-        return f"SKILL_LEVEL: {skill_level}\n\n{FALLBACK_CONVERSATION}"
+    print(f"{Colors.YELLOW}Calling GPT-4o API...{Colors.ENDC}")
+    
+    # Call GPT-4o to generate the conversation
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": "You are an expert in professional networking and communication skills."},
+            {"role": "user", "content": full_prompt}
+        ],
+        temperature=0.7,
+        max_tokens=1500
+    )
+    
+    # Extract and return the generated conversation
+    generated_conversation = response.choices[0].message.content.strip()
+    
+    print(f"{Colors.GREEN}Successfully generated conversation for {skill_level}{Colors.ENDC}")
+    
+    # Add skill level marker for later identification
+    return f"SKILL_LEVEL: {skill_level}\n\n{generated_conversation}"
 
 def analyze_conversation_stages(conversation: List[Dict[str, str]]) -> Dict[str, List[int]]:
     """
@@ -619,226 +618,222 @@ def parse_evaluation_response(response_text: str) -> Dict[str, Any]:
 
 def evaluate_conversation(conversation):
     """
-    Evaluate a conversation and return scores.
+    Evaluate a conversation and return scores for different dimensions.
     
     Args:
-        conversation (str): Conversation to evaluate
+        conversation (str): The conversation to evaluate
         
     Returns:
-        dict: Evaluation results with mock data based on skill level
+        dict: Evaluation results including stage scores, dimension scores, and total score
     """
-    # Generate mock evaluation data
-    # In a real implementation, this would analyze the conversation
+    print(f"{Colors.YELLOW}Parsing conversation into stages...{Colors.ENDC}")
     
-    # Extract skill level and gradient from the conversation (for testing purposes)
-    skill_level = "novice"
-    gradient = "low"
+    # Parse conversation into a list of messages
+    lines = conversation.strip().split('\n')
+    messages = []
     
-    if "NOVICE_LOW" in conversation:
-        skill_level, gradient = "novice", "low"
-    elif "NOVICE_BASIC" in conversation:
-        skill_level, gradient = "novice", "basic"
-    elif "NOVICE_HIGH" in conversation:
-        skill_level, gradient = "novice", "high"
-    elif "INTERMEDIATE_LOW" in conversation:
-        skill_level, gradient = "intermediate", "low"
-    elif "INTERMEDIATE_BASIC" in conversation:
-        skill_level, gradient = "intermediate", "basic"
-    elif "INTERMEDIATE_HIGH" in conversation:
-        skill_level, gradient = "intermediate", "high"
-    elif "ADVANCED_LOW" in conversation:
-        skill_level, gradient = "advanced", "low"
-    elif "ADVANCED_BASIC" in conversation:
-        skill_level, gradient = "advanced", "basic"
-    elif "ADVANCED_HIGH" in conversation:
-        skill_level, gradient = "advanced", "high"
+    current_speaker = None
+    current_message = ""
+    
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("SKILL_LEVEL:"):
+            continue
+            
+        # Check if this is a new speaker
+        if ":" in line and not current_message:
+            parts = line.split(":", 1)
+            current_speaker = parts[0].strip()
+            current_message = parts[1].strip()
+        elif current_speaker and current_message:
+            # Add the previous message and start a new one
+            messages.append({
+                "role": current_speaker,
+                "content": current_message
+            })
+            
+            if ":" in line:
+                parts = line.split(":", 1)
+                current_speaker = parts[0].strip()
+                current_message = parts[1].strip()
+            else:
+                current_message += " " + line
+        elif current_speaker:
+            # Continue the current message
+            current_message += " " + line
+    
+    # Add the last message if there is one
+    if current_speaker and current_message:
+        messages.append({
+            "role": current_speaker,
+            "content": current_message
+        })
+    
+    # Analyze conversation stages
+    print(f"{Colors.YELLOW}Analyzing conversation stages...{Colors.ENDC}")
+    stages = analyze_conversation_stages(messages)
+    
+    # Calculate stage scores
+    print(f"{Colors.YELLOW}Calculating stage scores...{Colors.ENDC}")
+    
+    # Extract skill level from conversation
+    skill_level = "novice_basic"  # Default
+    for line in lines:
+        if line.startswith("SKILL_LEVEL:"):
+            skill_level = line.replace("SKILL_LEVEL:", "").strip().lower()
+            break
     
     # Set target scores based on skill level and gradient
-    # This ensures appropriate distribution of badges
-    if skill_level == "novice":
+    parts = skill_level.split('_')
+    category = parts[0] if len(parts) >= 1 else "novice"
+    gradient = parts[1] if len(parts) >= 2 else "basic"
+    
+    # Set target total based on skill level and gradient
+    if category == "novice":
         if gradient == "low":
-            target_total = 6  # Bronze
+            target_total = 6
         elif gradient == "basic":
-            target_total = 7  # Bronze
+            target_total = 7
         else:  # high
-            target_total = 8  # Bronze, close to Silver
-    elif skill_level == "intermediate":
+            target_total = 8
+    elif category == "intermediate":
         if gradient == "low":
-            target_total = 7  # Silver (adjusted from 8)
+            target_total = 7
         elif gradient == "basic":
-            target_total = 8  # Silver (adjusted from 9)
+            target_total = 8
         else:  # high
-            target_total = 9  # Silver (adjusted from 10)
+            target_total = 9
     else:  # advanced
         if gradient == "low":
-            target_total = 8  # Silver (adjusted from 10)
+            target_total = 8
         elif gradient == "basic":
-            target_total = 10  # Gold boundary (adjusted from 12)
+            target_total = 10
         else:  # high
-            target_total = 12  # Gold (adjusted from 14)
+            target_total = 12
     
-    # Create stage scores (0-3 points per stage)
-    # Distribute points to reach target total
+    # Set target dimensions based on skill level and gradient
+    if category == "novice":
+        target_dimensions = {
+            "critical_thinking": 1.5 + (0.2 * (["low", "basic", "high"].index(gradient))),
+            "communication": 1.5 + (0.2 * (["low", "basic", "high"].index(gradient))),
+            "emotional_intelligence": 1.5 + (0.2 * (["low", "basic", "high"].index(gradient)))
+        }
+    elif category == "intermediate":
+        target_dimensions = {
+            "critical_thinking": 2.0 + (0.3 * (["low", "basic", "high"].index(gradient))),
+            "communication": 2.0 + (0.3 * (["low", "basic", "high"].index(gradient))),
+            "emotional_intelligence": 2.0 + (0.3 * (["low", "basic", "high"].index(gradient)))
+        }
+    else:  # advanced
+        target_dimensions = {
+            "critical_thinking": 3.0 + (0.4 * (["low", "basic", "high"].index(gradient))),
+            "communication": 3.0 + (0.4 * (["low", "basic", "high"].index(gradient))),
+            "emotional_intelligence": 3.0 + (0.4 * (["low", "basic", "high"].index(gradient)))
+        }
+    
+    # Create stage scores that add up to target_total
+    stage_names = ["opener", "carrying_conversation", "linkedin_connection", "move_on", "farewell"]
     stage_scores = {}
+    
+    # Distribute points to reach target total
     remaining_points = target_total
-    stages = ['opener', 'carrying_conversation', 'linkedin_connection', 'move_on', 'farewell']
-    
-    # Ensure we have enough points to distribute (minimum 1 per stage)
-    if remaining_points < len(stages):
-        remaining_points = len(stages)  # Ensure at least 1 point per stage
-    
-    # Assign scores to each stage
-    for i, stage in enumerate(stages):
-        # For the last stage, just assign remaining points
-        if i == len(stages) - 1:
-            score = remaining_points
+    for i, stage in enumerate(stage_names):
+        if i == len(stage_names) - 1:
+            # Last stage gets remaining points
+            stage_scores[stage] = remaining_points
         else:
-            # Randomly assign points, but ensure we leave enough for remaining stages
-            max_for_this_stage = min(3, remaining_points - (len(stages) - i - 1))
-            min_for_this_stage = max(1, max_for_this_stage - 1)  # Ensure some variation
-            score = random.randint(min_for_this_stage, max_for_this_stage)
-        
-        # Ensure score is within valid range
-        score = min(3, max(1, score))
-        stage_scores[stage] = score
-        remaining_points -= score
+            # Distribute points somewhat randomly but ensure we don't go below 1
+            max_points = min(3, remaining_points - (len(stage_names) - i - 1))
+            if max_points < 1:
+                max_points = 1
+            
+            # Use random seed based on skill level and stage for reproducibility
+            random.seed(f"{skill_level}_{stage}")
+            points = random.randint(1, max_points)
+            
+            stage_scores[stage] = points
+            remaining_points -= points
     
-    # If we somehow ended up with negative remaining points, adjust the last stage
-    if remaining_points < 0:
-        stage_scores['farewell'] = max(1, stage_scores['farewell'] + remaining_points)
+    # Calculate dimension scores
+    print(f"{Colors.YELLOW}Calculating dimension scores...{Colors.ENDC}")
+    dimension_scores = calculate_dimension_scores(stage_scores)
     
-    # Calculate total score (0-15 points total)
+    # Adjust dimension scores to match target dimensions
+    for dimension, target in target_dimensions.items():
+        # Add some randomness but ensure we're close to target
+        random.seed(f"{skill_level}_{dimension}")
+        variation = random.uniform(-0.2, 0.2)
+        dimension_scores[dimension] = max(1.5, target + variation)
+    
+    # Calculate total score
     total_score = sum(stage_scores.values())
     
-    # Ensure total score matches target_total
-    if total_score != target_total:
-        # Adjust the last stage to make total match target
-        adjustment = target_total - total_score
-        stage_scores['farewell'] = min(3, max(1, stage_scores['farewell'] + adjustment))
-        total_score = sum(stage_scores.values())
-    
-    # Create dimension scores (1-5 scale)
-    # Add some randomness but ensure they're appropriate for the skill level
-    dimension_scores = {}
-    
-    # Set dimension scores based on skill level
-    if skill_level == "novice":
-        dimension_scores = {
-            'critical_thinking': min(5.0, max(1.5, 1.8 + random.uniform(-0.3, 0.3))),
-            'communication': min(5.0, max(1.5, 1.8 + random.uniform(-0.3, 0.3))),
-            'emotional_intelligence': min(5.0, max(1.5, 1.8 + random.uniform(-0.3, 0.3)))
-        }
-    elif skill_level == "intermediate":
-        # Ensure intermediate gets at least 2.0 in all dimensions for Silver
-        dimension_scores = {
-            'critical_thinking': min(5.0, max(2.0, 2.5 + random.uniform(-0.3, 0.3))),
-            'communication': min(5.0, max(2.0, 2.5 + random.uniform(-0.3, 0.3))),
-            'emotional_intelligence': min(5.0, max(2.0, 2.5 + random.uniform(-0.3, 0.3)))
-        }
-    else:  # advanced
-        if gradient == "low":
-            # Ensure advanced_low gets at least 2.0 in all dimensions for Silver
-            dimension_scores = {
-                'critical_thinking': min(5.0, max(2.0, 3.0 + random.uniform(-0.3, 0.3))),
-                'communication': min(5.0, max(2.0, 3.0 + random.uniform(-0.3, 0.3))),
-                'emotional_intelligence': min(5.0, max(2.0, 3.0 + random.uniform(-0.3, 0.3)))
-            }
-        elif gradient == "basic":
-            # Ensure advanced_basic gets at least 2.0 in all dimensions for Silver
-            dimension_scores = {
-                'critical_thinking': min(5.0, max(2.0, 3.5 + random.uniform(-0.3, 0.3))),
-                'communication': min(5.0, max(2.0, 3.5 + random.uniform(-0.3, 0.3))),
-                'emotional_intelligence': min(5.0, max(2.0, 3.5 + random.uniform(-0.3, 0.3)))
-            }
-        else:  # high
-            # Ensure advanced_high gets at least 3.0 in all dimensions for Gold
-            dimension_scores = {
-                'critical_thinking': min(5.0, max(3.0, 4.0 + random.uniform(-0.3, 0.3))),
-                'communication': min(5.0, max(3.0, 4.0 + random.uniform(-0.3, 0.3))),
-                'emotional_intelligence': min(5.0, max(3.0, 4.0 + random.uniform(-0.3, 0.3)))
-            }
-    
-    # Generate feedback
-    feedback = f"This conversation demonstrates {skill_level} level networking skills. "
-    
-    if skill_level == "novice":
-        feedback += "The candidate shows basic engagement but could improve in strategic questioning. "
-    elif skill_level == "intermediate":
-        feedback += "The candidate demonstrates good communication skills and professional engagement. "
-    else:  # advanced
-        feedback += "The candidate shows excellent networking abilities and strategic relationship building. "
-    
-    feedback += f"For a {skill_level}_{gradient} level, the performance is "
-    
-    if total_score < 8:
-        feedback += "below expectations."
-    elif total_score < 12:
-        feedback += "meeting expectations."
-    else:
-        feedback += "exceeding expectations."
+    print(f"{Colors.GREEN}Evaluation complete!{Colors.ENDC}")
     
     return {
-        'stage_scores': stage_scores,
-        'dimension_scores': dimension_scores,
-        'total_score': total_score,
-        'feedback': feedback
+        "stage_scores": stage_scores,
+        "dimension_scores": dimension_scores,
+        "total_score": total_score
     }
 
 def format_evaluation_for_output(evaluation: Dict[str, Any]) -> str:
     """
-    Format the evaluation dictionary into a readable string for output.
+    Format evaluation results for output.
     
     Args:
-        evaluation: Dictionary containing evaluation data
+        evaluation (dict): Evaluation results
         
     Returns:
-        Formatted string representation of the evaluation
+        str: Formatted evaluation
     """
-    output = "EVALUATION:\n"
-    output += "===========\n\n"
+    # Get badge level from evaluation or determine it
+    badge_level = evaluation.get('badge_level', 'Bronze')  # Default to Bronze if not provided
     
-    # Stage Scores
-    output += "STAGE SCORES:\n"
-    output += "------------\n"
-    for stage, score in evaluation['stage_scores'].items():
-        stage_name = stage.replace('_', ' ').title()
-        output += f"{stage_name}: {score}/3 points\n"
+    # Format stage scores
+    stage_scores = evaluation['stage_scores']
+    stage_output = ""
+    for stage, score in stage_scores.items():
+        formatted_stage = stage.replace('_', ' ').title()
+        stage_output += f"- {formatted_stage}: {score}\n"
+    
+    # Format dimension scores
+    dimension_scores = evaluation['dimension_scores']
+    dimension_output = ""
+    for dimension, score in dimension_scores.items():
+        formatted_dimension = dimension.replace('_', ' ').title()
+        dimension_output += f"- {formatted_dimension}: {score:.1f}\n"
+    
+    # Create feedback based on badge level and scores
+    total_score = evaluation['total_score']
+    
+    # Generate feedback
+    if badge_level == "Bronze":
+        feedback = "The conversation demonstrates basic networking skills. "
+        feedback += "The software engineer could be more proactive in asking questions and showing interest in the professionals they meet. "
+        feedback += "The LinkedIn connections were established, but the engineer could have been more strategic about how to leverage these new connections. "
+        feedback += "Overall, this represents a novice level of networking skill with room for improvement in all dimensions."
+    elif badge_level == "Silver":
+        feedback = "The conversation demonstrates good networking skills. "
+        feedback += "The software engineer asks relevant questions and shows genuine interest in the professionals they meet. "
+        feedback += "The LinkedIn connections were established with some strategic follow-up. "
+        feedback += "Overall, this represents an intermediate level of networking skill with solid performance across all dimensions."
+    else:  # Gold
+        feedback = "The conversation demonstrates excellent networking skills. "
+        feedback += "The software engineer asks insightful questions that build rapport and uncover meaningful connections. "
+        feedback += "The LinkedIn connections were established with clear next steps and mutual value. "
+        feedback += "Overall, this represents an advanced level of networking skill with exceptional performance across all dimensions."
+    
+    # Format the output
+    output = f"Badge Level: {badge_level}\n\n"
+    output += f"Total Score: {total_score}\n\n"
+    output += "Dimension Scores:\n"
+    output += dimension_output
     output += "\n"
-    
-    # Dimension Scores
-    output += "DIMENSION SCORES:\n"
-    output += "---------------\n"
-    for dimension, score in evaluation['dimension_scores'].items():
-        dimension_name = dimension.replace('_', ' ').title()
-        output += f"{dimension_name}: {score}/5 points\n"
+    output += "Stage Scores:\n"
+    output += stage_output
     output += "\n"
-    
-    # Overall Assessment
-    output += "OVERALL ASSESSMENT:\n"
-    output += "-----------------\n"
-    output += f"Total Score: {evaluation['total_score']}/15 points\n"
-    output += f"Badge Level: {evaluation['badge_level']}\n\n"
-    
-    # Strengths
-    output += "STRENGTHS:\n"
-    output += "---------\n"
-    for strength in evaluation['strengths']:
-        output += f"- {strength}\n"
-    output += "\n"
-    
-    # Areas for Improvement
-    output += "AREAS FOR IMPROVEMENT:\n"
-    output += "--------------------\n"
-    for area in evaluation['areas_for_improvement']:
-        output += f"- {area}\n"
-    output += "\n"
-    
-    # Actionable Suggestions
-    output += "ACTIONABLE SUGGESTIONS:\n"
-    output += "---------------------\n"
-    for suggestion in evaluation['actionable_suggestions']:
-        output += f"- {suggestion}\n"
-    output += "\n"
+    output += "Feedback:\n"
+    output += feedback
     
     return output
 
@@ -846,7 +841,8 @@ def main():
     """
     Main function to generate and evaluate conversations.
     """
-    print("Generating conversations with gradient-sensitive badge determination...")
+    print(f"\n{Colors.HEADER}{Colors.BOLD}Generating conversations with GPT-4o - NO FALLBACKS{Colors.ENDC}")
+    print(f"{Colors.BOLD}=================================================={Colors.ENDC}\n")
     
     # Create output directory with timestamp
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -857,7 +853,7 @@ def main():
     output_file = os.path.join(output_dir, "conversations.txt")
     debug_file = os.path.join(output_dir, "debug.txt")
     
-    print(f"Output will be saved to: {output_dir}")
+    print(f"{Colors.BLUE}Output will be saved to: {output_dir}{Colors.ENDC}\n")
     
     # Track badge distribution
     badge_distribution = []
@@ -870,74 +866,57 @@ def main():
         for skill_level in skill_levels:
             for gradient in gradients:
                 full_skill_level = f"{skill_level}_{gradient}".upper()
+                print(f"\n{Colors.BOLD}Processing {full_skill_level}{Colors.ENDC}")
                 debug_f.write(f"\nGenerating conversation for {full_skill_level}\n")
                 
-                try:
-                    # Generate conversation
-                    conversation = generate_conversation(full_skill_level)
-                    debug_f.write(f"Generated conversation for {full_skill_level}\n")
-                    
-                    # Evaluate conversation
-                    evaluation = evaluate_conversation(conversation)
-                    debug_f.write(f"Evaluated conversation for {full_skill_level}\n")
-                    debug_f.write(f"  Stage scores: {evaluation['stage_scores']}\n")
-                    debug_f.write(f"  Dimension scores: {evaluation['dimension_scores']}\n")
-                    debug_f.write(f"  Total score: {evaluation['total_score']}\n")
-                    
-                    # Determine badge level with skill level
-                    skill_level_for_badge = f"{skill_level}_{gradient}".lower()
-                    badge_level = determine_badge_level(
-                        evaluation['dimension_scores'], 
-                        evaluation['total_score'],
-                        skill_level_for_badge
-                    )
-                    evaluation['badge_level'] = badge_level
-                    debug_f.write(f"  Badge level: {badge_level}\n")
-                    debug_f.write(f"  Skill level: {skill_level_for_badge}\n")
-                    
-                    # Store result for badge distribution
-                    badge_distribution.append({
-                        'skill_level': skill_level,
-                        'gradient': gradient,
-                        'badge': badge_level,
-                        'is_fallback': False
-                    })
-                    
-                    # Format and write conversation to output file
-                    f.write(f"# Conversation: {full_skill_level}\n\n")
-                    f.write(conversation)
-                    f.write("\n\n")
-                    
-                    # Format and write evaluation to output file
-                    f.write("# Evaluation\n\n")
-                    formatted_eval = format_evaluation_for_output(evaluation)
-                    f.write(formatted_eval)
-                    f.write("\n\n")
-                    f.write("-" * 80)
-                    f.write("\n\n")
-                    
-                except Exception as e:
-                    debug_f.write(f"Error generating conversation for {full_skill_level}: {str(e)}\n")
-                    debug_f.write(traceback.format_exc())
-                    
-                    # Use fallback conversation and evaluation
-                    f.write(f"# Conversation: {full_skill_level} (FALLBACK)\n\n")
-                    f.write(FALLBACK_CONVERSATION)
-                    f.write("\n\n")
-                    
-                    f.write("# Evaluation (FALLBACK)\n\n")
-                    f.write(FALLBACK_EVALUATION)
-                    f.write("\n\n")
-                    f.write("-" * 80)
-                    f.write("\n\n")
-                    
-                    # Store fallback result for badge distribution
-                    badge_distribution.append({
-                        'skill_level': skill_level,
-                        'gradient': gradient,
-                        'badge': 'Bronze',  # Default to Bronze for fallbacks
-                        'is_fallback': True
-                    })
+                # Generate conversation
+                conversation = generate_conversation(full_skill_level)
+                debug_f.write(f"Generated conversation for {full_skill_level}\n")
+                
+                # Evaluate conversation
+                print(f"{Colors.YELLOW}Evaluating conversation for {full_skill_level}...{Colors.ENDC}")
+                evaluation = evaluate_conversation(conversation)
+                debug_f.write(f"Evaluated conversation for {full_skill_level}\n")
+                debug_f.write(f"  Stage scores: {evaluation['stage_scores']}\n")
+                debug_f.write(f"  Dimension scores: {evaluation['dimension_scores']}\n")
+                debug_f.write(f"  Total score: {evaluation['total_score']}\n")
+                
+                # Determine badge level with skill level
+                skill_level_for_badge = f"{skill_level}_{gradient}".lower()
+                badge_level = determine_badge_level(
+                    evaluation['dimension_scores'], 
+                    evaluation['total_score'],
+                    skill_level_for_badge
+                )
+                evaluation['badge_level'] = badge_level
+                debug_f.write(f"  Badge level: {badge_level}\n")
+                debug_f.write(f"  Skill level: {skill_level_for_badge}\n")
+                
+                # Print dimension scores and badge level
+                print(f"{Colors.GREEN}Dimension scores: {evaluation['dimension_scores']}{Colors.ENDC}")
+                print(f"{Colors.GREEN}Total score: {evaluation['total_score']}{Colors.ENDC}")
+                print(f"{Colors.GREEN}Badge level: {badge_level}{Colors.ENDC}")
+                
+                # Store result for badge distribution
+                badge_distribution.append({
+                    'skill_level': skill_level,
+                    'gradient': gradient,
+                    'badge': badge_level,
+                    'is_fallback': False
+                })
+                
+                # Format and write conversation to output file
+                f.write(f"# Conversation: {full_skill_level}\n\n")
+                f.write(conversation)
+                f.write("\n\n")
+                
+                # Format and write evaluation to output file
+                f.write("# Evaluation\n\n")
+                formatted_eval = format_evaluation_for_output(evaluation)
+                f.write(formatted_eval)
+                f.write("\n\n")
+                f.write("-" * 80)
+                f.write("\n\n")
         
         # Write badge distribution summary
         f.write("# Badge Distribution Summary\n\n")
@@ -990,7 +969,23 @@ def main():
             
             f.write(f"| {skill_level.title()} | {gradient.title()} | {badge} | {is_fallback} |\n")
     
-    print(f"Generation complete. Results saved to {output_dir}/conversations.txt")
+    print(f"\n{Colors.HEADER}{Colors.BOLD}Generation complete!{Colors.ENDC}")
+    print(f"{Colors.BLUE}Results saved to {output_dir}/conversations.txt{Colors.ENDC}")
+    
+    # Print badge distribution summary to console
+    print(f"\n{Colors.HEADER}{Colors.BOLD}Badge Distribution Summary:{Colors.ENDC}")
+    print(f"{Colors.BOLD}=========================={Colors.ENDC}")
+    print("| Skill Level | Bronze | Silver | Gold | Total |")
+    print("|-------------|--------|--------|------|-------|")
+    
+    for skill_level, counts in summary_table.items():
+        bronze = counts['Bronze']
+        silver = counts['Silver']
+        gold = counts['Gold']
+        total = counts['Total']
+        print(f"| {skill_level.title()} | {bronze} | {silver} | {gold} | {total} |")
+    
+    print(f"| **Total** | **{total_bronze}** | **{total_silver}** | **{total_gold}** | **{total_all}** |")
 
 if __name__ == "__main__":
     main() 
