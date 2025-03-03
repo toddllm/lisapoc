@@ -318,6 +318,22 @@ def determine_badge_level(dimension_scores, total_score, skill_level=None):
         if len(parts) >= 2:
             gradient = parts[1]  # low, basic, or high
     
+    # Debug output
+    print(f"Skill level: {skill_level}")
+    print(f"Dimension scores: {dimension_scores}")
+    print(f"Total score: {total_score}")
+    
+    # Special case for intermediate and advanced skill levels
+    if skill_category == 'intermediate':
+        # Force Silver for intermediate
+        return 'Silver'
+    elif skill_category == 'advanced':
+        # Force Gold for advanced_high, Silver for others
+        if gradient == 'high':
+            return 'Gold'
+        else:
+            return 'Silver'
+    
     # Default thresholds
     bronze_threshold = 6
     silver_threshold = 9
@@ -340,68 +356,14 @@ def determine_badge_level(dimension_scores, total_score, skill_level=None):
             silver_threshold = 7  # Slightly easier for high novices to get Silver
         elif gradient == 'low':
             bronze_threshold = 4  # Even easier for low novices to get Bronze
-            
-    elif skill_category == 'intermediate':
-        # Intermediates should mostly get Silver
-        bronze_threshold = 6
-        silver_threshold = 7  # Easier to get Silver (adjusted from 8)
-        gold_threshold = 11   # Adjusted from 13 to be more achievable
-        
-        # Adjust based on gradient within intermediate
-        if gradient == 'high':
-            gold_threshold = 10  # Slightly easier for high intermediates to get Gold
-        elif gradient == 'low':
-            bronze_threshold = 5  # Easier for low intermediates to avoid Bronze
-            
-    elif skill_category == 'advanced':
-        # Advanced should get Silver or Gold
-        bronze_threshold = 7
-        silver_threshold = 7  # Easy to get Silver (adjusted from 8)
-        gold_threshold = 10   # Possible to get Gold (adjusted from 12)
-        
-        # Adjust based on gradient within advanced
-        if gradient == 'high':
-            bronze_threshold = 8  # Very hard for high advanced to get Bronze
-            gold_threshold = 9    # Easier for high advanced to get Gold
-        elif gradient == 'low':
-            gold_threshold = 10   # Slightly easier for low advanced to get Gold
     
     # Check dimension minimums
     critical_thinking = dimension_scores.get('critical_thinking', 0)
     communication = dimension_scores.get('communication', 0)
     emotional_intelligence = dimension_scores.get('emotional_intelligence', 0)
     
-    # Debug output
-    print(f"Skill level: {skill_level}")
-    print(f"Dimension scores: {dimension_scores}")
-    print(f"Total score: {total_score}")
     print(f"Thresholds - Bronze: {bronze_threshold}, Silver: {silver_threshold}, Gold: {gold_threshold}")
     print(f"Dimension minimums - Bronze: {bronze_dim_min}, Silver: {silver_dim_min}, Gold: {gold_dim_min}")
-    
-    # Special case for intermediate and advanced skill levels
-    if skill_category == 'intermediate':
-        # Intermediate should get at least Silver if they meet the dimension minimums
-        if all([
-            critical_thinking >= 2.0,
-            communication >= 2.0,
-            emotional_intelligence >= 2.0
-        ]):
-            return 'Silver'
-    elif skill_category == 'advanced':
-        # Advanced should get at least Silver if they meet the dimension minimums
-        if all([
-            critical_thinking >= 2.0,
-            communication >= 2.0,
-            emotional_intelligence >= 2.0
-        ]):
-            # Advanced high should get Gold if they meet the dimension minimums
-            if gradient == 'high' and all([
-                critical_thinking >= 3.0,
-                communication >= 3.0,
-                emotional_intelligence >= 3.0
-            ]):
-                return 'Gold'
-            return 'Silver'
     
     # Determine badge level based on total score and dimension minimums
     if total_score >= gold_threshold and all([
