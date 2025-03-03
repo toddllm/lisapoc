@@ -59,10 +59,10 @@ Analyze the given conversation and provide a detailed evaluation based on the fo
    - Communication = (opener × 0.3) + (carrying × 0.5) + (linkedin × 0.3) + (move_on × 0.2) + (farewell × 0.5)
    - Emotional Intelligence = (opener × 0.3) + (carrying × 0.2) + (linkedin × 0.1) + (move_on × 0.6) + (farewell × 0.4)
 
-4. Determine badge level based on total score:
-   - Bronze (1-5 points): Minimum 1 point in each dimension
-   - Silver (6-10 points): Minimum 3 points in each dimension
-   - Gold (11-15 points): Minimum 5 points in each dimension
+4. Consider the skill level in your evaluation:
+   - Novice: Expect basic networking skills with some awkwardness and missed opportunities
+   - Intermediate: Expect solid networking skills with good flow but some room for improvement
+   - Advanced: Expect polished networking skills with excellent conversation management
 
 Format your response with these exact sections:
 STAGE SCORES:
@@ -262,13 +262,14 @@ def calculate_dimension_scores(stage_scores: Dict[str, int]) -> Dict[str, float]
     
     return dimension_scores
 
-def determine_badge_level(dimension_scores: Dict[str, float], total_score: int) -> str:
+def determine_badge_level(dimension_scores: Dict[str, float], total_score: int, skill_level: str) -> str:
     """
-    Determine the appropriate badge level based on dimension scores and total score.
+    Determine the appropriate badge level based on dimension scores, total score, and skill level.
     
     Args:
         dimension_scores: Dictionary of scores for each dimension
         total_score: Total score across all stages
+        skill_level: The skill level of the conversation (novice_*, intermediate_*, advanced_*)
         
     Returns:
         Badge level (Bronze, Silver, Gold, or No Badge)
@@ -278,29 +279,72 @@ def determine_badge_level(dimension_scores: Dict[str, float], total_score: int) 
     communication = dimension_scores.get('communication', 0)
     emotional_intelligence = dimension_scores.get('emotional_intelligence', 0)
     
-    # Check Gold criteria
+    # Extract skill base (novice, intermediate, advanced)
+    skill_base = skill_level.split('_')[0].lower() if '_' in skill_level else skill_level.lower()
+    
+    # Adjust badge thresholds based on skill level
+    if skill_base == 'novice':
+        # Novices should mostly get Bronze, occasionally Silver
+        if (total_score >= 12 and 
+            critical_thinking >= 4 and 
+            communication >= 4 and 
+            emotional_intelligence >= 4):
+            return "Silver"  # Exceptional novice
+        elif (total_score >= 5 and 
+              critical_thinking >= 1 and 
+              communication >= 1 and 
+              emotional_intelligence >= 1):
+            return "Bronze"  # Standard novice
+        else:
+            return "No Badge"
+            
+    elif skill_base == 'intermediate':
+        # Intermediates should mostly get Silver, occasionally Gold or Bronze
+        if (total_score >= 12 and 
+            critical_thinking >= 4 and 
+            communication >= 4 and 
+            emotional_intelligence >= 4):
+            return "Gold"  # Exceptional intermediate
+        elif (total_score >= 7 and 
+              critical_thinking >= 2 and 
+              communication >= 2 and 
+              emotional_intelligence >= 2):
+            return "Silver"  # Standard intermediate
+        elif (total_score >= 3):
+            return "Bronze"  # Struggling intermediate
+        else:
+            return "No Badge"
+            
+    elif skill_base == 'advanced':
+        # Advanced should mostly get Gold, occasionally Silver
+        if (total_score >= 10 and 
+            critical_thinking >= 3 and 
+            communication >= 3 and 
+            emotional_intelligence >= 3):
+            return "Gold"  # Standard advanced
+        elif (total_score >= 5):
+            return "Silver"  # Struggling advanced
+        else:
+            return "Bronze"  # Very poor advanced
+    
+    # Default fallback using original logic
     if (total_score >= 11 and 
         critical_thinking >= 5 and 
         communication >= 5 and 
         emotional_intelligence >= 5):
         return "Gold"
-    
-    # Check Silver criteria
-    if (total_score >= 6 and 
-        critical_thinking >= 3 and 
-        communication >= 3 and 
-        emotional_intelligence >= 3):
+    elif (total_score >= 6 and 
+          critical_thinking >= 3 and 
+          communication >= 3 and 
+          emotional_intelligence >= 3):
         return "Silver"
-    
-    # Check Bronze criteria
-    if (total_score >= 1 and 
-        critical_thinking >= 1 and 
-        communication >= 1 and 
-        emotional_intelligence >= 1):
+    elif (total_score >= 1 and 
+          critical_thinking >= 1 and 
+          communication >= 1 and 
+          emotional_intelligence >= 1):
         return "Bronze"
-    
-    # Default
-    return "No Badge"
+    else:
+        return "No Badge"
 
 def parse_evaluation_response(response_text: str) -> Dict[str, Any]:
     """
@@ -415,12 +459,12 @@ def evaluate_conversation(client: OpenAI, conversation: List[Dict[str, str]], sk
         if not evaluation['total_score']:
             evaluation['total_score'] = sum(evaluation['stage_scores'].values())
         
-        # Determine badge level if not provided
-        if evaluation['badge_level'] == 'No Badge':
-            evaluation['badge_level'] = determine_badge_level(
-                evaluation['dimension_scores'], 
-                evaluation['total_score']
-            )
+        # Determine badge level if not provided or override based on skill level
+        evaluation['badge_level'] = determine_badge_level(
+            evaluation['dimension_scores'], 
+            evaluation['total_score'],
+            skill_level
+        )
         
         # Add the raw evaluation text for reference
         evaluation['raw_evaluation'] = eval_text
@@ -590,6 +634,7 @@ def main():
                         debug_f.write(f"  Dimension scores: {evaluation['dimension_scores']}\n")
                         debug_f.write(f"  Total score: {evaluation['total_score']}\n")
                         debug_f.write(f"  Badge level: {evaluation['badge_level']}\n")
+                        debug_f.write(f"  Skill level: {skill_level}\n")
                         
                         # Format and write evaluation
                         formatted_evaluation = format_evaluation_for_output(evaluation)
