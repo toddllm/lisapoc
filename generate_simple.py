@@ -498,56 +498,74 @@ def evaluate_conversation(conversation):
     elif "ADVANCED_HIGH" in conversation:
         skill_level, gradient = "advanced", "high"
     
-    # Generate base scores based on skill level
+    # Set target scores based on skill level and gradient
+    # This ensures appropriate distribution of badges
     if skill_level == "novice":
-        base_stage_score = 1.5  # Out of 3
-        base_dimension_score = 2.0  # Out of 5
+        if gradient == "low":
+            target_total = 6  # Bronze
+            target_dimension = 1.8
+        elif gradient == "basic":
+            target_total = 7  # Bronze
+            target_dimension = 2.0
+        else:  # high
+            target_total = 8  # Bronze, close to Silver
+            target_dimension = 2.2
     elif skill_level == "intermediate":
-        base_stage_score = 2.0  # Out of 3
-        base_dimension_score = 3.5  # Out of 5
+        if gradient == "low":
+            target_total = 8  # Bronze/Silver boundary
+            target_dimension = 2.5
+        elif gradient == "basic":
+            target_total = 9  # Silver
+            target_dimension = 3.0
+        else:  # high
+            target_total = 10  # Silver
+            target_dimension = 3.5
     else:  # advanced
-        base_stage_score = 2.5  # Out of 3
-        base_dimension_score = 4.5  # Out of 5
-    
-    # Adjust base score based on gradient
-    if gradient == "low":
-        gradient_modifier_stage = -0.5
-        gradient_modifier_dimension = -0.5
-    elif gradient == "basic":
-        gradient_modifier_stage = 0
-        gradient_modifier_dimension = 0
-    else:  # high
-        gradient_modifier_stage = 0.5
-        gradient_modifier_dimension = 0.5
-    
-    # Apply gradient modifier
-    adjusted_stage_base = base_stage_score + gradient_modifier_stage
-    adjusted_dimension_base = base_dimension_score + gradient_modifier_dimension
+        if gradient == "low":
+            target_total = 10  # Silver
+            target_dimension = 3.5
+        elif gradient == "basic":
+            target_total = 11  # Silver/Gold boundary
+            target_dimension = 4.0
+        else:  # high
+            target_total = 13  # Gold
+            target_dimension = 4.5
     
     # Create stage scores (0-3 points per stage)
-    # Ensure we get some variation in the scores
+    # Distribute points to reach target total
     stage_scores = {}
-    for stage in ['opener', 'carrying_conversation', 'linkedin_connection', 'move_on', 'farewell']:
-        # Add more randomness to ensure variation
-        variation = random.uniform(-0.5, 0.5)
-        score = adjusted_stage_base + variation
-        # Round to nearest integer and ensure within bounds
-        stage_scores[stage] = min(3, max(1, round(score)))  # Minimum score of 1 to ensure higher totals
+    remaining_points = target_total
+    stages = ['opener', 'carrying_conversation', 'linkedin_connection', 'move_on', 'farewell']
+    
+    # Assign scores to each stage
+    for i, stage in enumerate(stages):
+        # For the last stage, just assign remaining points
+        if i == len(stages) - 1:
+            score = remaining_points
+        else:
+            # Randomly assign points, but ensure we leave enough for remaining stages
+            max_for_this_stage = min(3, remaining_points - (len(stages) - i - 1))
+            min_for_this_stage = max(1, max_for_this_stage - 1)  # Ensure some variation
+            score = random.randint(min_for_this_stage, max_for_this_stage)
+        
+        # Ensure score is within valid range
+        score = min(3, max(1, score))
+        stage_scores[stage] = score
+        remaining_points -= score
+    
+    # If we somehow ended up with negative remaining points, adjust the last stage
+    if remaining_points < 0:
+        stage_scores['farewell'] = max(1, stage_scores['farewell'] + remaining_points)
     
     # Calculate total score (0-15 points total)
     total_score = sum(stage_scores.values())
     
     # Create dimension scores (1-5 scale)
-    # For intermediate and advanced, ensure higher dimension scores
-    if skill_level == "intermediate" or skill_level == "advanced":
-        min_dimension = 2.5 if skill_level == "intermediate" else 3.5
-    else:
-        min_dimension = 1.5
-    
+    # Add some randomness but ensure they're appropriate for the skill level
     dimension_scores = {
-        'critical_thinking': min(5.0, max(min_dimension, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
-        'communication': min(5.0, max(min_dimension, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
-        'emotional_intelligence': min(5.0, max(min_dimension, adjusted_dimension_base + random.uniform(-0.5, 0.5)))
+        'critical_thinking': min(5.0, max(1.5, target_dimension + random.uniform(-0.3, 0.3))),
+        'communication': min(5.0, max(1.5, target_dimension + random.uniform(-0.3, 0.3))),
+        'emotional_intelligence': min(5.0, max(1.5, target_dimension + random.uniform(-0.3, 0.3)))
     }
     
     # Generate feedback
