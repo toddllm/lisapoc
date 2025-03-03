@@ -94,6 +94,47 @@ This distribution better reflects the expected outcomes:
 
 These changes have successfully addressed the issues identified in the improvement plan and resulted in a more appropriate badge distribution.
 
+## GPT-4o Conversation Generation
+
+### Problem
+The current system uses a static fallback conversation for all skill levels, which doesn't accurately represent the different networking skills expected at each level. This limits the system's ability to provide realistic examples for testing and evaluation.
+
+### Solution
+Implement GPT-4o to generate realistic networking conversations that accurately reflect the expected behaviors for each skill level and gradient.
+
+### Implementation Details
+
+1. **Enhanced `generate_conversation` Function**: 
+   - Modified the function to use OpenAI's GPT-4o model
+   - Created detailed prompts for each skill level and gradient
+   - Implemented error handling with fallback to the default conversation
+
+2. **Skill-Level Specific Prompts**:
+   - Developed detailed prompt instructions for each skill level (novice, intermediate, advanced)
+   - Further refined instructions for each gradient (low, basic, high)
+   - Included specific behavioral markers for each skill level/gradient combination
+
+3. **Conversation Structure Requirements**:
+   - Ensured all generated conversations include key networking elements:
+     - Introduction/opener
+     - Back-and-forth conversation
+     - LinkedIn connection request
+     - Natural conversation conclusion
+     - Farewell
+
+### Expected Benefits
+
+1. **More Realistic Testing**: Generated conversations will better reflect real-world networking scenarios
+2. **Accurate Skill Representation**: Each conversation will demonstrate the appropriate skill level
+3. **Improved Evaluation Testing**: The evaluation system can be tested against more diverse and realistic conversations
+4. **Better Training Examples**: More authentic examples for training purposes
+
+### Success Criteria
+- Generated conversations clearly demonstrate the expected behaviors for each skill level
+- Conversations include all required networking elements
+- The evaluation system correctly assesses the generated conversations
+- Clear differentiation between conversations at different skill levels and gradients
+
 ## Expected Outcome
 
 - More nuanced badge distribution across all skill levels and gradients

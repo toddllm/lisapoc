@@ -109,33 +109,47 @@ ACTIONABLE SUGGESTIONS:
 
 # Fallback data for when generation or evaluation fails
 FALLBACK_CONVERSATION = """
-INTERVIEWER: Hi there! I noticed you're also attending this networking event. I'm [Name] from [Company]. What brings you here today?
+SOFTWARE ENGINEER: Excuse me, hi there! I noticed your company logo on your badge. I'm [Name], a software engineer working on web applications. Is this your first time at this networking event?
 
-CANDIDATE: Hello! I'm [Name]. I'm here to learn more about the industry and meet new people. It's my first time at this event.
+PROFESSIONAL (Product Manager): Hi! Nice to meet you. I'm [Name], a Product Manager at [Company]. No, I've been to a few of these events before. What about you?
 
-INTERVIEWER: That's great! First-time experiences can be exciting. What field or industry are you currently working in?
+SOFTWARE ENGINEER: It's my first time at this particular event. I'm here to learn more about the industry and meet new people in the tech space.
 
-CANDIDATE: I'm currently working in software development, focusing on web applications. I've been in the field for about two years now.
+PROFESSIONAL (Product Manager): That's great! First-time experiences can be exciting. What kind of web development are you currently working on?
 
-INTERVIEWER: Web development is such a dynamic area! Are you working with any particular technologies or frameworks that you find interesting?
+SOFTWARE ENGINEER: I'm focusing on frontend development. I've been working with React and Node.js mostly for about two years now. I really enjoy creating user-friendly interfaces.
 
-CANDIDATE: Yes, I've been working with React and Node.js mostly. I really enjoy frontend development and creating user-friendly interfaces.
+PROFESSIONAL (Product Manager): Web development is such a dynamic area! React is definitely in demand. I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
 
-INTERVIEWER: That's fantastic! I've worked with some React developers at my company, and they're doing some innovative things. Would you be interested in connecting on LinkedIn? I could introduce you to some people in my network who work with similar technologies.
+SOFTWARE ENGINEER: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
 
-CANDIDATE: That would be great! I'd appreciate the connections. Let me get my phone so we can connect right now.
+PROFESSIONAL (Product Manager): Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
 
-INTERVIEWER: Perfect! I just sent you a connection request. I'll definitely follow up with those introductions. By the way, there's a tech meetup happening next week focused on frontend frameworks. Would that be something you'd be interested in?
+SOFTWARE ENGINEER: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
 
-CANDIDATE: Absolutely! That sounds like exactly the kind of event I'd enjoy. Could you share the details with me?
+PROFESSIONAL (Product Manager): Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking.
 
-INTERVIEWER: Of course! I'll send you the link through LinkedIn. It's usually a good mix of presentations and networking. I've attended a few times and always learn something new. Well, I should probably mingle a bit more, but it was really nice meeting you!
+SOFTWARE ENGINEER: Thank you! I see someone with a CTO badge over there. I should probably introduce myself to them as well. It was nice meeting you!
 
-CANDIDATE: It was nice meeting you too! Thanks for the LinkedIn connection and information about the meetup. I look forward to staying in touch.
+PROFESSIONAL (Product Manager): Good idea! It was nice meeting you too. Good luck with your networking!
 
-INTERVIEWER: Likewise! Enjoy the rest of the event, and don't hesitate to reach out if you have any questions. Have a great evening!
+SOFTWARE ENGINEER: Excuse me, hi! I'm [Name], a frontend developer working with React. I noticed your CTO badge and wanted to introduce myself.
 
-CANDIDATE: You too! Thanks again, and enjoy the rest of the event!
+PROFESSIONAL (CTO): Hello there! I'm [Name], the CTO at [Startup]. Always good to meet React developers. What kind of projects have you worked on?
+
+SOFTWARE ENGINEER: I've mainly worked on e-commerce platforms and some data visualization dashboards. I'm particularly proud of a real-time analytics dashboard I built recently.
+
+PROFESSIONAL (CTO): That sounds impressive. We're working on something similar. Here's my card - would you mind connecting on LinkedIn as well? I'd love to continue this conversation.
+
+SOFTWARE ENGINEER: Of course, I'll connect with you right away. Thank you for the interest in my work.
+
+PROFESSIONAL (CTO): Great! Feel free to reach out if you're ever looking for new opportunities or just want to discuss tech. I should get back to my team now, but it was nice meeting you.
+
+SOFTWARE ENGINEER: It was nice meeting you too! Thanks for the LinkedIn connection. I look forward to staying in touch.
+
+PROFESSIONAL (CTO): Likewise! Enjoy the rest of the event.
+
+SOFTWARE ENGINEER: You too! Thanks again.
 """
 
 FALLBACK_EVALUATION = """
@@ -156,7 +170,7 @@ Stage Scores:
 - Farewell: 1
 
 Feedback:
-The conversation demonstrates basic networking skills. The candidate responds appropriately but could be more proactive in asking questions and showing interest in the interviewer. The LinkedIn connection was established, but the candidate could have been more strategic about how to leverage this new connection. The farewell was polite but generic. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
+The conversation demonstrates basic networking skills. The software engineer initiates conversations appropriately but could ask more thoughtful questions and show deeper interest in the professionals they meet. The LinkedIn connections were established, but the engineer could have been more strategic about how to leverage these new connections. The transitions between conversations were somewhat abrupt. Overall, this represents a novice level of networking skill with room for improvement in all dimensions.
 """
 
 def get_openai_client() -> OpenAI:
@@ -180,17 +194,164 @@ def get_openai_client() -> OpenAI:
 
 def generate_conversation(skill_level):
     """
-    Generate a mock conversation based on skill level.
+    Generate a realistic networking conversation based on skill level using GPT-4o.
     
     Args:
-        skill_level (str): Skill level of the conversation
+        skill_level (str): Skill level of the conversation (e.g., "NOVICE_LOW", "INTERMEDIATE_HIGH")
         
     Returns:
         str: Generated conversation
     """
-    # For testing purposes, we'll just return the fallback conversation
-    # In a real implementation, this would generate a unique conversation
-    return FALLBACK_CONVERSATION
+    client = get_openai_client()
+    
+    # Extract skill category and gradient
+    parts = skill_level.lower().split('_')
+    skill_category = parts[0] if len(parts) >= 1 else "novice"
+    gradient = parts[1] if len(parts) >= 2 else "basic"
+    
+    # Define the base prompt
+    base_prompt = """
+    Generate a realistic networking conversation between a SOFTWARE ENGINEER and various PROFESSIONALS at a networking event.
+    The SOFTWARE ENGINEER is the person being evaluated on their networking skills.
+    
+    The conversation should include interactions with at least two different professionals (e.g., Product Manager, Marketing Director, CTO, Startup Founder, etc.) and should include:
+    1. An introduction/opener (SOFTWARE ENGINEER speaks first)
+    2. Some back-and-forth conversation
+    3. A LinkedIn connection request
+    4. A natural way to move on/end the conversation
+    5. A farewell
+
+    Format the conversation exactly like this:
+    SOFTWARE ENGINEER: [software engineer's message]
+    
+    PROFESSIONAL (role): [professional's message]
+    
+    SOFTWARE ENGINEER: [software engineer's message]
+    
+    And so on...
+    
+    IMPORTANT: The SOFTWARE ENGINEER must initiate the conversation by approaching a professional at the networking event.
+    """
+    
+    # Add skill level specific instructions
+    skill_instructions = {
+        "novice": {
+            "low": """
+            The SOFTWARE ENGINEER should demonstrate NOVICE_LOW networking skills:
+            - Shows basic social etiquette but appears nervous or uncertain
+            - Responds to questions but rarely asks their own
+            - Misses obvious networking opportunities
+            - Provides minimal information about themselves
+            - Accepts the LinkedIn connection but doesn't know how to leverage it
+            - Demonstrates awkward conversation transitions
+            """,
+            "basic": """
+            The SOFTWARE ENGINEER should demonstrate NOVICE_BASIC networking skills:
+            - Shows adequate social etiquette with occasional awkwardness
+            - Sometimes asks questions but they may be generic
+            - Recognizes some networking opportunities but misses others
+            - Shares some information about themselves when prompted
+            - Accepts the LinkedIn connection with limited follow-up
+            - Has somewhat abrupt conversation transitions
+            """,
+            "high": """
+            The SOFTWARE ENGINEER should demonstrate NOVICE_HIGH networking skills:
+            - Shows good social etiquette with minimal awkwardness
+            - Asks some relevant questions
+            - Recognizes obvious networking opportunities
+            - Shares relevant information about themselves
+            - Shows interest in the LinkedIn connection
+            - Has mostly smooth conversation transitions
+            """
+        },
+        "intermediate": {
+            "low": """
+            The SOFTWARE ENGINEER should demonstrate INTERMEDIATE_LOW networking skills:
+            - Shows professional social etiquette
+            - Asks relevant questions and follows up on answers
+            - Identifies most networking opportunities
+            - Shares targeted information about their experience and interests
+            - Actively engages with the LinkedIn connection opportunity
+            - Manages conversation flow with minimal awkwardness
+            """,
+            "basic": """
+            The SOFTWARE ENGINEER should demonstrate INTERMEDIATE_BASIC networking skills:
+            - Shows confident and professional social etiquette
+            - Asks thoughtful questions that demonstrate interest
+            - Capitalizes on most networking opportunities
+            - Effectively communicates their value and experience
+            - Suggests specific ways to leverage the LinkedIn connection
+            - Navigates conversation transitions smoothly
+            """,
+            "high": """
+            The SOFTWARE ENGINEER should demonstrate INTERMEDIATE_HIGH networking skills:
+            - Shows polished social etiquette
+            - Asks insightful questions that build rapport
+            - Recognizes and creates networking opportunities
+            - Articulates their unique value proposition clearly
+            - Proposes specific follow-up actions for the LinkedIn connection
+            - Guides conversation flow naturally and professionally
+            """
+        },
+        "advanced": {
+            "low": """
+            The SOFTWARE ENGINEER should demonstrate ADVANCED_LOW networking skills:
+            - Shows sophisticated social awareness and etiquette
+            - Asks strategic questions that reveal shared interests or opportunities
+            - Creates valuable networking moments throughout the conversation
+            - Communicates their expertise and interests memorably
+            - Establishes clear next steps for the LinkedIn connection
+            - Controls conversation pacing and transitions expertly
+            """,
+            "basic": """
+            The SOFTWARE ENGINEER should demonstrate ADVANCED_BASIC networking skills:
+            - Demonstrates exceptional social intelligence and etiquette
+            - Asks questions that uncover meaningful professional connections
+            - Transforms casual conversation into valuable networking
+            - Presents their professional narrative compellingly
+            - Creates mutual value in the LinkedIn connection
+            - Manages conversation dynamics with subtle expertise
+            """,
+            "high": """
+            The SOFTWARE ENGINEER should demonstrate ADVANCED_HIGH networking skills:
+            - Shows masterful social intelligence and charismatic presence
+            - Asks questions that build deep rapport and uncover unexpected connections
+            - Creates high-value networking opportunities that benefit both parties
+            - Communicates their professional brand with memorable impact
+            - Establishes the foundation for a lasting professional relationship
+            - Navigates the conversation with invisible but perfect control
+            """
+        }
+    }
+    
+    # Get the appropriate skill instructions
+    skill_prompt = skill_instructions.get(skill_category, {}).get(gradient, skill_instructions["novice"]["basic"])
+    
+    # Combine prompts
+    full_prompt = base_prompt + skill_prompt
+    
+    try:
+        # Call GPT-4o to generate the conversation
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": "You are an expert in professional networking and communication skills."},
+                {"role": "user", "content": full_prompt}
+            ],
+            temperature=0.7,
+            max_tokens=1500
+        )
+        
+        # Extract and return the generated conversation
+        generated_conversation = response.choices[0].message.content.strip()
+        
+        # Add skill level marker for later identification
+        return f"SKILL_LEVEL: {skill_level}\n\n{generated_conversation}"
+        
+    except Exception as e:
+        print(f"Error generating conversation with GPT-4o: {str(e)}")
+        # Fall back to the default conversation if generation fails
+        return f"SKILL_LEVEL: {skill_level}\n\n{FALLBACK_CONVERSATION}"
 
 def analyze_conversation_stages(conversation: List[Dict[str, str]]) -> Dict[str, List[int]]:
     """
