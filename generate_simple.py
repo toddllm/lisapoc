@@ -606,6 +606,7 @@ def evaluate_conversation(conversation):
             'emotional_intelligence': min(5.0, max(1.5, 1.8 + random.uniform(-0.3, 0.3)))
         }
     elif skill_level == "intermediate":
+        # Ensure intermediate gets at least 2.0 in all dimensions for Silver
         dimension_scores = {
             'critical_thinking': min(5.0, max(2.0, 2.5 + random.uniform(-0.3, 0.3))),
             'communication': min(5.0, max(2.0, 2.5 + random.uniform(-0.3, 0.3))),
@@ -613,22 +614,25 @@ def evaluate_conversation(conversation):
         }
     else:  # advanced
         if gradient == "low":
+            # Ensure advanced_low gets at least 2.0 in all dimensions for Silver
             dimension_scores = {
-                'critical_thinking': min(5.0, max(2.5, 3.0 + random.uniform(-0.3, 0.3))),
-                'communication': min(5.0, max(2.5, 3.0 + random.uniform(-0.3, 0.3))),
-                'emotional_intelligence': min(5.0, max(2.5, 3.0 + random.uniform(-0.3, 0.3)))
+                'critical_thinking': min(5.0, max(2.0, 3.0 + random.uniform(-0.3, 0.3))),
+                'communication': min(5.0, max(2.0, 3.0 + random.uniform(-0.3, 0.3))),
+                'emotional_intelligence': min(5.0, max(2.0, 3.0 + random.uniform(-0.3, 0.3)))
             }
         elif gradient == "basic":
+            # Ensure advanced_basic gets at least 2.0 in all dimensions for Silver
             dimension_scores = {
-                'critical_thinking': min(5.0, max(3.0, 3.5 + random.uniform(-0.3, 0.3))),
-                'communication': min(5.0, max(3.0, 3.5 + random.uniform(-0.3, 0.3))),
-                'emotional_intelligence': min(5.0, max(3.0, 3.5 + random.uniform(-0.3, 0.3)))
+                'critical_thinking': min(5.0, max(2.0, 3.5 + random.uniform(-0.3, 0.3))),
+                'communication': min(5.0, max(2.0, 3.5 + random.uniform(-0.3, 0.3))),
+                'emotional_intelligence': min(5.0, max(2.0, 3.5 + random.uniform(-0.3, 0.3)))
             }
         else:  # high
+            # Ensure advanced_high gets at least 3.0 in all dimensions for Gold
             dimension_scores = {
-                'critical_thinking': min(5.0, max(3.5, 4.0 + random.uniform(-0.3, 0.3))),
-                'communication': min(5.0, max(3.5, 4.0 + random.uniform(-0.3, 0.3))),
-                'emotional_intelligence': min(5.0, max(3.5, 4.0 + random.uniform(-0.3, 0.3)))
+                'critical_thinking': min(5.0, max(3.0, 4.0 + random.uniform(-0.3, 0.3))),
+                'communication': min(5.0, max(3.0, 4.0 + random.uniform(-0.3, 0.3))),
+                'emotional_intelligence': min(5.0, max(3.0, 4.0 + random.uniform(-0.3, 0.3)))
             }
     
     # Generate feedback
