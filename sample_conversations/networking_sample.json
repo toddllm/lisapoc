@@ -1,0 +1,62 @@
+{
+  "conversation_id": "sample-001",
+  "skill_level": "intermediate_basic",
+  "conversation": [
+    {
+      "role": "INTERVIEWER",
+      "content": "Hi there! I'm Jake, I work in software development."
+    },
+    {
+      "role": "CANDIDATE",
+      "content": "What brings you to this networking event today?"
+    },
+    {
+      "role": "INTERVIEWER",
+      "content": "I'm here to connect with other professionals in the tech industry. I'm particularly interested in AI and machine learning applications. What about you?"
+    },
+    {
+      "role": "CANDIDATE",
+      "content": "I've been working on some machine learning projects myself. What got you started in AI?"
+    },
+    {
+      "role": "INTERVIEWER",
+      "content": "That's great to hear! I started with a research project in natural language processing during my master's program. It's fascinating how the field has evolved. Are you on LinkedIn?"
+    },
+    {
+      "role": "CANDIDATE",
+      "content": "I'd love to connect on LinkedIn to keep in touch and share insights about ML projects. My profile has some of my recent work."
+    },
+    {
+      "role": "INTERVIEWER",
+      "content": "Actually, I need to catch up with a colleague I just spotted. Would you excuse me for a moment?"
+    },
+    {
+      "role": "CANDIDATE",
+      "content": "Of course, no problem. It was great talking with you about AI and your experiences."
+    },
+    {
+      "role": "INTERVIEWER",
+      "content": "Likewise! It was nice meeting you. Enjoy the rest of the event."
+    },
+    {
+      "role": "CANDIDATE",
+      "content": "Thanks, you too! Looking forward to connecting online."
+    }
+  ],
+  "expected_evaluation": {
+    "stage_scores": {
+      "opener": 3,
+      "carrying_conversation": 3,
+      "linkedin_connection": 3,
+      "move_on": 3,
+      "farewell": 3
+    },
+    "dimension_scores": {
+      "critical_thinking": 4.5,
+      "communication": 4.3,
+      "emotional_intelligence": 3.9
+    },
+    "total_score": 15,
+    "badge_level": "Gold"
+  }
+} 
