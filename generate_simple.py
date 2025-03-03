@@ -382,23 +382,23 @@ def determine_badge_level(dimension_scores, total_score, skill_level=None):
     if skill_category == 'intermediate':
         # Intermediate should get at least Silver if they meet the dimension minimums
         if all([
-            critical_thinking >= silver_dim_min,
-            communication >= silver_dim_min,
-            emotional_intelligence >= silver_dim_min
+            critical_thinking >= 2.0,
+            communication >= 2.0,
+            emotional_intelligence >= 2.0
         ]):
             return 'Silver'
     elif skill_category == 'advanced':
         # Advanced should get at least Silver if they meet the dimension minimums
         if all([
-            critical_thinking >= silver_dim_min,
-            communication >= silver_dim_min,
-            emotional_intelligence >= silver_dim_min
+            critical_thinking >= 2.0,
+            communication >= 2.0,
+            emotional_intelligence >= 2.0
         ]):
             # Advanced high should get Gold if they meet the dimension minimums
             if gradient == 'high' and all([
-                critical_thinking >= gold_dim_min,
-                communication >= gold_dim_min,
-                emotional_intelligence >= gold_dim_min
+                critical_thinking >= 3.0,
+                communication >= 3.0,
+                emotional_intelligence >= 3.0
             ]):
                 return 'Gold'
             return 'Silver'
