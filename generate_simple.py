@@ -525,22 +525,23 @@ def evaluate_conversation(conversation):
     adjusted_dimension_base = base_dimension_score + gradient_modifier_dimension
     
     # Create stage scores (0-3 points per stage)
-    stage_scores = {
-        'opener': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2)))),
-        'carrying_conversation': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2)))),
-        'linkedin_connection': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2)))),
-        'move_on': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2)))),
-        'farewell': min(3, max(0, round(adjusted_stage_base + random.uniform(-0.2, 0.2))))
-    }
+    # Ensure we get some variation in the scores
+    stage_scores = {}
+    for stage in ['opener', 'carrying_conversation', 'linkedin_connection', 'move_on', 'farewell']:
+        # Add more randomness to ensure variation
+        variation = random.uniform(-0.5, 0.5)
+        score = adjusted_stage_base + variation
+        # Round to nearest integer and ensure within bounds
+        stage_scores[stage] = min(3, max(0, round(score)))
     
     # Calculate total score (0-15 points total)
     total_score = sum(stage_scores.values())
     
     # Create dimension scores (1-5 scale)
     dimension_scores = {
-        'critical_thinking': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.3, 0.3))),
-        'communication': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.3, 0.3))),
-        'emotional_intelligence': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.4, 0.2)))
+        'critical_thinking': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
+        'communication': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.5, 0.5))),
+        'emotional_intelligence': min(5.0, max(1.0, adjusted_dimension_base + random.uniform(-0.5, 0.5)))
     }
     
     # Generate feedback
