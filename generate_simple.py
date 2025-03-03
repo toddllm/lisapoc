@@ -10,7 +10,7 @@ import json
 import time
 import re
 import traceback
-from datetime import datetime
+import datetime
 from typing import Dict, List, Any, Tuple, Optional
 import httpx
 from openai import OpenAI
@@ -691,169 +691,154 @@ def format_evaluation_for_output(evaluation: Dict[str, Any]) -> str:
     return output
 
 def main():
-    """Main function to generate conversations and save them to a file."""
-    try:
-        # Create timestamped output directory
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_dir = f'output_{timestamp}'
-        os.makedirs(output_dir, exist_ok=True)
+    """
+    Main function to generate and evaluate conversations.
+    """
+    print("Generating conversations with gradient-sensitive badge determination...")
+    
+    # Create output directory with timestamp
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_dir = f"output_{timestamp}"
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Output files
+    output_file = os.path.join(output_dir, "conversations.txt")
+    debug_file = os.path.join(output_dir, "debug.txt")
+    
+    print(f"Output will be saved to: {output_dir}")
+    
+    # Track badge distribution
+    badge_distribution = []
+    
+    with open(output_file, "w") as f, open(debug_file, "w") as debug_f:
+        # Generate conversations for different skill levels and gradients
+        skill_levels = ["novice", "intermediate", "advanced"]
+        gradients = ["low", "basic", "high"]
         
-        print(f"Generating conversations with gradient-sensitive badge determination...")
-        print(f"Output will be saved to: {output_dir}")
-        
-        # Open files for writing
-        with open(f'{output_dir}/conversations.txt', 'w') as f, open(f'{output_dir}/debug.txt', 'w') as debug_f:
-            debug_f.write(f"Starting conversation generation at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            debug_f.write(f"Using gradient-sensitive badge determination\n\n")
-            
-            # Define skill levels and gradients
-            skill_levels = ['novice', 'intermediate', 'advanced']
-            gradients = ['low', 'basic', 'high']
-            
-            # Track badge distribution
-            badge_distribution = []
-            
-            # Generate conversations for each skill level and gradient
-            for skill_level in skill_levels:
-                for gradient in gradients:
-                    full_skill_level = f"{skill_level}_{gradient}".upper()
-                    debug_f.write(f"\nGenerating conversation for {full_skill_level}\n")
+        for skill_level in skill_levels:
+            for gradient in gradients:
+                full_skill_level = f"{skill_level}_{gradient}".upper()
+                debug_f.write(f"\nGenerating conversation for {full_skill_level}\n")
+                
+                try:
+                    # Generate conversation
+                    conversation = generate_conversation(full_skill_level)
+                    debug_f.write(f"Generated conversation for {full_skill_level}\n")
                     
-                    try:
-                        # Generate conversation
-                        conversation = generate_conversation(full_skill_level)
-                        debug_f.write(f"Generated conversation for {full_skill_level}\n")
-                        
-                        # Evaluate conversation
-                        evaluation = evaluate_conversation(conversation)
-                        debug_f.write(f"Evaluated conversation for {full_skill_level}\n")
-                        debug_f.write(f"  Stage scores: {evaluation['stage_scores']}\n")
-                        debug_f.write(f"  Dimension scores: {evaluation['dimension_scores']}\n")
-                        debug_f.write(f"  Total score: {evaluation['total_score']}\n")
-                        
-                        # Determine badge level with skill level
-                        skill_level_for_badge = f"{skill_level}_{gradient}".lower()
-                        badge_level = determine_badge_level(
-                            evaluation['dimension_scores'], 
-                            evaluation['total_score'],
-                            skill_level_for_badge
-                        )
-                        evaluation['badge_level'] = badge_level
-                        
-                        # Store result for badge distribution
-                        badge_distribution.append({
-                            'skill_level': skill_level,
-                            'gradient': gradient,
-                            'badge': badge_level,
-                            'is_fallback': False
-                        })
-                        
-                        debug_f.write(f"  Badge level: {badge_level}\n")
-                        debug_f.write(f"  Skill level: {skill_level_for_badge}\n")
-                        
-                        # Write to file
-                        f.write(f"# Conversation for {full_skill_level}\n\n")
-                        f.write(conversation)
-                        f.write("\n\n")
-                        f.write(f"## Evaluation for {full_skill_level}\n\n")
-                        f.write(f"Badge Level: {badge_level}\n\n")
-                        f.write(f"Total Score: {evaluation['total_score']}\n\n")
-                        f.write("Dimension Scores:\n")
-                        for dimension, score in evaluation['dimension_scores'].items():
-                            f.write(f"- {dimension.replace('_', ' ').title()}: {score}\n")
-                        f.write("\n")
-                        f.write("Stage Scores:\n")
-                        for stage, score in evaluation['stage_scores'].items():
-                            f.write(f"- {stage.replace('_', ' ').title()}: {score}\n")
-                        f.write("\n")
-                        f.write("Feedback:\n")
-                        f.write(evaluation['feedback'])
-                        f.write("\n\n")
-                        f.write("-" * 80)
-                        f.write("\n\n")
-                        
-                    except Exception as e:
-                        debug_f.write(f"Error generating or evaluating conversation for {full_skill_level}: {str(e)}\n")
-                        traceback.print_exc(file=debug_f)
-                        
-                        # Use fallback data
-                        f.write(f"# Conversation for {full_skill_level} (FALLBACK)\n\n")
-                        f.write(FALLBACK_CONVERSATION)
-                        f.write("\n\n")
-                        f.write(f"## Evaluation for {full_skill_level} (FALLBACK)\n\n")
-                        f.write(FALLBACK_EVALUATION)
-                        f.write("\n\n")
-                        f.write("-" * 80)
-                        f.write("\n\n")
-                        
-                        # Store fallback result for badge distribution
-                        badge_distribution.append({
-                            'skill_level': skill_level,
-                            'gradient': gradient,
-                            'badge': 'Bronze',  # Fallbacks get Bronze
-                            'is_fallback': True
-                        })
+                    # Evaluate conversation
+                    evaluation = evaluate_conversation(conversation)
+                    debug_f.write(f"Evaluated conversation for {full_skill_level}\n")
+                    debug_f.write(f"  Stage scores: {evaluation['stage_scores']}\n")
+                    debug_f.write(f"  Dimension scores: {evaluation['dimension_scores']}\n")
+                    debug_f.write(f"  Total score: {evaluation['total_score']}\n")
+                    
+                    # Determine badge level with skill level
+                    skill_level_for_badge = f"{skill_level}_{gradient}".lower()
+                    badge_level = determine_badge_level(
+                        evaluation['dimension_scores'], 
+                        evaluation['total_score'],
+                        skill_level_for_badge
+                    )
+                    evaluation['badge_level'] = badge_level
+                    debug_f.write(f"  Badge level: {badge_level}\n")
+                    debug_f.write(f"  Skill level: {skill_level_for_badge}\n")
+                    
+                    # Store result for badge distribution
+                    badge_distribution.append({
+                        'skill_level': skill_level,
+                        'gradient': gradient,
+                        'badge': badge_level,
+                        'is_fallback': False
+                    })
+                    
+                    # Format and write conversation to output file
+                    f.write(f"# Conversation: {full_skill_level}\n\n")
+                    f.write(conversation)
+                    f.write("\n\n")
+                    
+                    # Format and write evaluation to output file
+                    f.write("# Evaluation\n\n")
+                    formatted_eval = format_evaluation_for_output(evaluation)
+                    f.write(formatted_eval)
+                    f.write("\n\n")
+                    f.write("-" * 80)
+                    f.write("\n\n")
+                    
+                except Exception as e:
+                    debug_f.write(f"Error generating conversation for {full_skill_level}: {str(e)}\n")
+                    debug_f.write(traceback.format_exc())
+                    
+                    # Use fallback conversation and evaluation
+                    f.write(f"# Conversation: {full_skill_level} (FALLBACK)\n\n")
+                    f.write(FALLBACK_CONVERSATION)
+                    f.write("\n\n")
+                    
+                    f.write("# Evaluation (FALLBACK)\n\n")
+                    f.write(FALLBACK_EVALUATION)
+                    f.write("\n\n")
+                    f.write("-" * 80)
+                    f.write("\n\n")
+                    
+                    # Store fallback result for badge distribution
+                    badge_distribution.append({
+                        'skill_level': skill_level,
+                        'gradient': gradient,
+                        'badge': 'Bronze',  # Default to Bronze for fallbacks
+                        'is_fallback': True
+                    })
+        
+        # Write badge distribution summary
+        f.write("# Badge Distribution Summary\n\n")
+        
+        # Create summary table
+        summary_table = {}
+        for entry in badge_distribution:
+            skill_level = entry['skill_level']
+            badge = entry['badge']
             
-            # Calculate badge distribution summary
-            badge_counts = {
-                'novice': {'Bronze': 0, 'Silver': 0, 'Gold': 0},
-                'intermediate': {'Bronze': 0, 'Silver': 0, 'Gold': 0},
-                'advanced': {'Bronze': 0, 'Silver': 0, 'Gold': 0}
-            }
+            if skill_level not in summary_table:
+                summary_table[skill_level] = {'Bronze': 0, 'Silver': 0, 'Gold': 0, 'Total': 0}
             
-            for entry in badge_distribution:
-                badge_counts[entry['skill_level']][entry['badge']] += 1
+            summary_table[skill_level][badge] += 1
+            summary_table[skill_level]['Total'] += 1
+        
+        # Write summary table
+        f.write("| Skill Level | Bronze | Silver | Gold | Total |\n")
+        f.write("|-------------|--------|--------|------|-------|\n")
+        
+        total_bronze = 0
+        total_silver = 0
+        total_gold = 0
+        total_all = 0
+        
+        for skill_level, counts in summary_table.items():
+            bronze = counts['Bronze']
+            silver = counts['Silver']
+            gold = counts['Gold']
+            total = counts['Total']
             
-            # Write badge distribution summary
-            debug_f.write("\n\nBadge Distribution Summary:\n")
-            f.write("\n\n# Badge Distribution Summary\n\n")
+            total_bronze += bronze
+            total_silver += silver
+            total_gold += gold
+            total_all += total
             
-            f.write("| Skill Level | Bronze | Silver | Gold | Total |\n")
-            f.write("|-------------|--------|--------|------|-------|\n")
+            f.write(f"| {skill_level.title()} | {bronze} | {silver} | {gold} | {total} |\n")
+        
+        f.write(f"| **Total** | **{total_bronze}** | **{total_silver}** | **{total_gold}** | **{total_all}** |\n")
+        
+        f.write("\n\n# Detailed Badge Distribution by Gradient\n\n")
+        f.write("| Skill Level | Gradient | Badge | Fallback |\n")
+        f.write("|-------------|----------|-------|----------|\n")
+        
+        for entry in badge_distribution:
+            skill_level = entry['skill_level']
+            gradient = entry['gradient']
+            badge = entry['badge']
+            is_fallback = "Yes" if entry['is_fallback'] else "No"
             
-            total_bronze = 0
-            total_silver = 0
-            total_gold = 0
-            
-            for skill_level in skill_levels:
-                bronze = badge_counts[skill_level]['Bronze']
-                silver = badge_counts[skill_level]['Silver']
-                gold = badge_counts[skill_level]['Gold']
-                total = bronze + silver + gold
-                
-                debug_f.write(f"  {skill_level.title()}: Bronze={bronze}, Silver={silver}, Gold={gold}, Total={total}\n")
-                f.write(f"| {skill_level.title()} | {bronze} | {silver} | {gold} | {total} |\n")
-                
-                total_bronze += bronze
-                total_silver += silver
-                total_gold += gold
-            
-            total_all = total_bronze + total_silver + total_gold
-            debug_f.write(f"  Total: Bronze={total_bronze}, Silver={total_silver}, Gold={total_gold}, Total={total_all}\n")
-            f.write(f"| **Total** | **{total_bronze}** | **{total_silver}** | **{total_gold}** | **{total_all}** |\n")
-            
-            # Write detailed badge distribution by gradient
-            debug_f.write("\n\nDetailed Badge Distribution by Gradient:\n")
-            f.write("\n\n# Detailed Badge Distribution by Gradient\n\n")
-            
-            f.write("| Skill Level | Gradient | Badge | Fallback |\n")
-            f.write("|-------------|----------|-------|----------|\n")
-            
-            for entry in badge_distribution:
-                skill = entry['skill_level'].title()
-                gradient = entry['gradient']
-                badge = entry['badge']
-                fallback = "Yes" if entry['is_fallback'] else "No"
-                
-                debug_f.write(f"  {skill}_{gradient}: Badge={badge}, Fallback={fallback}\n")
-                f.write(f"| {skill} | {gradient} | {badge} | {fallback} |\n")
-            
-            debug_f.write("\nFinished generating conversations\n")
-            print(f"Generation complete. Results saved to {output_dir}/conversations.txt")
-            
-    except Exception as e:
-        print(f"Error: {str(e)}")
-        traceback.print_exc()
+            f.write(f"| {skill_level.title()} | {gradient.title()} | {badge} | {is_fallback} |\n")
+    
+    print(f"Generation complete. Results saved to {output_dir}/conversations.txt")
 
 if __name__ == "__main__":
     main() 
